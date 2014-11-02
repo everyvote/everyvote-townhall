@@ -8,3 +8,5 @@ install:
   - 'bower install'
 script:
   - grunt
+after_success:
+  - bash .travis.deploy.sh
