@@ -9,8 +9,24 @@
  */
 angular.module('everyvoteTuresoApp')
   .controller('CandidateListingCtrl', function ($scope) {
+    
     $scope.posts = [
-      'US Senate Seat',
-      '3rd Congressional District'
+      {
+        name: 'US Senate Seat!!!!!!!!!!',
+        candidates: [], 
+      },
+      {
+        name: '3rd Congressional District',
+        candidates: [],
+      },
+      {
+        name: '3rd Congressional District',
+        candidates: [],
+      },
+      {
+        name: '3rd Congressional District',
+        candidates: [],
+      }
     ];
+    
   });
