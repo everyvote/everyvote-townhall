@@ -20,6 +20,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'CandidateListingCtrl'
       })
+      .when('/myMagicalBurrito', {
+        templateUrl: 'views/burrito.html',
+        controller: 'CandidateListingCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
