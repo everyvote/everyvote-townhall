@@ -12,20 +12,20 @@ angular.module('everyvoteTuresoApp')
     
     $scope.posts = [
       {
-        name: 'US Senate Seat!!!!!!!!!!',
-        candidates: [], 
+        name: 'President',
+        candidates: ['Sojourner Truth', 'Frederick Douglass', 'Jane Addams', 'Thomas Paine'], 
       },
       {
-        name: '3rd Congressional District',
-        candidates: [],
+        name: 'Vice-President',
+        candidates: ['Abraham Lincoln', 'Susan B. Anthony', 'Denis Diderot', 'Booker T. Washington'],
       },
       {
-        name: '3rd Congressional District',
-        candidates: [],
+        name: 'Treasurer',
+        candidates: ['Buckminster Fuller', 'Harriet Tubman', 'James Baldwin', 'Albert Einstein'],
       },
       {
-        name: '3rd Congressional District',
-        candidates: [],
+        name: 'Secretary',
+        candidates: ['Marshall McLuhan', 'Mark Twain', 'Martin Luther King Jr.', 'Harriet Beecher Stowe'],
       }
     ];
     

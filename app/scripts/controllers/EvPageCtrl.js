@@ -10,7 +10,7 @@
 angular.module('everyvoteTuresoApp')
   .controller('EvPageCtrl', function ($scope) {
     
-    $scope.zone = 'Town, State';
-    $scope.electionName = 'November 2014 Election Season';
+    $scope.zone = 'EveryVote University > Student Association';
+    $scope.electionName = 'Spring 2015 Semester';
     
   });
