@@ -1,13 +1,16 @@
 <div class="profile-folder display-none" style="display: block;">
-  
+
   <div class="profile-folder-bar">
     <h3>
       <i id="folder-1-1-icon" class="fa fa-caret-down caret-width"></i>
-      {{ name }}
+      {{ post.name }}
     </h3>
   </div>
-  
+
   <div class="profile-folder display-none" style="display: block;">
-    <ev-profile></ev-profile>
+    <div ng-repeat="candidate in post.candidates">
+      <ev-profile candidate="candidate">
+      </ev-profile>
+    </div>
   </div><!-- /.profile-folder -->
 </div>

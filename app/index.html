@@ -1,17 +1,17 @@
 <!doctype html>
 <html class="no-js">
-  
+
   <head>
     <meta charset="utf-8">
     <title>EveryVote</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
 
-    
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -24,18 +24,18 @@
     <link rel="stylesheet" href="styles/evProfile.css">
     <!-- endbuild -->
   </head>
-  
+
   <body ng-app="everyvoteTuresoApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <!-- Body -->
     <div class="ev-body-container" ng-controller="EvPageCtrl">
       <div class="row">
         <div class="col-sm-9">
           <div class="main-border">
-            
+
             <!-- Cover img -->
             <div class="cover-img">
               <h5>{{ zone }}</h5>
@@ -43,18 +43,18 @@
               <img src="images/shadow.png" class="img-responsive cover-img-shadow" />
               <img src="http://placehold.it/808x184" class="img-responsive" />
             </div>
-            
+
             <!-- Detail Pane -->
             <div class="main-content" ng-view="">
-              
+
             </div><!-- /.main-content -->
-          
+
           </div><!-- /.main-border -->
         </div><!-- /.col-sm-9 -->
-        
+
         <!-- Sidebar -->
         <div class="col-sm-3 hidden-xs">
-          
+
           <div class="sidebar-folder" ng-repeat="post in ['Stub Post 1', 'Stub Post 2']">
 
             <div class="sidebar-bar-button">
@@ -72,12 +72,12 @@
             </div><!-- /.sidebar-profile -->
 
           </div><!-- /.sidebar-folder -->
-          
+
         </div><!-- /.col-sm-3 -->
-        
+
       </div><!-- /.row -->
     </div><!-- /.ev-body-container -->
-    
+
     <!-- Footer -->
     <div class="ev-footer-container">
         <div class="row">

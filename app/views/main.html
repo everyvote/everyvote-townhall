@@ -5,19 +5,14 @@
         ng-repeat="candidate in post.candidates">
 
       {{candidate}},
-      
+
     </span>
 
 </div>
 
-<ev-profile-folder name="President">
-
-</ev-profile-folder>
-
-
 <div ng-repeat="post in posts">
 
-  <ev-profile-folder name="post.name">
+  <ev-profile-folder post="post">
 
   </ev-profile-folder>
 

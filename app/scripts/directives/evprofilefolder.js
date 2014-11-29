@@ -10,7 +10,7 @@ angular.module('everyvoteTuresoApp')
   .directive('evProfileFolder', function () {
     return {
       scope: {
-        name: '='
+        post: '='
       },
       templateUrl: 'views/directives/evProfileFolder.html',
       restrict: 'E'
