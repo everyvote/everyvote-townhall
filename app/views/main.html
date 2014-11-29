@@ -1,3 +1,15 @@
+<div ng-repeat="post in posts">
+    Here are all the candidates for {{post.name}}: <br/>
+
+    <span  style="font-weight:bold"
+        ng-repeat="candidate in post.candidates">
+
+      {{candidate}},
+      
+    </span>
+
+</div>
+
 <ev-profile-folder name="President">
 
 </ev-profile-folder>
