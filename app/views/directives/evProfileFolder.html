@@ -1,16 +1,11 @@
-<div class="profile-folder display-none" style="display: block;">
+<div class="profile-folder">
 
-  <div class="profile-folder-bar">
-    <h3>
-      <i id="folder-1-1-icon" class="fa fa-caret-down caret-width"></i>
-      {{ post.name }}
-    </h3>
+  <!-- #folder-#-bar is the button that shows or hides folder-# onclick -->
+  <div id="folder-#-bar" class="profile-folder-bar">
+    <h3><i id="folder-#-icon" class="fa fa-caret-down caret-width"></i>{{ post.name }} <span class="profile-folder-bar-number">23</span></h3>
   </div>
+  <div id="folder-#" class="profile-folder" ng-repeat="candidate in post.candidates">
+    <ev-profile candidate="candidate"></ev-profile>
+  </div><!-- / #profile-# .profile-folder -->
 
-  <div class="profile-folder display-none" style="display: block;">
-    <div ng-repeat="candidate in post.candidates">
-      <ev-profile candidate="candidate">
-      </ev-profile>
-    </div>
-  </div><!-- /.profile-folder -->
-</div>
+</div><!-- /.profile-folder -->

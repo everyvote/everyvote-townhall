@@ -1,18 +1,60 @@
 <div class="profile clearfix">
-  <a href="#">
-    <img src="http://placehold.it/110x110">
-    <h4>- {{ candidate }}</h4>
-  </a>
-  <div class="profile-social">
-    <i class="fa fa-facebook-square"></i>
-    <i class="fa fa-twitter-square"></i>
-    <i class="fa fa-linkedin-square"></i>
-    <i class="fa fa-pinterest-square"></i>
-  </div>
-  <hr>
-  <p class="party"><b>Party Name</b></p>
-  <div class="profile-multimedia">
-    <i class="fa fa-play-circle-o"></i>
-  </div>
-  <p class="profile-summary">Profile Summary</p>
+  <div class="profile-row-first">
+    <div class="col-sm-2">
+      <a class="profile-picture" href="candidate.html">
+        <img src="{{ candidate.profile_picture }}" />
+      </a>
+      <div class="clearfix"></div>
+    </div><!-- /.col-sm-2 -->
+    <div class="col-sm-7">
+      <div class="box-padding-sides">
+        <div class="profile-subtitle">
+          <a href="candidate.html">
+            <h4>{{ candidate.name }}</h4>
+          </a>
+        </div>
+        <div class="profile-summary">
+          {{ candidate.summary }} <span class="more">more...</span>
+        </div>
+        <div class="profile-list">
+          <table>
+            <tr>
+              <td>Party</td>
+              <td>Independent</td>
+            </tr>
+            <tr>
+              <td>Videos</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Questions </td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Comments</td>
+              <td>23</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div><!-- /.col-sm-7 -->
+    <div class="col-sm-3">
+      <div class="bg-lt-gry box-padding-sides profile-right-col">
+        <div class="profile-stats">
+        </div>
+        <div class="profile-social-icons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-linkedin"></i>
+          <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <p>Save Candidate</p>
+        <ul>
+          <li>Voting For</li>
+          <li>Not Voting For</li>
+        </ul>
+      </div>
+    </div><!-- /.col-sm-3 -->
+  </div><!-- /.profile-row-first -->
 </div><!-- /.profile clearfix -->
+<hr>

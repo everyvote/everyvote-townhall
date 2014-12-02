@@ -484,7 +484,7 @@ hr {
     border-left:1px solid #aaa;
     box-shadow: 0px 1px 3px 1px rgba(0,0,0,.2);
     background-color:#fff;
-    
+
     /* added to accomodate sticky footer */
     overflow:auto;
     padding-bottom:50px;
@@ -724,7 +724,7 @@ hr {
 
 .ev-footer-container {
   background: #4b4f4d;
-  
+
   /* added to accomodate sticky footer */
   position: relative;
   margin-top: -50px; /* negative value of footer height */
