@@ -46,49 +46,38 @@
               <img src="images/niu.png" class="img-responsive" />
             </div>
 
-            <!-- this should be in the detail pane as a directive -->
-            <div class="visible-xs">
-              <h5>NIU > Student Association</h5>
-              <h1>Fall 2014 Session</h1>
-            </div>
-            <h2>Election</h2>
-            <p><b>Voting begins in 58 days and 6 hours</b></p>
-            <p>Voting Days: October 23 (9am-5pm), October 24 (7am-7pm), October 25 (9am-5pm)</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur lacinia mi, nec tincidunt eros. Aliquam nec sem aliquet, mattis nisi sit amet, fringilla arcu. Aenean egestas risus eu facilisis vulputate. Praesent rutrum mollis nisl, eget tempor turpis interdum ultricies. Cras imperdiet mi ut risus pellentesque porta.... <a href="#">show more</a></p>
-            <h2>Candidates</h2>
-            <p class="main-sort-by">Sort by: <a>random</a></p>
-            <!-- above should be in detail pane as a directive -->
+            <div class="main-content">
 
-            <!-- Detail Pane -->
-            <div class="main-content" ng-view="">
-              <!-- main content inserted here from app.js routes and templates -->
+              <!-- this should be in the detail pane as a directive -->
+              <div class="visible-xs">
+                <h5>NIU > Student Association</h5>
+                <h1>Fall 2014 Session</h1>
+              </div>
+              <h2>Election</h2>
+              <p><b>Voting begins in 58 days and 6 hours</b></p>
+              <p>Voting Days: October 23 (9am-5pm), October 24 (7am-7pm), October 25 (9am-5pm)</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur lacinia mi, nec tincidunt eros. Aliquam nec sem aliquet, mattis nisi sit amet, fringilla arcu. Aenean egestas risus eu facilisis vulputate. Praesent rutrum mollis nisl, eget tempor turpis interdum ultricies. Cras imperdiet mi ut risus pellentesque porta.... <a href="#">show more</a></p>
+              <h2>Candidates</h2>
+              <p class="main-sort-by">Sort by: <a>random</a></p>
+              <!-- above should be in detail pane as a directive -->
+
+              <!-- Detail Pane -->
+              <div class="detail-pane" ng-view="">
+                <!-- detail-pane contents inserted here from app.js routes and templates -->
+              </div>
+
             </div><!-- /.main-content -->
 
           </div><!-- /.main-border -->
         </div><!-- /.col-sm-9 -->
 
-        <!-- Sidebar -->
-        <div class="col-sm-3 hidden-xs">
+        <!-- Sidebar Pane -->
+        <div class="sidebar-pane" ng-include="'views/sidebar.html'" ng-controller="SidebarController">
+          <!-- sidebar contents inserted here via app.js routes and templates -->
+        </div>
 
-        <div class="sidebar-folder" ng-repeat="post in posts">
-        567
-          <!-- #sidebar-#-bar is the button that shows or hides sidebar-# onclick -->
-          <div id="sidebar-#-bar" class="sidebar-bar-button click-me-color">
-            <h3><i id="sidebar-#-icon" class="fa fa-minus-square-o"></i> {{ post.name }}</h3>
-          </div>
-          <div id="sidebar-#" class="sidebar-folder">
-            <div class="sidebar-profile" ng-repeat="candidate in post.candidates">
-              <div class="sidebar-profile-picture">
-                <img src="{{ candidate.profile_picture }}" />
-              </div>
-              <div class="sidebar-profile-text-wrapper">
-                <a href="candidate.html"><p>{{ candidate.name }}</p></a>
-              </div>
-              <div class="clearfix"></div>
-            </div><!-- /.sidebar-profile -->
-          </div><!-- /#sidebar-# -->
-        </div><!-- /.col-sm-3 -->
       </div><!-- /.row -->
+
     </div><!-- /.ev-body-container -->
 
     <!-- Footer -->
@@ -134,6 +123,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/CandidateListingCtrl.js"></script>
+        <script src="scripts/controllers/SidebarController.js"></script>
         <script src="scripts/directives/evprofile.js"></script>
         <script src="scripts/directives/evprofilefolder.js"></script>
         <script src="scripts/controllers/EvPageCtrl.js"></script>
