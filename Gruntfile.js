@@ -7,7 +7,23 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
+var proxy = require('proxy-middleware');
+var url = require('url');
+
+var POPIT_API_URL = 'https://everyvote-demo.popit.mysociety.org/api/v0.1';
+var proxyConfig = url.parse(POPIT_API_URL);
+proxyConfig.bodyReplacements = [
+  {
+    search: POPIT_API_URL,
+    replace: 'http://localhost:9000/api/popit/v0.1'
+  }
+];
+var proxyMiddleware = proxy(proxyConfig);
+
+
 module.exports = function (grunt) {
+
+
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -63,6 +79,8 @@ module.exports = function (grunt) {
       }
     },
 
+
+
     // The actual grunt server settings
     connect: {
       options: {
@@ -81,6 +99,7 @@ module.exports = function (grunt) {
                 '/bower_components',
                 connect.static('./bower_components')
               ),
+              connect().use('/api/popit/v0.1', proxyMiddleware),
               connect.static(appConfig.app)
             ];
           }
