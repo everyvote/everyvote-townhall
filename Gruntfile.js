@@ -12,12 +12,13 @@ var url = require('url');
 
 var POPIT_API_URL = 'https://everyvote-demo.popit.mysociety.org/api/v0.1';
 var proxyConfig = url.parse(POPIT_API_URL);
+/*
 proxyConfig.bodyReplacements = [
   {
     search: POPIT_API_URL,
     replace: 'http://localhost:9000/api/popit/v0.1'
   }
-];
+];*/
 var proxyMiddleware = proxy(proxyConfig);
 
 
