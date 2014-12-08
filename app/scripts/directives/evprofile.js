@@ -9,6 +9,10 @@
 angular.module('everyvoteTuresoApp')
   .directive('evProfile', function () {
     return {
+      scope: {
+        candidateId: '='
+      },
+      controller: 'EvProfileCtrl',
       templateUrl: 'views/directives/evProfile.html',
       restrict: 'E'
     };
