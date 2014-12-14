@@ -7,9 +7,15 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
+
+var rewriteModule = require('http-rewrite-middleware');
+
+/*
+ *  Popit proxying stuff
+ */
+var POPIT_PROXY_ENABLED = false;
 var proxy = require('proxy-middleware');
 var url = require('url');
-
 var POPIT_API_URL = 'https://everyvote-demo.popit.mysociety.org/api/v0.1';
 var proxyConfig = url.parse(POPIT_API_URL);
 /*
@@ -94,13 +100,24 @@ module.exports = function (grunt) {
         options: {
           open: true,
           middleware: function (connect) {
+
+            var popitProxy = function (req, res, next) { next();};
+
+            if (POPIT_PROXY_ENABLED) {
+              popitProxy = connect().use('/api/popit/v0.1', proxyMiddleware);
+            }
+
             return [
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
                 connect.static('./bower_components')
               ),
-              connect().use('/api/popit/v0.1', proxyMiddleware),
+              popitProxy,
+              rewriteModule.getMiddleware([
+                {from:'^/api/(.*)$', to:'/fakeAPI/$1.json'}
+              ]),
+              connect().use('/fakeAPI', connect.static('test/fakeAPI')),
               connect.static(appConfig.app)
             ];
           }

@@ -1,0 +1,73 @@
+{
+  "result": {
+    "id": "547bd934bbdd16e9231c1630",
+    "sources": [],
+    "images": [
+      {
+        "_id": "547be373bbdd16e9231c1631",
+        "mime_type": "image/jpeg",
+        "created": "2014-12-01T03:41:39.306Z",
+        "url": "https://everyvote-demo.popit.mysociety.org/persons/547bd934bbdd16e9231c1630/image/547be373bbdd16e9231c1631"
+      }
+    ],
+    "name": "Thomas Paine",
+    "death_date": "1809-06-08",
+    "birth_date": "1737-02-09",
+    "summary": "The World is my country, all mankind are my brethren, and to do good is my religion.\r\n \r\nGive to every other human being every right that you claim for yourself - that is my doctrine.\r\n\r\nHow just, how suitable to our crime is the punishment with which [King George III] threatens us? We have enslaved multitudes, and shed much innocent blood in doing it; and now are threatened with the same.\r\n\r\nIs this doing to them as we would desire they should do to us? If they could carry off and enslave some thousands of us, would we think it just?\r\n \r\nIt is error only, and not truth, that shrinks from inquiry.\r\n\r\nIf there must be trouble, let it be in my day, that my child may have peace.",
+    "memberships": [
+      {
+        "id": "547bef0fbbdd16e9231c163a",
+        "person_id": "547bd934bbdd16e9231c1630",
+        "role": "Presidential Candidate",
+        "organization_id": "547be3c2bbdd16e9231c1632",
+        "start_date": "",
+        "end_date": "",
+        "area": {
+          "name": "TEST"
+        },
+        "links": [],
+        "contact_details": [],
+        "url": "https://everyvote-demo.popit.mysociety.org/api/v0.1/memberships/547bef0fbbdd16e9231c163a",
+        "html_url": "https://everyvote-demo.popit.mysociety.org/memberships/547bef0fbbdd16e9231c163a"
+      }
+    ],
+    "links": [
+      {
+        "id": "5484f1596bacc73870d0067d",
+        "url": "https://www.facebook.com/TomPaineToday",
+        "note": "Facebook"
+      },
+      {
+        "id": "5484f1596bacc73870d0067c",
+        "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
+        "note": "Homepage"
+      },
+      {
+        "id": "5484f1596bacc73870d0067b",
+        "url": "https://twitter.com/76tompaine",
+        "note": "Twitter"
+      }
+    ],
+    "contact_details": [
+      {
+        "id": "5484f1596bacc73870d0067a",
+        "label": "Facebook",
+        "type": "facebook",
+        "value": "TomPaineToday",
+        "note": ""
+      },
+      {
+        "id": "5484f1596bacc73870d00679",
+        "label": "Twitter",
+        "type": "twitter",
+        "value": "76tompaine",
+        "note": ""
+      }
+    ],
+    "identifiers": [],
+    "other_names": [],
+    "url": "https://everyvote-demo.popit.mysociety.org/api/v0.1/persons/547bd934bbdd16e9231c1630",
+    "html_url": "https://everyvote-demo.popit.mysociety.org/persons/547bd934bbdd16e9231c1630",
+    "image": "https://everyvote-demo.popit.mysociety.org/persons/547bd934bbdd16e9231c1630/image/547be373bbdd16e9231c1631"
+  }
+}

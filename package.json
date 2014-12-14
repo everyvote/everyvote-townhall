@@ -25,6 +25,7 @@
     "grunt-svgmin": "^0.4.0",
     "grunt-usemin": "^2.1.1",
     "grunt-wiredep": "^1.7.0",
+    "http-rewrite-middleware": "^0.1.6",
     "jshint-stylish": "^0.2.0",
     "karma": "^0.12.24",
     "karma-jasmine": "^0.1.5",
