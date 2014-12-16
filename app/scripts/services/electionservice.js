@@ -25,6 +25,7 @@ angular.module('everyvoteTuresoApp')
           {
             name: 'President',
             candidateIds: [
+              'vince-s114',
               '547bd934bbdd16e9231c1630'
             ]
           },
