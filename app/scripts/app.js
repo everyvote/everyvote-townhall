@@ -21,9 +21,9 @@ angular
         templateUrl: 'views/main.html',
         controller: 'CandidateListingCtrl'
       })
-      .when('/myMagicalBurrito', {
-        templateUrl: 'views/burrito.html',
-        controller: 'CandidateListingCtrl'
+      .when('/candidates/:id', {
+        templateUrl: 'views/candidateDetail.html',
+        controller: 'CandidateDetailCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -41,4 +41,26 @@ angular.module('everyvoteTuresoApp')
       return deferred.promise;
     };
 
+    this.getNextCandidate = function (id) {
+
+      var deferred = $q.defer();
+
+      this.getElection().then(function (election) {
+
+        /*
+        var allCandidates = _.reduce(election.posts, function (memo, post) {
+          return memo.concat(post.candidateIds);
+        }, []);
+
+        var indexOfCurrentCandidate = _.indexOf(allCandidates, id);
+        var indexOfNextCandidate = indexOfCurrentCandidate + 1;
+
+        var nextCandidateId = allCandidates[indexOfNextCandidate];
+        */
+        deferred.resolve('dummyId');
+      });
+
+      return deferred.promise;
+    };
+
   });
