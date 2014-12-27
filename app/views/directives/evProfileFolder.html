@@ -9,9 +9,7 @@
     </h3>
   </div>
   <div id="folder-#" class="profile-folder" >
-    <div ng-repeat="candidateId in post.candidateIds">
-      <ev-profile candidate-id="candidateId" />
-    </div>
+    <ev-profile candidate-id="candidateId" ng-repeat="candidateId in post.candidateIds" />
   </div><!-- / #profile-# .profile-folder -->
 
 </div><!-- /.profile-folder -->

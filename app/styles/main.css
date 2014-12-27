@@ -1053,6 +1053,7 @@ hr {
 .sidebar-bar-button {
     padding:3px 5px;
     background-color:#f5f5f5;
+    border-top:1px solid #aaa;
     border-bottom:1px solid #aaa;
     clear:both;
     cursor:pointer;
@@ -1098,7 +1099,7 @@ hr {
 }
 
 .sidebar-folder {
-    border-bottom:1px solid #aaa;
+
 }
 
 .ev-footer-container {

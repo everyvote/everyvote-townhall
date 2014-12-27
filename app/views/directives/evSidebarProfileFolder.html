@@ -1,0 +1,10 @@
+{{$index}}
+<div class="sidebar-folder">
+  <!-- #sidebar-#-bar is the button that shows or hides sidebar-# onclick -->
+  <div id="sidebar-#-bar" class="sidebar-bar-button click-me-color">
+    <h3><i id="sidebar-#-icon" class="fa fa-minus-square-o"></i> {{ post.name }}</h3>
+  </div>
+  <div id="sidebar-#" class="sidebar-folder">
+    <ev-sidebar-profile candidate-id="candidateId" ng-repeat="candidateId in post.candidateIds" />7890
+  </div><!-- /#sidebar-# -->
+</div><!-- /.sidebar-folder -->
