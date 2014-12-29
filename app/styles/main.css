@@ -812,7 +812,6 @@ hr {
 
 .profile-right-col {
     font-size: 13px;
-    max-height: 133px;
 }
 
 @media (max-width:767px) {
@@ -958,12 +957,12 @@ hr {
 }
 
 .profile-social-icons {
-    margin:10px 0;
+    margin-bottom: 10px;
 }
 
 .profile-social-icons a {
+  display:inline-block;
   margin-right: 15px;
-  margin-bottom: 10px;
   margin-top: 10px;
 }
 
