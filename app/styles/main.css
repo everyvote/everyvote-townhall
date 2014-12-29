@@ -60,8 +60,9 @@ h7 {
   font-weight: 500;
 }
 
-.more {
-  color: #ff0000;
+.ev-more {
+  color: #428bca;
+  cursor: pointer;
 }
 
 ul {
