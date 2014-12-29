@@ -4,7 +4,7 @@
     <i class="fa fa-caret-down caret-width" ng-show="folderExpanded"></i>
     <i class="fa fa-caret-right caret-width" ng-show="!folderExpanded"></i>
     {{ post.name }}
-    <span class="profile-folder-bar-number">23</span>
+    <span class="profile-folder-bar-number">{{ post.totalCandidates }}</span>
   </h3>
 </div>
 <div class="profile-folder" ng-show="folderExpanded">

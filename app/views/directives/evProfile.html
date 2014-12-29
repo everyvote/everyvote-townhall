@@ -17,7 +17,8 @@
         <div class="profile-summary">
           <span ng-show="!fullSummary">{{ truncSummary }}</span>
           <span ng-show="fullSummary">{{ summary }}</span>
-          <span class="ev-more" ng-click="toggleSummary();">more</span>
+          <span class="ev-more" ng-show="!fullSummary" ng-click="toggleSummary();">more</span>
+          <span class="ev-more" ng-show="fullSummary" ng-click="toggleSummary();">less</span>
         </div>
         <div class="profile-list">
           <table>

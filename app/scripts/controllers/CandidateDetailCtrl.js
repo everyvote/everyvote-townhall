@@ -15,10 +15,7 @@ angular.module('everyvoteTuresoApp')
       .getCandidate($routeParams.id)
       .then(function (candidate) {
         $scope.candidateId = $routeParams.id;
-        console.log($scope.candidateId);
-        console.log("asdf");
         $scope.fullname = candidate.name;
-        console.log($scope.fullname);
         $scope.summary = candidate.summary;
       })
 

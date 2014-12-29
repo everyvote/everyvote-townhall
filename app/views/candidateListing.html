@@ -1,7 +1,17 @@
 <h2>Election</h2>
 <p><b>Voting begins in 58 days and 6 hours</b></p>
-<p>Voting Days: October 23 (9am-5pm), October 24 (7am-7pm), October 25 (9am-5pm)</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur lacinia mi, nec tincidunt eros. Aliquam nec sem aliquet, mattis nisi sit amet, fringilla arcu. Aenean egestas risus eu facilisis vulputate. Praesent rutrum mollis nisl, eget tempor turpis interdum ultricies. Cras imperdiet mi ut risus pellentesque porta.... <a href="#">show more</a></p>
+<p>
+  <b>Voting Days</b><br>
+  October 23, 9AM - 5PM<br>
+  October 24, 7AM - 7PM<br>
+  October 25, 9AM - 5PM
+</p>
+<p>
+  <span ng-show="!fullSummary">{{ truncSummary }}</span>
+  <span ng-show="fullSummary">{{ summary }}</span>
+  <span class="ev-more" ng-show="!fullSummary" ng-click="toggleSummary();">more</span>
+  <span class="ev-more" ng-show="fullSummary" ng-click="toggleSummary();">less</span>
+</p>
 <h2>Candidates</h2>
 <p class="main-sort-by">Sort by: <a>random</a></p>
 
