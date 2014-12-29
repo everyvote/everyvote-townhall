@@ -51,11 +51,11 @@
         <div class="profile-stats">
         </div>
         <div class="profile-social-icons">
-          <i class="fa fa-facebook"></i>
-          <i class="fa fa-twitter"></i>
-          <i class="fa fa-linkedin"></i>
-          <i class="fa fa-ellipsis-h"></i>
+            <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
+              <i class="fa fa-{{socialLink.note}}"></i>
+            </a>
         </div>
+
         <p>Save Candidate</p>
         <ul>
           <li>Voting For</li>

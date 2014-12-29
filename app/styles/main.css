@@ -957,13 +957,17 @@ hr {
     font-size: 17px;
 }
 
-.profile-social-icons i {
+.profile-social-icons {
+    margin:10px 0;
+}
+
+.profile-social-icons a {
   margin-right: 15px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.profile-social-icons i:last-child {
+.profile-social-icons a:last-child {
     margin-right: 0px;
 }
 
