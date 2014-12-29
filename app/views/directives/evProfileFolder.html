@@ -1,15 +1,12 @@
-<div class="profile-folder">
-
-  <!-- #folder-#-bar is the button that shows or hides folder-# onclick -->
-  <div id="folder-#-bar" class="profile-folder-bar">
-    <h3>
-      <i id="folder-#-icon" class="fa fa-caret-down caret-width"></i>
-      {{ post.name }}
-      <span class="profile-folder-bar-number">23</span>
-    </h3>
-  </div>
-  <div id="folder-#" class="profile-folder" >
-    <ev-profile candidate-id="candidateId" ng-repeat="candidateId in post.candidateIds" />
-  </div><!-- / #profile-# .profile-folder -->
-
+<!-- #folder-#-bar is the button that shows or hides folder-# onclick -->
+<div class="profile-folder-bar" ng-click="toggleFolder()">
+  <h3>
+    <i class="fa fa-caret-down caret-width" ng-show="folderExpanded"></i>
+    <i class="fa fa-caret-right caret-width" ng-show="!folderExpanded"></i>
+    {{ post.name }}
+    <span class="profile-folder-bar-number">23</span>
+  </h3>
+</div>
+<div class="profile-folder" ng-show="folderExpanded">
+  <ev-profile candidate-id="candidateId" ng-repeat="candidateId in post.candidateIds" /></ev-profile>
 </div><!-- /.profile-folder -->

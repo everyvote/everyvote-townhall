@@ -13,6 +13,14 @@ angular.module('everyvoteTuresoApp')
         post: '='
       },
       templateUrl: 'views/directives/evSidebarProfileFolder.html',
-      restrict: 'E'
-    };
+      restrict: 'E',
+      controller: function ($scope) {
+        $scope.sidebarFolderExpanded = true;
+
+        $scope.toggleSidebarFolder = function() {
+          $scope.sidebarFolderExpanded = (! $scope.sidebarFolderExpanded);
+
+        }
+      }
+    }
   });

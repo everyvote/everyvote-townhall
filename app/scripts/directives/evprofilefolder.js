@@ -13,6 +13,14 @@ angular.module('everyvoteTuresoApp')
         post: '='
       },
       templateUrl: 'views/directives/evProfileFolder.html',
-      restrict: 'E'
+      restrict: 'E',
+      controller: function ($scope) {
+        $scope.folderExpanded = true;
+
+        $scope.toggleFolder = function() {
+          $scope.folderExpanded = (! $scope.folderExpanded);
+
+        }
+      }
     };
   });

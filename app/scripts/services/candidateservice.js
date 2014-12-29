@@ -22,7 +22,10 @@ angular.module('everyvoteTuresoApp')
           // For now we're just gonna just shift the data from popit
           var person = data.result;
           deferred.resolve(person);
+          console.log(person);
+          person.helloworld = "booyah";
         })
+
         .error(function (error) {
           deferred.reject(error);
         });

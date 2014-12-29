@@ -15,8 +15,9 @@
           </a>
         </div>
         <div class="profile-summary">
-          {{ candidate.summary }}
-          <span class="more">more...</span>
+          <span ng-show="!fullSummary">{{ truncSummary }}</span>
+          <span ng-show="fullSummary">{{ summary }}</span>
+          <span class="more" ng-click="toggleSummary();">more...</span>
         </div>
         <div class="profile-list">
           <table>
