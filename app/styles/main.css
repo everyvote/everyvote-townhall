@@ -710,6 +710,7 @@ hr {
         float: left;
         margin-right: 15px;
         width: 100px;
+        box-shadow: #bbb 2px 2px 1px 0px;
   }
 }
 
@@ -718,6 +719,7 @@ hr {
         float: left;
         margin-right: 15px;
         width: 90%;
+        box-shadow: #bbb 2px 2px 1px 0px;
   }
 }
 
@@ -959,6 +961,7 @@ hr {
 }
 
 .profile-social-icons {
+    width: 130px;
     margin-bottom: 10px;
 }
 

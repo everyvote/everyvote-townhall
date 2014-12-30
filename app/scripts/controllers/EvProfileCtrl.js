@@ -24,7 +24,11 @@ angular.module('everyvoteTuresoApp')
         $scope.socialLinks = candidate.links;
         var socialLinks = candidate.links,
             i,
-            isSupported = ["facebook", "twitter", "linkedin", "homepage"];
+            isSupported = ["homepage", "email", "facebook", "twitter",
+                           "linkedin", "reddit", "github", "instagram",
+                           "bitbucket", "googleplus", "pinterest", "skype",
+                           "youtube", "yelp", "tumblr", "stumbleupon",
+                           "stackoverflow", "vine"];
 
         for (i = 0; i < socialLinks.length; i++) {
             socialLinks[i].note = socialLinks[i].note.toLowerCase();
@@ -41,6 +45,13 @@ angular.module('everyvoteTuresoApp')
           return obj.note;
         }).indexOf("homepage");
 
+        var stackoverflowPos = socialLinks.map(function(obj) {
+          return obj.note;
+        }).indexOf("stackoverflow");
+
+        if (stackoverflowPos > -1) {
+          socialLinks[stackoverflowPos].note = "stack-overflow";
+        }
 
         if (homePos > -1) {
           var homeObj = socialLinks.splice(homePos, 1);

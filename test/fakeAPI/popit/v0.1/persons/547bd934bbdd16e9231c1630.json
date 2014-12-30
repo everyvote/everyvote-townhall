@@ -48,24 +48,29 @@
         "note": "Linkedin"
       },
       {
+        "id": "tpainestackoverflow",
+        "url": "https://www.stackoverflow.com",
+        "note": "StackOverflow"
+      },
+      {
+        "id": "tpainegithub",
+        "url": "https://www.github.com",
+        "note": "GitHub"
+      },
+      {
         "id": "tpainepinterest",
         "url": "https://www.pinterest.com",
         "note": "Pinterest"
       },
       {
-        "id": "tpainehomepage",
-        "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
-        "note": "Homepage"
+        "id": "tpainepinterest",
+        "url": "https://www.pinterest.com",
+        "note": "Pinterest"
       },
       {
-        "id": "tpainehomepage",
-        "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
-        "note": "Homepage"
-      },
-      {
-        "id": "tpainehomepage",
-        "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
-        "note": "Homepage"
+        "id": "tpainepinterest",
+        "url": "https://www.pinterest.com",
+        "note": "Pinterest"
       },
       {
         "id": "tpainehomepage",
