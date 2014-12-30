@@ -54,15 +54,17 @@ h6 {
 }
 
 h7 {
-  text-transform: uppercase;
-  color: #666;
-  letter-spacing: .06em;
-  font-weight: 500;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: .06em;
+    font-weight: 500;
 }
 
 .ev-more {
-  color: #428bca;
-  cursor: pointer;
+    color: #888;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 12px;
 }
 
 ul {
@@ -844,7 +846,7 @@ hr {
     border: 1px solid #CFCFCF;
     border-radius: 3px;
     padding: 2px 5px;
-    width: 117px;
+    max-width: 120px;
 }
 
 .group {
@@ -962,7 +964,7 @@ hr {
 
 .profile-social-icons a {
   display:inline-block;
-  margin-right: 15px;
+  margin-right: 10px;
   margin-top: 10px;
 }
 

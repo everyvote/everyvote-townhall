@@ -38,47 +38,52 @@
         "note": "Facebook"
       },
       {
-        "id": "5484f1596bacc73870d0067d",
-        "url": "https://www.facebook.com/TomPaineToday",
-        "note": "Facebook"
+        "id": "tpainereddit",
+        "url": "https://www.reddit.com",
+        "note": "reddit"
       },
       {
-        "id": "5484f1596bacc73870d0067d",
-        "url": "https://www.facebook.com/TomPaineToday",
-        "note": "Facebook"
+        "id": "tpainelinkedin",
+        "url": "https://www.linkedin.com",
+        "note": "Linkedin"
       },
       {
-        "id": "5484f1596bacc73870d0067d",
-        "url": "https://www.facebook.com/TomPaineToday",
-        "note": "Facebook"
+        "id": "tpainepinterest",
+        "url": "https://www.pinterest.com",
+        "note": "Pinterest"
       },
       {
-        "id": "5484f1596bacc73870d0067d",
-        "url": "https://www.facebook.com/TomPaineToday",
-        "note": "Facebook"
-      },
-      {
-        "id": "5484f1596bacc73870d0067d",
-        "url": "https://www.facebook.com/TomPaineToday",
-        "note": "Facebook"
-      },
-      {
-        "id": "5484f1596bacc73870d0067d",
-        "url": "https://www.facebook.com/TomPaineToday",
-        "note": "Facebook"
-      },
-      {
-        "id": "5484f1596bacc73870d0067d",
-        "url": "https://www.facebook.com/TomPaineToday",
-        "note": "Facebook"
-      },
-      {
-        "id": "5484f1596bacc73870d0067c",
+        "id": "tpainehomepage",
         "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
         "note": "Homepage"
       },
       {
-        "id": "5484f1596bacc73870d0067b",
+        "id": "tpainehomepage",
+        "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
+        "note": "Homepage"
+      },
+      {
+        "id": "tpainehomepage",
+        "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
+        "note": "Homepage"
+      },
+      {
+        "id": "tpainehomepage",
+        "url": "http://en.wikipedia.org/wiki/Thomas_Paine",
+        "note": "Homepage"
+      },
+      {
+        "id": "tpaineTwitter",
+        "url": "https://twitter.com/76tompaine",
+        "note": "Twitter"
+      },
+      {
+        "id": "tpaineTwitter",
+        "url": "https://twitter.com/76tompaine",
+        "note": "Twitter"
+      },
+      {
+        "id": "tpaineTwitter",
         "url": "https://twitter.com/76tompaine",
         "note": "Twitter"
       }
