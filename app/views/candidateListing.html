@@ -9,8 +9,8 @@
 <p>
   <span ng-show="!fullSummary">{{ truncSummary }}</span>
   <span ng-show="fullSummary">{{ summary }}</span>
-  <span class="ev-more" ng-show="!fullSummary" ng-click="toggleSummary();">more</span>
-  <span class="ev-more" ng-show="fullSummary" ng-click="toggleSummary();">less</span>
+  <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();">more</span>
+  <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();">less</span>
 </p>
 <h2>Candidates</h2>
 <p class="main-sort-by">Sort by: <a>random</a></p>
