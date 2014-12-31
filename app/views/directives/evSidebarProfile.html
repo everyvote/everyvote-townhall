@@ -1,6 +1,8 @@
 <div class="sidebar-profile">
   <div class="sidebar-profile-picture">
-    <img src="{{ candidate.image }}" />
+    <a href="#/candidates/{{ candidate.id }}">
+      <img src="{{ candidate.image }}" />
+    </a>
   </div>
   <div class="sidebar-profile-text-wrapper">
     <a href="/#/candidates/{{candidate.id}}"><p>{{ candidate.name }}</p></a>
