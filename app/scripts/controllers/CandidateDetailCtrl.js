@@ -11,6 +11,8 @@ angular.module('everyvoteTuresoApp')
   .controller('CandidateDetailCtrl', function ($scope, $routeParams,
     CandidateService) {
 
+    $scope.candidateId = $routeParams.id;
+
     CandidateService
       .getCandidate($routeParams.id)
       .then(function (candidate) {
