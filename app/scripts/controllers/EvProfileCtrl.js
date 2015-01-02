@@ -42,12 +42,6 @@ angular.module('everyvoteTuresoApp')
             }
         }
 
-        // check if "homepage" is a link, then move to front of socialLinks array,
-        // also convert socialLink.note to "home" for Font Awesome compatibility
-        var homePos = socialLinks.map(function(obj) {
-          return obj.note;
-        }).indexOf("homepage");
-
         var stackoverflowPos = socialLinks.map(function(obj) {
           return obj.note;
         }).indexOf("stackoverflow");
@@ -55,6 +49,28 @@ angular.module('everyvoteTuresoApp')
         if (stackoverflowPos > -1) {
           socialLinks[stackoverflowPos].note = "stack-overflow";
         }
+
+        var googlePlusPos = socialLinks.map(function(obj) {
+          return obj.note;
+        }).indexOf("googleplus");
+
+        if (googlePlusPos > -1) {
+          socialLinks[googlePlusPos].note = "google-plus";
+        }
+
+        var emailPos = socialLinks.map(function(obj) {
+          return obj.note;
+        }).indexOf("email");
+
+        if (emailPos > -1) {
+          socialLinks[emailPos].note = "envelope";
+        }
+
+        // check if "homepage" is a link, then move to front of socialLinks array,
+        // also convert socialLink.note to "home" for Font Awesome compatibility
+        var homePos = socialLinks.map(function(obj) {
+          return obj.note;
+        }).indexOf("homepage");
 
         if (homePos > -1) {
           var homeObj = socialLinks.splice(homePos, 1);

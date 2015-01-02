@@ -25,14 +25,44 @@ angular.module('everyvoteTuresoApp')
           {
             name: 'President',
             candidateIds: [
-              'vince-s114',
+              '548e5dd2ad8307d10c2f19fc',
+              '548e5c3fad8307d10c2f19f8',
+              '548e5e35ad8307d10c2f19fe',
               '547bd934bbdd16e9231c1630'
             ]
           },
           {
             name: 'Vice President',
             candidateIds: [
-              '547bd934bbdd16e9231c1630'
+              '548e4eeaad8307d10c2f19f2',
+              '548e5d34ad8307d10c2f19fa',
+              '548e4bbcad8307d10c2f19ec',
+              '548e6056ad8307d10c2f1a06',
+            ]
+          },
+          {
+            name: 'Treasurer',
+            candidateIds: [
+              '548e5ee9ad8307d10c2f1a02',
+              '548e4a16ad8307d10c2f19ea',
+              '548e4c89ad8307d10c2f19ee'
+            ]
+          },
+          {
+            name: 'Secretary',
+            candidateIds: [
+              '548e4cf5ad8307d10c2f19f0',
+              '548e609dad8307d10c2f1a08',
+              '548e6130ad8307d10c2f1a0a',
+              '548e5eb1ad8307d10c2f1a00'
+            ]
+          },
+          {
+            name: 'Senator - District 1',
+            candidateIds: [
+              '548e5fe5ad8307d10c2f1a04',
+              '548e4fa4ad8307d10c2f19f4',
+              '548e5026ad8307d10c2f19f6'
             ]
           }
         ]

@@ -13,7 +13,7 @@ var rewriteModule = require('http-rewrite-middleware');
 /*
  *  Popit proxying stuff
  */
-var POPIT_PROXY_ENABLED = false;
+var POPIT_PROXY_ENABLED = true;
 var proxy = require('proxy-middleware');
 var url = require('url');
 var POPIT_API_URL = 'https://everyvote-demo.popit.mysociety.org/api/v0.1';
