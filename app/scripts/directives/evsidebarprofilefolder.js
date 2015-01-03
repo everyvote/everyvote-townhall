@@ -21,6 +21,8 @@ angular.module('everyvoteTuresoApp')
           $scope.sidebarFolderExpanded = (! $scope.sidebarFolderExpanded);
 
         }
+
+        $scope.post.totalCandidates = $scope.post.candidateIds.length;
       }
     }
   });
