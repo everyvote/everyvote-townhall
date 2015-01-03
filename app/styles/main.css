@@ -597,7 +597,7 @@ hr {
 
 .main-content {
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -624,8 +624,10 @@ hr {
     }
 }
 
-.main-border {
-    border-right:1px solid #aaa;
+.main-margin {
+    margin-right: 10px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 .onpage-nav {
@@ -653,6 +655,7 @@ hr {
 .profile-folder-bar {
     width:100%;
     border-bottom: 1px dotted #A0A0A0;
+    margin:20px 0;
     padding: 3px 0px;
     color: #252525;
     cursor:pointer;
@@ -690,7 +693,7 @@ hr {
 }
 
 .profile {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     margin-top: 20px;
     clear:both;
 }
@@ -964,7 +967,7 @@ hr {
 
 .profile-social-icons {
     width: 130px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .profile-social-icons a {
@@ -1004,6 +1007,12 @@ hr {
     margin-top: 10px;
     margin-bottom: 20px;
     border-top: 1px solid #ccc;
+}
+
+.sidebar-pane {
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-bottom-left-radius: 10px;
 }
 
 .sidebar-dropdown-background {
@@ -1109,7 +1118,6 @@ hr {
 }
 
 .sidebar-folder {
-    border-bottom:1px solid #aaa;
 }
 
 .ev-footer-container {
