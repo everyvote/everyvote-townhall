@@ -14,8 +14,8 @@ angular.module('everyvoteTuresoApp')
       .then(function (candidate) {
         $scope.candidate = candidate;
         $scope.summary = candidate.summary;
-        $scope.truncSummary = candidate.summary.substring(0, 220);
-        if ($scope.summary.length > 220) {
+        $scope.truncSummary = candidate.summary.substring(0, 200);
+        if ($scope.summary.length > 200) {
           $scope.truncSummary = $scope.truncSummary + "...";
           $scope.truncSummaryIsLessThanSummary = true;
         } else {
