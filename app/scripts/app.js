@@ -12,7 +12,8 @@ angular
   .module('everyvoteTuresoApp', [
     'ngAnimate',
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'everyvoteFilters'
   ])
   .constant('POPIT_API', 'http://localhost:9000/api/popit/v0.1')
   .config(function ($routeProvider) {

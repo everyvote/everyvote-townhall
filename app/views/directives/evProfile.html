@@ -15,8 +15,8 @@
           </a>
         </div>
         <div class="profile-summary">
-          <span ng-show="!fullSummary">{{ truncSummary }}</span>
-          <span ng-show="fullSummary">{{ summary }}</span>
+          <span ng-show="!fullSummary">{{ truncSummary | htmlToPlaintext }}</span>
+          <span ng-show="fullSummary">{{ summary | htmlToPlaintext }}</span>
           <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary"
                 ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
           <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary"
@@ -28,10 +28,7 @@
               <td>Party</td>
               <td>Independent</td>
             </tr>
-            <tr>
-              <td>Alterego</td>
-              <td>{{candidate.everyvote.alterego}}</td>
-            </tr>
+            <!--
             <tr>
               <td>Videos</td>
               <td>3</td>
@@ -44,6 +41,7 @@
               <td>Comments</td>
               <td>23</td>
             </tr>
+            -->
           </table>
         </div>
       </div>
