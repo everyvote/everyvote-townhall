@@ -14,14 +14,6 @@
             <h4>{{ candidate.name }}</h4>
           </a>
         </div>
-        <div class="profile-summary">
-          <span ng-show="!fullSummary">{{ truncSummary | htmlToPlaintext }}</span>
-          <span ng-show="fullSummary">{{ summary | htmlToPlaintext }}</span>
-          <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary"
-                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
-          <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary"
-                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-up"></i></span>
-        </div>
         <div class="profile-list">
           <table>
             <tr>
@@ -44,6 +36,14 @@
             -->
           </table>
         </div>
+        <div class="profile-summary">
+          <span ng-show="!fullSummary">{{ truncSummary | htmlToPlaintext }}</span>
+          <span ng-show="fullSummary">{{ summary | htmlToPlaintext }}</span>
+          <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary"
+                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
+          <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary"
+                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-up"></i></span>
+        </div>
       </div>
     </div><!-- /.col-sm-7 -->
     <div class="col-sm-3">
@@ -55,11 +55,13 @@
               <i class="fa fa-fw fa-{{socialLink.note}}"></i>
             </a>
             <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="!socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
-              <i class="fa fa-fw fa-angle-down"></i>
+              <i class="fa fa-fw fa-ellipsis-h"></i>
             </a>
+            <!--
             <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
               <i class="fa fa-fw fa-angle-up"></i>
             </a>
+            -->
         </div>
 
         <p>Save Candidate</p>

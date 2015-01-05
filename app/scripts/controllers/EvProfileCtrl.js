@@ -80,15 +80,14 @@ angular.module('everyvoteTuresoApp')
 
         // remove socialLinks that are duplicate social media websites/methods
         // using the ___ shared by ___ on Stack Overflow - ___
-        console.log($scope.socialLinks);
         $scope.socialLinks = socialLinks.reduce(function(a,b){if(a.indexOf(b)<0)a.push(b);return a;},[]);
-        console.log($scope.socialLinks);
-        $scope.displayedSocialLinks = socialLinks.slice(0,3);
 
-        if ($scope.socialLinks.length > 3) {
+        if ($scope.socialLinks.length > 4) {
           $scope.showMoreSocialIcon = true;
+          $scope.displayedSocialLinks = socialLinks.slice(0,3);
         } else {
           $scope.showMoreSocialIcon = false;
+          $scope.displayedSocialLinks = socialLinks.slice(0,4);
         }
 
         $scope.socialIconsAreDisplayed = false;
@@ -98,7 +97,7 @@ angular.module('everyvoteTuresoApp')
             $scope.displayedSocialLinks = $scope.socialLinks;
             $scope.socialIconsAreDisplayed = true;
           } else {
-            $scope.displayedSocialLinks = $scope.socialLinks.slice(0,3);
+            $scope.displayedSocialLinks = $scope.socialLinks.slice(0,4);
             $scope.socialIconsAreDisplayed = false;
           }
         }

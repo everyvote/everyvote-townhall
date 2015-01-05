@@ -668,6 +668,10 @@ hr {
     text-decoration: none;
 }
 
+.profile a:hover {
+    color: #777;
+}
+
 .profile-picture img {
     margin-bottom: 10px;
 }
