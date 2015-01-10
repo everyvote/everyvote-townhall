@@ -7,12 +7,12 @@
  * # evProfileFolder
  */
 angular.module('everyvoteTuresoApp')
-  .directive('evProfileFolder', function () {
+  .directive('evProfileListingFolder', function () {
     return {
       scope: {
         post: '='
       },
-      templateUrl: 'views/directives/evProfileFolder.html',
+      templateUrl: 'views/directives/evProfileListingFolder.html',
       restrict: 'E',
       controller: function ($scope) {
         $scope.folderExpanded = true;
