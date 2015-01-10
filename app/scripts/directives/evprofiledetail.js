@@ -7,13 +7,13 @@
  * # evProfile
  */
 angular.module('everyvoteTuresoApp')
-  .directive('evProfile', function () {
+  .directive('evProfileDetail', function () {
     return {
       scope: {
         candidateId: '='
       },
       controller: 'EvProfileCtrl',
-      templateUrl: 'views/directives/evProfile.html',
+      templateUrl: 'views/directives/evProfileDetail.html',
       restrict: 'E'
     };
   });

@@ -1,0 +1,76 @@
+<div class="profile clearfix">
+  <div class="profile-row-first">
+
+    <div class="col-sm-2">
+      <a class="profile-picture" href="#/candidates/{{ candidate.id }}">
+        <img src="{{ candidate.image }}" />
+      </a>
+      <div class="clearfix"></div>
+    </div><!-- /.col-sm-2 -->
+    <div class="col-sm-7">
+      <div class="box-padding-sides">
+        <div class="profile-subtitle">
+          <a href="/#/candidates/{{candidate.id}}">
+            <h4>{{ candidate.name }}</h4>
+          </a>
+        </div>
+        <div class="profile-list">
+          <table>
+            <tr>
+              <!-- <td>Party</td> -->
+              <td>Independent LISTING</td>
+            </tr>
+            <!--
+            <tr>
+              <td>Videos</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Questions </td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Comments</td>
+              <td>23</td>
+            </tr>
+            -->
+          </table>
+        </div>
+        <div class="profile-summary">
+          <span ng-show="!fullSummary">{{ truncSummary | htmlToPlaintext }}</span>
+          <span ng-show="fullSummary">{{ summary | htmlToPlaintext }}</span>
+          <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary"
+                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
+          <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary"
+                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-up"></i></span>
+        </div>
+      </div>
+    </div><!-- /.col-sm-7 -->
+    <div class="col-sm-3">
+      <div class="bg-lt-gry box-padding-sides profile-right-col">
+        <div class="profile-stats">
+        </div>
+        <div class="profile-social-icons">
+            <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
+              <i class="fa fa-fw fa-{{socialLink.note}}"></i>
+            </a>
+            <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="!socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
+              <i class="fa fa-fw fa-ellipsis-h"></i>
+            </a>
+            <!--
+            <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
+              <i class="fa fa-fw fa-angle-up"></i>
+            </a>
+            -->
+        </div>
+
+        <p>Save Candidate</p>
+        <ul>
+          <li>Voting For</li>
+          <li>Not Voting For</li>
+        </ul>
+
+      </div>
+    </div><!-- /.col-sm-3 -->
+  </div><!-- /.profile-row-first -->
+</div><!-- /.profile clearfix -->

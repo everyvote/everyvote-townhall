@@ -31,16 +31,17 @@
     <![endif]-->
 
     <!-- Body -->
+
     <div class="ev-body-container" ng-controller="EvPageCtrl">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-9" id="main-col">
           <div class="main-margin">
 
             <!-- Cover img -->
             <div class="cover-img">
               <div class="hidden-xs">
                 <h5><a href="/">NIU > Student Association</a></h5>
-                <h1><a href="/">Fall 2014 Session</a></h1>
+                <h1><a href="/">Spring 2015 Session</a></h1>
               </div>
               <img src="images/shadow.png" class="img-responsive cover-img-shadow" />
               <img src="images/niu.png" class="img-responsive" />
@@ -50,7 +51,7 @@
 
               <div class="visible-xs">
                 <h5>NIU > Student Association</h5>
-                <h1>Fall 2014 Session</h1>
+                <h1>Spring 2015 Session</h1>
               </div>
 
               <!-- Detail Pane -->
@@ -61,10 +62,16 @@
             </div><!-- /.main-content -->
 
           </div><!-- /.main-border -->
+
+          <div class="ev-footer">
+              <a href="#" target="_blank"><img src="images/ev-brand.png" /></a>
+              <div class="clearfix"></div>
+          </div>
+
         </div><!-- /.col-sm-9 -->
 
         <!-- Sidebar Pane -->
-        <div class="col-sm-3 hidden-xs sidebar-pane" ng-include="'views/sidebar.html'" ng-controller="CandidateListingCtrl">
+        <div class="col-sm-3 hidden-xs sidebar-pane" id="sidebar-col" ng-include="'views/sidebar.html'" ng-controller="CandidateListingCtrl">
           <!-- sidebar contents inserted here via app.js routes and templates -->
         </div>
 
@@ -76,9 +83,6 @@
     <div class="ev-footer-container">
         <div class="row">
           <div class="col-xs-12">
-              <div class="ev-footer">
-                  <a href="#" target="_blank"><img src="images/ev-brand.png" /></a>
-              </div>
           </div>
         </div>
     </div><!-- /.ev-footer-container -->
@@ -116,8 +120,9 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/CandidateListingCtrl.js"></script>
         <script src="scripts/controllers/SidebarController.js"></script>
-        <script src="scripts/directives/evprofile.js"></script>
-        <script src="scripts/directives/evprofilefolder.js"></script>
+        <script src="scripts/directives/evprofiledetail.js"></script>
+        <script src="scripts/directives/evprofilelisting.js"></script>
+        <script src="scripts/directives/evprofilelistingfolder.js"></script>
         <script src="scripts/directives/evsidebarprofile.js"></script>
         <script src="scripts/directives/evsidebarprofilefolder.js"></script>
         <script src="scripts/controllers/EvPageCtrl.js"></script>
@@ -127,5 +132,20 @@
         <script src="scripts/controllers/CandidateDetailCtrl.js"></script>
         <script src="scripts/filters.js"></script>
         <!-- endbuild -->
+
+        <script>
+          function resizeToWindow () {
+            windowHeight = $(window).height();
+            $("#main-col").height(windowHeight);
+            $("#sidebar-col").height(windowHeight);
+          }
+
+          resizeToWindow();
+
+          $(window).resize(function() {
+            resizeToWindow();
+          });
+        </script>
+
 </body>
 </html>
