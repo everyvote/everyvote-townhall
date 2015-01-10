@@ -15,7 +15,7 @@ angular
     'ngRoute',
     'everyvoteFilters'
   ])
-  .constant('POPIT_API', 'http://localhost:9000/api/popit/v0.1')
+  .constant('POPIT_API', 'https://everyvote-demo.popit.mysociety.org/api/v0.1')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
