@@ -20,9 +20,9 @@ angular.module('everyvoteTuresoApp')
         $scope.toggleSidebarFolder = function() {
           $scope.sidebarFolderExpanded = (! $scope.sidebarFolderExpanded);
 
-        }
+        };
 
         $scope.post.totalCandidates = $scope.post.candidateIds.length;
       }
-    }
+    };
   });

@@ -16,7 +16,7 @@ angular.module('everyvoteTuresoApp')
         $scope.summary = candidate.summary;
         $scope.truncSummary = candidate.summary.substring(0, 200);
         if ($scope.summary.length > 200) {
-          $scope.truncSummary = $scope.truncSummary + "...";
+          $scope.truncSummary = $scope.truncSummary + '...';
           $scope.truncSummaryIsLessThanSummary = true;
         } else {
           $scope.truncSummaryIsLessThanSummary = false;
@@ -27,11 +27,11 @@ angular.module('everyvoteTuresoApp')
         $scope.socialLinks = candidate.links;
         var socialLinks = candidate.links,
             i,
-            isSupported = ["homepage", "email", "facebook", "twitter",
-                           "linkedin", "reddit", "github", "instagram",
-                           "bitbucket", "googleplus", "pinterest", "skype",
-                           "youtube", "yelp", "tumblr", "stumbleupon",
-                           "stackoverflow", "vine"];
+            isSupported = ['homepage', 'email', 'facebook', 'twitter',
+                           'linkedin', 'reddit', 'github', 'instagram',
+                           'bitbucket', 'googleplus', 'pinterest', 'skype',
+                           'youtube', 'yelp', 'tumblr', 'stumbleupon',
+                           'stackoverflow', 'vine'];
 
         for (i = 0; i < socialLinks.length; i++) {
             socialLinks[i].note = socialLinks[i].note.toLowerCase();
@@ -44,43 +44,43 @@ angular.module('everyvoteTuresoApp')
 
         var stackoverflowPos = socialLinks.map(function(obj) {
           return obj.note;
-        }).indexOf("stackoverflow");
+        }).indexOf('stackoverflow');
 
         if (stackoverflowPos > -1) {
-          socialLinks[stackoverflowPos].note = "stack-overflow";
+          socialLinks[stackoverflowPos].note = 'stack-overflow';
         }
 
         var googlePlusPos = socialLinks.map(function(obj) {
           return obj.note;
-        }).indexOf("googleplus");
+        }).indexOf('googleplus');
 
         if (googlePlusPos > -1) {
-          socialLinks[googlePlusPos].note = "google-plus";
+          socialLinks[googlePlusPos].note = 'google-plus';
         }
 
         var emailPos = socialLinks.map(function(obj) {
           return obj.note;
-        }).indexOf("email");
+        }).indexOf('email');
 
         if (emailPos > -1) {
-          socialLinks[emailPos].note = "envelope";
+          socialLinks[emailPos].note = 'envelope';
         }
 
         // check if "homepage" is a link, then move to front of socialLinks array,
         // also convert socialLink.note to "home" for Font Awesome compatibility
         var homePos = socialLinks.map(function(obj) {
           return obj.note;
-        }).indexOf("homepage");
+        }).indexOf('homepage');
 
         if (homePos > -1) {
           var homeObj = socialLinks.splice(homePos, 1);
-          homeObj[0].note = "home";
+          homeObj[0].note = 'home';
           socialLinks.splice(0, 0, homeObj[0]);
         }
 
         // remove socialLinks that are duplicate social media websites/methods
         // using the ___ shared by ___ on Stack Overflow - ___
-        $scope.socialLinks = socialLinks.reduce(function(a,b){if(a.indexOf(b)<0)a.push(b);return a;},[]);
+        $scope.socialLinks = socialLinks.reduce(function(a,b){if(a.indexOf(b)<0){a.push(b);return a;}},[]);
 
         if ($scope.socialLinks.length > 4) {
           $scope.showMoreSocialIcon = true;
@@ -100,11 +100,11 @@ angular.module('everyvoteTuresoApp')
             $scope.displayedSocialLinks = $scope.socialLinks.slice(0,4);
             $scope.socialIconsAreDisplayed = false;
           }
-        }
+        };
 
         $scope.toggleSummary = function() {
           $scope.fullSummary = (! $scope.fullSummary);
-        }
+        };
 
       });
 

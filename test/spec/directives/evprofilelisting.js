@@ -1,10 +1,10 @@
 'use strict';
 
-describe('Directive: evProfile', function () {
+describe('Directive: evProfileListing', function () {
 
   // load the directive's module
   beforeEach(module('everyvoteTuresoApp'));
-  beforeEach(module('views/directives/evProfile.html'));
+  beforeEach(module('views/directives/evProfileListing.html'));
 
   var element,
     scope;
@@ -19,7 +19,7 @@ describe('Directive: evProfile', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<ev-profile candidateId="candidateId"></ev-profile>');
+    element = angular.element('<ev-profile-listing candidateId="candidateId"></ev-profile-listing>');
     element = $compile(element)(scope);
     scope.$apply();
   }));
