@@ -881,9 +881,9 @@ hr {
     }
 }
 
-@media (min-width:768px) and (max-width:795px) {
+@media (min-width:768px) {
     .functions-menu {
-        max-height: none;
+        margin-bottom: 10px;
     }
 }
 
@@ -1245,6 +1245,6 @@ hr {
 }
 
 .candidate-text {
-  margin: 15px 10px 15px 0;
+  margin: 0 10px 15px 0;
   clear: both;
 }
