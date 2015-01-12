@@ -1,14 +1,46 @@
 <div class="profile clearfix">
-  <div class="profile-row-first">
 
-    <div class="col-sm-2">
+    <div class="col-sm-2 hidden-xs">
       <a class="profile-picture" href="#/candidates/{{ candidate.id }}">
         <img src="{{ candidate.image }}" />
+        <div class="clearfix"></div>
       </a>
-      <div class="clearfix"></div>
     </div><!-- /.col-sm-2 -->
+
+    <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
     <div class="col-sm-7">
       <div class="box-padding-sides">
+        <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
+          <img src="{{ candidate.image }}" />
+        </a>
+
+        <div class="dropdown functions-dropdown hidden-sm hidden-md hidden-lg">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-fw fa-ellipsis-h"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <div class="bg-lt-gry box-padding-sides functions-menu">
+              <div class="profile-social-icons">
+                  <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
+                    <i class="fa fa-fw fa-{{socialLink.note}}"></i>
+                  </a>
+                  <!--
+                  <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
+                    <i class="fa fa-fw fa-angle-up"></i>
+                  </a>
+                  -->
+              </div>
+
+              <p>Save Candidate</p>
+              <ul>
+                <li>Voting For</li>
+                <li>Not Voting For</li>
+              </ul>
+
+            </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
+          </ul>
+        </div>
+
         <div class="profile-subtitle">
           <a href="/#/candidates/{{candidate.id}}">
             <h4>{{ candidate.name }}</h4>
@@ -36,22 +68,10 @@
             -->
           </table>
         </div>
-        <div class="candidate-text">
-          <h7>Summary</h7>
-          <p>If the first woman God ever made was strong enough to turn the world upside down all alone, these women together ought to be able to turn it back, and get it right side up again! And now they is asking to do it, the men better let them.</p>
-        </div>
-        <div class="candidate-text">
-          <h7>Experience</h7>
-          <p>Proin congue lectus risus, id vulputate nisi fringilla et. Sed fringilla quam magna, vitae facilisis turpis dignissim et. Mauris sit amet bibendum lacus. Morbi consectetur lacus venenatis sapien finibus, et mattis nulla viverra. Aenean dictum molestie ligula vitae ultrices. Sed molestie nunc ac aliquet tincidunt.</p>
-        </div>
-        <div class="candidate-text">
-          <h7>Goals</h7>
-          <p>Proin congue lectus risus, id vulputate nisi fringilla et. Sed fringilla quam magna, vitae facilisis turpis dignissim et. Mauris sit amet bibendum lacus. Morbi consectetur lacus venenatis sapien finibus, et mattis nulla viverra. Aenean dictum molestie ligula vitae ultrices. Sed molestie nunc ac aliquet tincidunt.</p>
-        </div>
       </div>
     </div><!-- /.col-sm-7 -->
-    <div class="col-sm-3">
-      <div class="bg-lt-gry box-padding-sides profile-right-col">
+    <div class="col-sm-3 hidden-xs">
+      <div class="bg-lt-gry box-padding-sides functions-menu">
         <div class="profile-stats">
         </div>
         <div class="profile-social-icons">
@@ -74,8 +94,22 @@
           <li>Not Voting For</li>
         </ul>
 
-      </div>
+      </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
     </div><!-- /.col-sm-3 -->
-  </div><!-- /.profile-row-first -->
+    <div class="col-xs-12">
+      <div class="candidate-text">
+        <h7>Summary</h7>
+        <p>{{ candidate.summary | htmlToPlaintext }}</p>
+      </div>
+      <div class="candidate-text">
+        <h7>Experience</h7>
+        <p>Proin congue lectus risus, id vulputate nisi fringilla et. Sed fringilla quam magna, vitae facilisis turpis dignissim et. Mauris sit amet bibendum lacus. Morbi consectetur lacus venenatis sapien finibus, et mattis nulla viverra. Aenean dictum molestie ligula vitae ultrices. Sed molestie nunc ac aliquet tincidunt.</p>
+      </div>
+      <div class="candidate-text">
+        <h7>Goals</h7>
+        <p>Proin congue lectus risus, id vulputate nisi fringilla et. Sed fringilla quam magna, vitae facilisis turpis dignissim et. Mauris sit amet bibendum lacus. Morbi consectetur lacus venenatis sapien finibus, et mattis nulla viverra. Aenean dictum molestie ligula vitae ultrices. Sed molestie nunc ac aliquet tincidunt.</p>
+      </div>
+    </div>
 
 </div><!-- /.profile clearfix -->
+

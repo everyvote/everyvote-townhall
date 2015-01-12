@@ -1,14 +1,46 @@
 <div class="profile clearfix">
-  <div class="profile-row-first">
 
-    <div class="col-sm-2">
+    <div class="col-sm-2 hidden-xs">
       <a class="profile-picture" href="#/candidates/{{ candidate.id }}">
         <img src="{{ candidate.image }}" />
+        <div class="clearfix"></div>
       </a>
-      <div class="clearfix"></div>
     </div><!-- /.col-sm-2 -->
+
+    <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
     <div class="col-sm-7">
       <div class="box-padding-sides">
+        <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
+          <img src="{{ candidate.image }}" />
+        </a>
+
+        <div class="dropdown functions-dropdown hidden-sm hidden-md hidden-lg">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-fw fa-ellipsis-h"></i>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <div class="bg-lt-gry box-padding-sides functions-menu">
+              <div class="profile-social-icons">
+                  <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
+                    <i class="fa fa-fw fa-{{socialLink.note}}"></i>
+                  </a>
+                  <!--
+                  <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
+                    <i class="fa fa-fw fa-angle-up"></i>
+                  </a>
+                  -->
+              </div>
+
+              <p>Save Candidate</p>
+              <ul>
+                <li>Voting For</li>
+                <li>Not Voting For</li>
+              </ul>
+
+            </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
+          </ul>
+        </div>
+
         <div class="profile-subtitle">
           <a href="/#/candidates/{{candidate.id}}">
             <h4>{{ candidate.name }}</h4>
@@ -36,18 +68,15 @@
             -->
           </table>
         </div>
-        <div class="profile-summary">
+
+        <div class="profile-summary" style="cursor:pointer" ng-click="toggleSummary();">
           <span ng-show="!fullSummary">{{ truncSummary | htmlToPlaintext }}</span>
           <span ng-show="fullSummary">{{ summary | htmlToPlaintext }}</span>
-          <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary"
-                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
-          <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary"
-                ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-up"></i></span>
         </div>
       </div>
     </div><!-- /.col-sm-7 -->
-    <div class="col-sm-3">
-      <div class="bg-lt-gry box-padding-sides profile-right-col">
+    <div class="col-sm-3 hidden-xs">
+      <div class="bg-lt-gry box-padding-sides functions-menu">
         <div class="profile-stats">
         </div>
         <div class="profile-social-icons">
@@ -70,7 +99,7 @@
           <li>Not Voting For</li>
         </ul>
 
-      </div>
+      </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
     </div><!-- /.col-sm-3 -->
-  </div><!-- /.profile-row-first -->
+
 </div><!-- /.profile clearfix -->

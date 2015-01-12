@@ -36,8 +36,7 @@ angular.module('everyvoteTuresoApp')
             candidateIds: [
               '548e4eeaad8307d10c2f19f2',
               '548e5d34ad8307d10c2f19fa',
-              '548e4bbcad8307d10c2f19ec',
-              '548e6056ad8307d10c2f1a06',
+              '548e4bbcad8307d10c2f19ec'
             ]
           },
           {
@@ -45,6 +44,7 @@ angular.module('everyvoteTuresoApp')
             candidateIds: [
               '548e5ee9ad8307d10c2f1a02',
               '548e4a16ad8307d10c2f19ea',
+              '548e6056ad8307d10c2f1a06',
               '548e4c89ad8307d10c2f19ee'
             ]
           },

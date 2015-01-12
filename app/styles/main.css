@@ -679,8 +679,13 @@ hr {
     color: #777;
 }
 
+.profile-picture {
+    float: left;
+    display: block;
+}
+
 .profile-picture img {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .profile-folder-bar {
@@ -741,16 +746,14 @@ hr {
 
 @media (max-width:767px) {
   .profile img {
-        float: left;
         margin-right: 15px;
-        width: 100px;
+        max-width: 55px;
         box-shadow: #bbb 2px 2px 1px 0px;
   }
 }
 
 @media (min-width:768px) {
   .profile img {
-        float: left;
         margin-right: 15px;
         width: 90%;
         box-shadow: #bbb 2px 2px 1px 0px;
@@ -848,20 +851,38 @@ hr {
     text-align: center;
 }
 
-.profile-right-col {
+.functions-dropdown {
+    float: right;
+}
+
+.functions-dropdown button {
+    border: 1px solid #ccc;
+    color: #aaa;
+}
+
+.functions-dropdown > ul {
+    margin-left: -98px !important;
+    padding: 0 !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    min-width: 0 !important;
+}
+
+.functions-menu {
     font-size: 13px;
     padding-bottom: 4px;
 }
 
 @media (max-width:767px) {
-    .profile-right-col {
-        padding-right:10px;
-        padding-left:10px;
+    .functions-menu {
+        padding-left: 10px;
+        padding-right: 0;
     }
 }
 
 @media (min-width:768px) and (max-width:795px) {
-    .profile-right-col {
+    .functions-menu {
         max-height: none;
     }
 }
@@ -872,11 +893,11 @@ hr {
     color: #888;
 }
 
-.profile-right-col ul {
+.functions-menu ul {
     list-style: none;
 }
 
-.profile-right-col li {
+.functions-menu li {
     color: #777;
     font-size: 1em;
     margin-bottom: 6px;
@@ -950,7 +971,8 @@ hr {
 @media (max-width:767px) {
     .profile-summary {
         /* overflow: auto; */
-        display: none;
+        /*display: none;*/
+        clear: both;
     }
 }
 
@@ -958,6 +980,7 @@ hr {
    font-size: 12px;
    color: #666;
    margin-bottom: 10px;
+   overflow: hidden;
 }
 
 .profile-list table {
@@ -992,7 +1015,7 @@ hr {
   }
 }
 
-.profile-right-col i {
+.functions-menu i {
     font-size: 17px;
 }
 
@@ -1040,12 +1063,26 @@ hr {
     border-top: 1px solid #ccc;
 }
 
+.xs-show-functions-btn {
+    height: 42px;
+    width: 42px;
+    float: right;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+
+.xs-functions-menu {
+    float: right;
+}
+
 .sidebar-pane {
 
 }
 
 #sidebar-nav {
     border-left: 1px solid #ccc;
+    padding-bottom: 30px;
     overflow-y: scroll;
 }
 
@@ -1104,12 +1141,16 @@ hr {
     padding: 3px 15px;
 }
 
+.sidebar-bar-divider {
+    clear: both;
+    height: 1px;
+    border-top: 1px solid #ccc;
+}
+
 .sidebar-bar-button {
     padding: 4px 9px;
-    margin-right: 1px;
+    margin-right: 2px;
     background-color: #f5f5f5;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
     clear: both;
     cursor: pointer;
 }
@@ -1204,5 +1245,6 @@ hr {
 }
 
 .candidate-text {
-  margin:15px 10px 15px 0;
+  margin: 15px 10px 15px 0;
+  clear: both;
 }

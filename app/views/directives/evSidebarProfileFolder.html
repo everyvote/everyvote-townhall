@@ -1,4 +1,5 @@
 <!-- #sidebar-#-bar is the button that shows or hides sidebar-# onclick -->
+<div class="sidebar-bar-divider"></div>
 <div class="sidebar-bar-button click-me-color" ng-click="toggleSidebarFolder()">
   <h3>
     <i class="fa fa-minus-square-o" ng-show="sidebarFolderExpanded" ></i>
@@ -7,6 +8,7 @@
     <span style="float:right;">{{ post.totalCandidates }}</span>
   </h3>
 </div>
+<div class="sidebar-bar-divider" ng-show="sidebarFolderExpanded"></div>
 <div class="sidebar-folder" ng-show="sidebarFolderExpanded">
   <ev-sidebar-profile candidate-id="candidateId" ng-repeat="candidateId in post.candidateIds" /></ev-sidebar-profile>
 </div><!-- /#sidebar-# -->
