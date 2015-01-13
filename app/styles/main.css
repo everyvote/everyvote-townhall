@@ -145,6 +145,14 @@ hr {
   border: 1px solid #e7e7e7;
 }
 
+.dark-links a {
+    color: #000;
+}
+
+.dark-links a:hover {
+    color: #555;
+}
+
 .box-padding-sides {
   padding-left: 10px;
   padding-right: 10px;
@@ -1247,4 +1255,19 @@ hr {
 .candidate-text {
   margin: 0 10px 15px 0;
   clear: both;
+}
+
+/* jQuery-Stickem by davist11 https://github.com/davist11/jQuery-Stickem */
+.stickem-container {
+
+}
+
+.stickit {
+    position: fixed;
+    top: 0;
+}
+
+.stickit-end {
+    position: absolute;
+    right: 0;
 }
