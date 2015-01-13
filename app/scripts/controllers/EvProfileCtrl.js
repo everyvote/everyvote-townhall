@@ -8,7 +8,20 @@
  * Controller of the everyvoteTuresoApp
  */
 angular.module('everyvoteTuresoApp')
-  .controller('EvProfileCtrl', function ($scope, CandidateService) {
+  .controller('EvProfileCtrl', function ($scope, CandidateService, $routeParams) {
+
+    //
+    //
+    //
+    function checkIfOnDetailPage () {
+      $scope.isFocused = ($routeParams.id === $scope.candidateId);
+    }
+
+    checkIfOnDetailPage();
+    $scope.$on('$routeChangeSuccess', checkIfOnDetailPage);
+    //
+    //
+    //
 
     CandidateService.getCandidate($scope.candidateId)
       .then(function (candidate) {
