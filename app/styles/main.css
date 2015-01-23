@@ -22,22 +22,28 @@ h1 a:hover {
 }
 
 h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-family: 'Lora', serif;
+    font-size: 16px;
     letter-spacing: .04em;
     text-transform: uppercase;
     font-weight: 800 !important;
-    margin-top: 0 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 15px;
+    width: auto;
+    padding: 0 10px;
+    margin-top: -34px;
+    margin-left: -10px;
+    background: white;
+    float: left;
 }
 
 h3 {
   font-family: 'Open Sans' 'Lora', sans-serif;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 15px;
   /* text-transform: uppercase; */
   letter-spacing: .06em;
 }
@@ -45,8 +51,8 @@ h3 {
 h4 {
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 5px !important;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 17px;
     margin-top: 0px;
 }
 
@@ -142,7 +148,6 @@ hr {
 
 .bg-lt-gry {
   background-color: #F4F5F5 !important;
-  border: 1px solid #e7e7e7;
 }
 
 .dark-links a {
@@ -153,13 +158,14 @@ hr {
     color: #555;
 }
 
-.box-padding-sides {
-  padding-left: 10px;
-  padding-right: 10px;
+.profile-main-content {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 @media (max-width:767px) {
-    .box-padding-sides {
+    .profile-main-content {
       padding-left: 0;
       padding-right: 0;
     }
@@ -632,6 +638,27 @@ hr {
 
 /*----MAIN CONTENT----*/
 
+.ev-content {
+    border: 1px solid #999;
+    padding: 25px 20px;
+    margin: 0 0 40px 0;
+}
+
+.ev-content-voting-info {
+    background-color: #ccc;
+    padding:20px;
+}
+
+.ev-content-summary {
+    margin: 0 0 0 25px;
+}
+
+.main-sort-by {
+    margin: -8px 0 17px 0;
+    clear: left;
+    font-size: 13px;
+}
+
 .main-content {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -697,13 +724,15 @@ hr {
 }
 
 .profile-folder-bar {
-    width:100%;
-    border-bottom: 1px dotted #A0A0A0;
-    margin:20px 0;
-    padding: 3px 0px;
+    border: 1px solid #ccc;
+    margin: 0 0 5px 0;
+    padding: 3px 10px;
     color: #252525;
-    cursor:pointer;
+    cursor: pointer;
     transition: .3s;
+    background-color: #f7f7f7;
+    float: left;
+    font-size: 14px;
 }
 
 .profile-folder-bar:hover {
@@ -712,12 +741,20 @@ hr {
 
 .profile-folder-bar-number {
     float:right;
-    margin:0 0 0 20px;
+    margin:0 0 0 15px;
     text-transform: lowercase;
 }
 
+.profile-folder-divider {
+    clear: both;
+    border-top: 1px solid #ccc;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+
+}
+
 .caret-width {
-    width: 20px;
+    width: 15px;
     display:inline-block;
 }
 
@@ -737,8 +774,8 @@ hr {
 }
 
 .profile {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    float:left;
+    margin: 5px 0 20px  0;
     clear:both;
 }
 
@@ -805,7 +842,7 @@ hr {
 
 @media (min-width:768px) {
     .profile-subtitle {
-        margin: 0 0 10px 0;
+        margin: 5px 0 1px 0;
     }
 }
 
@@ -877,9 +914,14 @@ hr {
     min-width: 0 !important;
 }
 
+.functions-dropdown-padding-sides {
+    padding: 0 10px;
+}
+
 .functions-menu {
     font-size: 13px;
-    padding-bottom: 4px;
+    padding: 0 10px 4px 10px;
+    height: 109px;
 }
 
 @media (max-width:767px) {
@@ -908,12 +950,9 @@ hr {
 .functions-menu li {
     color: #777;
     font-size: 1em;
-    margin-bottom: 6px;
-    background: #FAFAFA;
-    border: 1px solid #CFCFCF;
+    margin-bottom: 5px;
     border-radius: 3px;
     padding: 2px 5px;
-    max-width: 120px;
 }
 
 .group {
@@ -973,7 +1012,7 @@ hr {
 .profile-summary {
     font-size: 12px;
     max-width: 550px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 @media (max-width:767px) {
@@ -987,7 +1026,7 @@ hr {
 .profile-list {
    font-size: 12px;
    color: #666;
-   margin-bottom: 10px;
+   margin-bottom: 7px;
    overflow: hidden;
 }
 
@@ -1024,17 +1063,18 @@ hr {
 }
 
 .functions-menu i {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .profile-social-icons {
-    width: 130px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
 }
 
 .profile-social-icons a {
   display:inline-block;
-  margin-right: 10px;
+  margin-right: 13px;
   margin-top: 10px;
 }
 
@@ -1123,6 +1163,43 @@ hr {
 .sidebar-dropdown a {
     color:#eaeaea;
     text-decoration:none;
+}
+
+.sidebar-nav-scroll {
+    background: #eee;
+    border-bottom: 1px solid #bbb;
+    margin-right: 1px;
+}
+
+.sidebar-nav-scroll-button {
+    float: right;
+    clear: both;
+}
+
+.sidebar-nav-scroll-button-up {
+    float:right;
+    padding: 0 8px 0px 10px;
+    border-left: 1px solid #bbb;
+}
+
+.sidebar-nav-scroll-button-divider {
+    border-top: 1px solid #bbb;
+    clear: both;
+    margin: 0;
+}
+
+.sidebar-nav-scroll-button-down {
+    float:right;
+    padding: 0px 8px 0 10px;
+    border-left: 1px solid #bbb;
+}
+
+.sidebar-title {
+    clear: both;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    padding: 7px 0;
 }
 
 .sidebar-sort-by {

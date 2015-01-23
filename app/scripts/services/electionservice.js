@@ -25,16 +25,16 @@ angular.module('everyvoteTuresoApp')
           {
             name: 'President',
             candidateIds: [
+              '548e4fa4ad8307d10c2f19f4',
               '548e5dd2ad8307d10c2f19fc',
               '548e5c3fad8307d10c2f19f8',
-              '548e5e35ad8307d10c2f19fe',
-              '547bd934bbdd16e9231c1630'
+              '548e5e35ad8307d10c2f19fe'
             ]
           },
           {
             name: 'Vice President',
             candidateIds: [
-              '548e4eeaad8307d10c2f19f2',
+              '548e5026ad8307d10c2f19f6',
               '548e5d34ad8307d10c2f19fa',
               '548e4bbcad8307d10c2f19ec'
             ]
@@ -61,8 +61,8 @@ angular.module('everyvoteTuresoApp')
             name: 'Senator - District 1',
             candidateIds: [
               '548e5fe5ad8307d10c2f1a04',
-              '548e4fa4ad8307d10c2f19f4',
-              '548e5026ad8307d10c2f19f6'
+              '547bd934bbdd16e9231c1630',
+              '548e4eeaad8307d10c2f19f2',
             ]
           }
         ]

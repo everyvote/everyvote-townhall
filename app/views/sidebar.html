@@ -1,6 +1,14 @@
 <nav id="sidebar-nav" class="affix stickem-container" data-spy="affix" data-offset-top="0">
-  <div style="">
-    Candidates
+  <div class="sidebar-nav-scroll">
+    <div class="sidebar-nav-scroll-button">
+      <i class="fa fa-caret-up sidebar-nav-scroll-button-up"></i>
+      <hr class="sidebar-nav-scroll-button-divider">
+      <i class="fa fa-caret-down sidebar-nav-scroll-button-down"></i>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="sidebar-title">
+    CANDIDATES
   </div>
   <ev-sidebar-profile-folder post="post" ng-repeat="post in posts" />
   </ev-sidebar-profile-folder>

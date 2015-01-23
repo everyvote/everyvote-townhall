@@ -4,9 +4,12 @@
     <i class="fa fa-caret-down caret-width" ng-show="folderExpanded"></i>
     <i class="fa fa-caret-right caret-width" ng-show="!folderExpanded"></i>
     {{ post.name }}
-    <span class="profile-folder-bar-number">{{ post.totalCandidates }}</span>
+    <span class="profile-folder-bar-number">({{ post.totalCandidates }})</span>
   </h3>
 </div>
+<hr class="profile-folder-divider">
 <div class="profile-folder" ng-show="folderExpanded">
+  <div style="height: 7px;"></div>
   <ev-profile-listing candidate-id="candidateId" ng-repeat="candidateId in post.candidateIds" /></ev-profile-listing>
+  <div class="clearfix"></div>
 </div><!-- /.profile-folder -->

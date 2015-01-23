@@ -9,7 +9,7 @@
 
     <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
     <div class="col-sm-7">
-      <div class="box-padding-sides">
+      <div class="profile-main-content">
         <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
           <img src="{{ candidate.image }}" />
         </a>
@@ -73,12 +73,10 @@
           <span ng-show="!fullSummary">{{ truncSummary | htmlToPlaintext }}</span>
           <span ng-show="fullSummary">{{ summary | htmlToPlaintext }}</span>
         </div>
-      </div>
+      </div><!-- /.box-padding-sides -->
     </div><!-- /.col-sm-7 -->
     <div class="col-sm-3 hidden-xs">
-      <div class="bg-lt-gry box-padding-sides functions-menu">
-        <div class="profile-stats">
-        </div>
+      <div class="bg-lt-gry functions-menu">
         <div class="profile-social-icons">
             <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
               <i class="fa fa-fw fa-{{socialLink.note}}"></i>
@@ -93,10 +91,9 @@
             -->
         </div>
 
-        <p>Save Candidate</p>
         <ul>
-          <li>Voting For</li>
-          <li>Not Voting For</li>
+          <li><i class="fa fa-check"></i> &nbsp; Voting For</li>
+          <li><i class="fa fa-check"></i> &nbsp; Not Voting For</li>
         </ul>
 
       </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->

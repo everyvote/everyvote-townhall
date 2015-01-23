@@ -1,18 +1,38 @@
-<h2>Election</h2>
-<p><b>Voting begins in 58 days and 6 hours</b></p>
-<p>
-  <b>Voting Days</b><br>
-  October 23, 9AM - 5PM<br>
-  October 24, 7AM - 7PM<br>
-  October 25, 9AM - 5PM
-</p>
-<p>
-  <span ng-show="!fullSummary">{{ truncSummary }}</span>
-  <span ng-show="fullSummary">{{ summary }}</span>
-  <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
-  <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-up"></i></span>
-</p>
-<h2>Candidates</h2>
-<p class="main-sort-by">Sort by: <a>random</a></p>
+<div class="ev-content">
+  <h2 class="ev-content-header">Election</h2>
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="ev-content-voting-info">
+        <p><em>Voting begins in 58 days and 6 hours</em></p>
+        <p>
+          <div style="padding-bottom: 5px;"><b>Voting Days</b></div>
+          <div>
+            October 23 (9AM - 5PM)
+            October 24 (7AM - 7PM)
+            October 25 (9AM - 5PM)
+          </div>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="ev-content-summary">
+        <p>
+        <span>{{ summary }}</span>
+        <!-- truncated summary code we may or may not want to use later -->
+        <!-- <span ng-show="!fullSummary">{{ truncSummary }}</span>
+          <span ng-show="fullSummary">{{ summary }}</span>
+          <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
+          <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-up"></i></span> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!-- /.ev-content -->
+<div class="clearfix"></div>
+<div class="ev-content">
+  <h2>Candidates</h2>
+  <p class="main-sort-by">sort by: <a>random</a></p>
 
-<ev-profile-listing-folder post="post" ng-repeat="post in posts" /></ev-profile-listing-folder>
+  <ev-profile-listing-folder post="post" ng-repeat="post in posts" /></ev-profile-listing-folder>
+</div><!-- /.ev-content -->
