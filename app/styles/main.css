@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-top: 0;
@@ -22,7 +22,7 @@ h1 a:hover {
 }
 
 h2 {
-    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 16px;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -39,7 +39,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Open Sans' 'Lora', sans-serif;
+  font-family: 'Open Sans' 'Playfair Display', sans-serif;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
   font-weight: 600;
@@ -57,7 +57,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-size: 14px;
     letter-spacing: .01em;
     margin-top: 0;
@@ -209,7 +209,7 @@ hr {
     border-right:none;
     border-bottom: none;
     border-left:none;
-    font-family:"Lora", sans-serif;
+    font-family:"Playfair Display", sans-serif;
     z-index: 9999;
     max-width:1080px;
 }
@@ -455,7 +455,7 @@ hr {
 .tab-bar {
     height:36px;
     line-height:36px;
-    font-family: 'Lora', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-size: 14px;
     letter-spacing: .03em;
     text-shadow: 1px 1px 2px rgba(0,0,0,.9);
@@ -702,7 +702,7 @@ hr {
 
 .groups-search {
     margin:20px 0;
-    font-family:"Lora", sans-serif;
+    font-family:"Playfair Display", sans-serif;
 }
 
 .profile a {
@@ -1084,7 +1084,7 @@ hr {
 
 .profile-page-title {
     float:left;
-    font-family:"Lora", sans-serif;
+    font-family:"Playfair Display", sans-serif;
     font-size:22px;
     font-weight:700;
 }
@@ -1197,7 +1197,7 @@ hr {
 .sidebar-title {
     clear: both;
     text-align: center;
-    font-family: "Lora", serif;
+    font-family: "Playfair Display", serif;
     font-weight: 700;
     padding: 7px 0;
 }
