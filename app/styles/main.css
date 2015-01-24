@@ -22,20 +22,21 @@ h1 a:hover {
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
+    font-family: 'Playfair Display',serif;
+    font-size: 17px;
     letter-spacing: .04em;
     text-transform: uppercase;
-    font-weight: 800 !important;
+    font-weight: 800!important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 15px;
     width: auto;
     padding: 0 10px;
-    margin-top: -34px;
+    margin-top: -37px;
     margin-left: -10px;
-    background: white;
+    background: #fff;
     float: left;
+    color: black;
 }
 
 h3 {
@@ -599,19 +600,25 @@ hr {
 }
 
 .cover-img h1 {
-    bottom: 0px;
+    bottom: 5px;
     left: 25px;
     position: absolute;
     z-index: 99999;
     text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .cover-img h5 {
-    bottom: 50px;
+    bottom: 43px;
     left: 25px;
     position: absolute;
     z-index: 99999;
     text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 13px;
 }
 
 .cover-img-shadow {
@@ -660,7 +667,7 @@ hr {
 }
 
 .main-content {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
@@ -1200,6 +1207,7 @@ hr {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     padding: 7px 0;
+    font-size: 15px;
 }
 
 .sidebar-sort-by {
