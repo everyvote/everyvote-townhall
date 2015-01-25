@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Cardo', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-top: 0;
@@ -22,7 +22,7 @@ h1 a:hover {
 }
 
 h2 {
-    font-family: 'Playfair Display',serif;
+    font-family: 'Cardo',serif;
     font-size: 17px;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -40,7 +40,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Open Sans' 'Playfair Display', sans-serif;
+  font-family: 'Open Sans' 'Cardo', sans-serif;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
   font-weight: 600;
@@ -58,7 +58,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Cardo', sans-serif;
     font-size: 14px;
     letter-spacing: .01em;
     margin-top: 0;
@@ -210,7 +210,7 @@ hr {
     border-right:none;
     border-bottom: none;
     border-left:none;
-    font-family:"Playfair Display", sans-serif;
+    font-family:"Cardo", sans-serif;
     z-index: 9999;
     max-width:1080px;
 }
@@ -456,7 +456,7 @@ hr {
 .tab-bar {
     height:36px;
     line-height:36px;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Cardo', sans-serif;
     font-size: 14px;
     letter-spacing: .03em;
     text-shadow: 1px 1px 2px rgba(0,0,0,.9);
@@ -624,7 +624,11 @@ hr {
 .cover-img-shadow {
     position: absolute;
     z-index: 9999;
-    opacity: .8;
+    opacity: .3;
+    top: 112px;
+    height: 72px;
+    background-color: black;
+    width: 100%;
 }
 
 #sidebar-col {
@@ -709,7 +713,7 @@ hr {
 
 .groups-search {
     margin:20px 0;
-    font-family:"Playfair Display", sans-serif;
+    font-family:"Cardo", sans-serif;
 }
 
 .profile a {
@@ -722,7 +726,6 @@ hr {
 }
 
 .profile-picture {
-    float: left;
     display: block;
 }
 
@@ -733,13 +736,32 @@ hr {
 .profile-folder-bar {
     border: 1px solid #ccc;
     margin: 0 0 5px 0;
-    padding: 3px 10px;
+    padding: 3px 40px 3px 10px;
     color: #252525;
     cursor: pointer;
     transition: .3s;
     background-color: #f7f7f7;
     float: left;
     font-size: 14px;
+    position: relative;
+}
+
+.profile-folder-bar:before {
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    content: '';
+    border-top: 34px solid silver;
+    border-left: 35px solid transparent;
+}
+
+.profile-folder-bar:after {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    content: '';
+    border-top: 34px solid white;
+    border-left: 35px solid transparent;
 }
 
 .profile-folder-bar:hover {
@@ -784,6 +806,7 @@ hr {
     float:left;
     margin: 5px 0 20px  0;
     clear:both;
+    width: 100%;
 }
 
 @media (min-width:768px) {
@@ -1077,6 +1100,8 @@ hr {
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
+    width: 100%;
+    height: 34px;
 }
 
 .profile-social-icons a {
@@ -1091,7 +1116,7 @@ hr {
 
 .profile-page-title {
     float:left;
-    font-family:"Playfair Display", sans-serif;
+    font-family:"Cardo", sans-serif;
     font-size:22px;
     font-weight:700;
 }
@@ -1204,7 +1229,7 @@ hr {
 .sidebar-title {
     clear: both;
     text-align: center;
-    font-family: "Playfair Display", serif;
+    font-family: "Cardo", serif;
     font-weight: 700;
     padding: 7px 0;
     font-size: 15px;
