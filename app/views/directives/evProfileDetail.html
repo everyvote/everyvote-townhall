@@ -1,4 +1,4 @@
-<div class="profile clearfix">
+<div style="padding-top: 0;" class="profile clearfix">
 
     <div class="col-sm-2 hidden-xs">
       <a class="profile-picture" href="#/candidates/{{ candidate.id }}">
@@ -9,7 +9,7 @@
 
     <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
     <div class="col-sm-7">
-      <div class="profile-main-content">
+      <div class="profile-detail-content">
         <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
           <img src="{{ candidate.image }}" />
         </a>
@@ -68,12 +68,6 @@
             -->
           </table>
         </div>
-
-        <div class="profile-summary">
-          <br>
-          <br>
-          <br>
-        </div>
       </div><!-- /.box-padding-sides -->
     </div><!-- /.col-sm-7 -->
     <div class="col-sm-3 hidden-xs">
@@ -99,18 +93,22 @@
 
       </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
     </div><!-- /.col-sm-3 -->
+
+    <div class="clearfix"></div>
     <div class="col-xs-12">
-      <div class="candidate-text">
-        <h7>Summary</h7>
-        <p>{{ candidate.summary | htmlToPlaintext }}</p>
-      </div>
-      <div class="candidate-text">
-        <h7>Experience</h7>
-        <p>Proin congue lectus risus, id vulputate nisi fringilla et. Sed fringilla quam magna, vitae facilisis turpis dignissim et. Mauris sit amet bibendum lacus. Morbi consectetur lacus venenatis sapien finibus, et mattis nulla viverra. Aenean dictum molestie ligula vitae ultrices. Sed molestie nunc ac aliquet tincidunt.</p>
-      </div>
-      <div class="candidate-text">
-        <h7>Goals</h7>
-        <p>Proin congue lectus risus, id vulputate nisi fringilla et. Sed fringilla quam magna, vitae facilisis turpis dignissim et. Mauris sit amet bibendum lacus. Morbi consectetur lacus venenatis sapien finibus, et mattis nulla viverra. Aenean dictum molestie ligula vitae ultrices. Sed molestie nunc ac aliquet tincidunt.</p>
+      <div class="profile-detail-content">
+        <div class="candidate-text">
+          <h7>Summary</h7>
+          <p>{{ candidate.summary | htmlToPlaintext }}</p>
+        </div>
+        <div class="candidate-text">
+          <h7>Experience</h7>
+          <p>{{ candidate.summary | htmlToPlaintext }}</p>
+        </div>
+        <div class="candidate-text">
+          <h7>Goals</h7>
+          <p>{{ candidate.summary | htmlToPlaintext }}</p>
+        </div>
       </div>
     </div>
 

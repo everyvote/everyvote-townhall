@@ -22,7 +22,7 @@ h1 a:hover {
 }
 
 h2 {
-    font-family: 'Cardo',serif;
+    font-family: 'Cardo', serif;
     font-size: 17px;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -32,11 +32,19 @@ h2 {
     height: 15px;
     width: auto;
     padding: 0 10px;
-    margin-top: -37px;
+    margin-top: -36px;
     margin-left: -10px;
     background: #fff;
     float: left;
     color: black;
+}
+
+@media (max-width: 767px) {
+    h2 {
+        margin: 0 0 20px 0;
+        padding: 0;
+        font-size: 20px;
+    }
 }
 
 h3 {
@@ -121,13 +129,6 @@ hr {
     margin:0 !important;
 }
 
-@media (max-width:520px) {
-    .col-xs-12 {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-}
-
 .bg-dk-gry-gradient {
     background-image: -webkit-gradient(
         linear,
@@ -162,13 +163,20 @@ hr {
 .profile-main-content {
   margin-left: 10px;
   margin-right: 10px;
-  border-bottom: 1px solid #ccc;
 }
 
 @media (max-width:767px) {
     .profile-main-content {
       padding-left: 0;
       padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-detail-content {
+        margin: 0 15px;
     }
 }
 
@@ -625,10 +633,14 @@ hr {
     position: absolute;
     z-index: 9999;
     opacity: .3;
-    top: 112px;
+    bottom: 0;
     height: 72px;
     background-color: black;
     width: 100%;
+}
+
+.cover-img-text {
+    bottom: 0;
 }
 
 #sidebar-col {
@@ -639,11 +651,15 @@ hr {
 
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .main-content h1 {
+        margin: 0 15px;
+        font-size: 20px;
+        font-weight: 700;
     }
     .main-content h5 {
-        margin:0 0 10px 0;
+        margin:0 15px 10px 15px;
+        font-family: "Open Sans", sans-serif;
     }
 }
 
@@ -651,17 +667,38 @@ hr {
 
 .ev-content {
     border: 1px solid #999;
-    padding: 25px 20px;
+    padding: 25px 20px 15px 20px;
     margin: 0 0 40px 0;
 }
 
+@media (max-width: 767px) {
+    .ev-content {
+        padding: 25px 15px 0 15px;
+        border: none;
+        margin: 0;
+    }
+}
+
 .ev-content-voting-info {
-    background-color: #ccc;
-    padding:20px;
+    background-color: #f2f2f2;
+    padding:20px 20px 15px 20px;
+}
+
+@media (max-width: 767px) {
+    .ev-content-voting-info {
+        margin: 0 0 15px 0;
+        padding: 20px 15px 15px 15px;
+    }
 }
 
 .ev-content-summary {
     margin: 0 0 0 25px;
+}
+
+@media (max-width: 767px) {
+    .ev-content-summary {
+        margin: 0;
+    }
 }
 
 .main-sort-by {
@@ -682,15 +719,9 @@ hr {
     border-bottom: 1px dotted #999;
 }
 
-@media (min-width:521px) and (max-width:767px) {
+@media (max-width: 767px) {
     .main-content {
-        padding: 15px;
-    }
-}
-
-@media (max-width:520px) {
-    .main-content {
-        padding:15px;
+        padding: 15px 0;
         border-left: none;
         border-right: none;
     }
@@ -727,6 +758,7 @@ hr {
 
 .profile-picture {
     display: block;
+    float: left;
 }
 
 .profile-picture img {
@@ -735,7 +767,7 @@ hr {
 
 .profile-folder-bar {
     border: 1px solid #ccc;
-    margin: 0 0 5px 0;
+    margin: 10px 0 -1px 0;
     padding: 3px 40px 3px 10px;
     color: #252525;
     cursor: pointer;
@@ -778,7 +810,7 @@ hr {
     clear: both;
     border-top: 1px solid #ccc;
     margin-top: 5px !important;
-    margin-bottom: 5px !important;
+    margin-bottom: 0 !important;
 
 }
 
@@ -803,10 +835,11 @@ hr {
 }
 
 .profile {
-    float:left;
-    margin: 5px 0 20px  0;
-    clear:both;
+    float: left;
+    clear: both;
     width: 100%;
+    border-bottom: 1px dotted #DDC;
+    padding: 25px 0 15px 0;
 }
 
 @media (min-width:768px) {
@@ -1050,6 +1083,8 @@ hr {
         /* overflow: auto; */
         /*display: none;*/
         clear: both;
+        font-size: 14px;
+        max-width: none;
     }
 }
 
@@ -1058,6 +1093,12 @@ hr {
    color: #666;
    margin-bottom: 7px;
    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .profile-list {
+        font-size: 13px;
+    }
 }
 
 .profile-list table {
@@ -1117,14 +1158,14 @@ hr {
 .profile-page-title {
     float:left;
     font-family:"Cardo", sans-serif;
-    font-size:22px;
+    font-size:20px;
     font-weight:700;
 }
 
 .profile-page-status {
-    clear: both;
-    font-size: 18px;
+    font-size: 17px;
     font-style: italic;
+    overflow: auto;
 }
 
 .profile-page-nav-buttons {
@@ -1135,6 +1176,12 @@ hr {
 .profile-page-nav-buttons a {
     color:#333;
     text-decoration:none;
+}
+
+@media (max-width: 767px) {
+    .profile-page-nav {
+        margin: 15px;
+    }
 }
 
 .profile-page-nav hr {
@@ -1210,7 +1257,7 @@ hr {
 
 .sidebar-nav-scroll-button-up {
     float:right;
-    padding: 0 8px 0px 10px;
+    padding: 0 13px 0px 15px;
     border-left: 1px solid #bbb;
 }
 
@@ -1222,7 +1269,7 @@ hr {
 
 .sidebar-nav-scroll-button-down {
     float:right;
-    padding: 0px 8px 0 10px;
+    padding: 0px 13px 0 15px;
     border-left: 1px solid #bbb;
 }
 
@@ -1363,7 +1410,7 @@ hr {
 }
 
 .candidate-text {
-  margin: 0 10px 15px 0;
+  margin: 10px 10px 15px 0;
   clear: both;
 }
 
