@@ -32,6 +32,32 @@
     <!-- Body -->
 
     <div class="ev-body-container" ng-controller="EvPageCtrl">
+      <div class="sidebar-nav-title-container">
+        <div class="sidebar-nav-title sidebar-nav-h-resize">
+          Candidates
+        </div>
+      </div>
+      <div class="sidebar-nav-overlay">
+      </div>
+      <div class="sidebar-nav-horizontal-divider-container">
+        <div class="sidebar-nav-horizontal-divider">
+        </div>
+      </div>
+      <div class="sidebar-nav-vertical-divider-container">
+        <div class="sidebar-nav-vertical-divider">
+        </div>
+      </div>
+      <div class="sidebar-nav-container">
+        <div class="sidebar-nav-scroll">
+          <div class="sidebar-nav-scroll-button">
+            <i class="fa fa-caret-up sidebar-nav-scroll-button-up"></i>
+            <hr class="sidebar-nav-scroll-button-divider">
+            <i class="fa fa-caret-down sidebar-nav-scroll-button-down"></i>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-sm-9" id="main-col">
           <div class="main-margin">
@@ -77,8 +103,8 @@
         </div>
 
         <!-- these cols are used in resizeSidebar() -->
-        <div class="col-sm-9" style="display:none" id="main-col-width"></div>
-        <div class="col-sm-3" style="display:none" id="sidebar-col-width"></div>
+        <div class="col-sm-9" style="display: none; visibility: hidden;" id="main-col-width"></div>
+        <div class="col-sm-3" style="visibility: hidden; border-left: 1px solid transparent" id="sidebar-col-width"></div>
 
       </div><!-- /.row -->
 

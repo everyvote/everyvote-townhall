@@ -1,15 +1,4 @@
-<nav id="sidebar-nav" class="affix stickem-container" data-spy="affix" data-offset-top="0">
-  <div class="sidebar-nav-scroll">
-    <div class="sidebar-nav-scroll-button">
-      <i class="fa fa-caret-up sidebar-nav-scroll-button-up"></i>
-      <hr class="sidebar-nav-scroll-button-divider">
-      <i class="fa fa-caret-down sidebar-nav-scroll-button-down"></i>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-  <div class="sidebar-title">
-    CANDIDATES
-  </div>
+<nav id="sidebar-nav" class="affix stickem-container sidebar-nav-h-resize" data-spy="affix" data-offset-top="0">
   <ev-sidebar-profile-folder post="post" ng-repeat="post in posts">
   </ev-sidebar-profile-folder>
   <div class="sidebar-bar-divider"></div>
@@ -17,11 +6,16 @@
 
 <script>
   function resizeSidebar () {
-    console.log("running");
     sidebarWidth = $("#sidebar-col-width").width();
-    console.log(sidebarWidth);
-    console.log($("#sidebar-nav").width());
-    $("#sidebar-nav").width(sidebarWidth);
+    windowWidth = $(window).width();
+    if (windowWidth > 1080 && windowWidth % 2 == 0) {
+      $(".sidebar-nav-h-resize").width(sidebarWidth);
+    } else if (windowWidth > 1080 && windowWidth % 2 == 1) {
+      $(".sidebar-nav-h-resize").width(sidebarWidth + 1);
+    } else {
+      $(".sidebar-nav-h-resize").width(sidebarWidth + 1);
+    }
+
   }
 
   resizeSidebar();
@@ -31,7 +25,7 @@
   })
 
   function resizeToWindow () {
-    windowHeight = $(window).height();
+    windowHeight = $(window).height() - 28;
     $("#sidebar-nav").height(windowHeight);
   }
 
