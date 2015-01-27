@@ -1240,7 +1240,7 @@ hr {
     position: fixed;
     width: 100%;
     max-width: 1078px;
-    z-index; 0;
+    z-index: 0;
 }
 
 .sidebar-nav-scroll-button {
