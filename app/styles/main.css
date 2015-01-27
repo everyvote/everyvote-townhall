@@ -590,6 +590,17 @@ hr {
     bottom: 0
 }
 
+.cover-img-text a {
+
+}
+
+.cover-img-text img {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    margin: 0 8px 0 0;
+}
+
 #sidebar-col {
     overflow-y: scroll
 }
@@ -1172,6 +1183,12 @@ hr {
     text-align:right;
     max-width: 1078px;
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .sidebar-nav-title-container {
+        display: none;
+    }
 }
 
 .sidebar-nav-title-subcontainer {
