@@ -18,7 +18,6 @@ angular.module('everyvoteTuresoApp')
       .then(function (candidate) {
         $scope.candidate = {};
         $scope.candidate.name = candidate.name;
-        console.log($scope.candidate.name);
         $scope.candidate.summary = candidate.summary;
       })
 

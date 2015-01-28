@@ -11,7 +11,8 @@ angular.module('everyvoteTuresoApp')
   .controller('EvProfileCtrl', function ($scope, CandidateService, $routeParams) {
 
     //
-    //
+    // set $scope.isFocused if we are on the detail page.
+    // should go in its own controller for the sidebar.
     //
     function checkIfOnDetailPage () {
       $scope.isFocused = ($routeParams.id === $scope.candidateId);
@@ -25,16 +26,9 @@ angular.module('everyvoteTuresoApp')
 
     CandidateService.getCandidate($scope.candidateId)
       .then(function (candidate) {
+
         $scope.candidate = candidate;
         $scope.summary = candidate.summary;
-        $scope.truncSummary = candidate.summary.substring(0, 200);
-        if ($scope.summary.length > 200) {
-          $scope.truncSummary = $scope.truncSummary + '...';
-          $scope.truncSummaryIsLessThanSummary = true;
-        } else {
-          $scope.truncSummaryIsLessThanSummary = false;
-        }
-        $scope.fullSummary = false;
 
         // make social link names lowercase to work with Font Awesome icons
         $scope.socialLinks = candidate.links;
@@ -114,11 +108,6 @@ angular.module('everyvoteTuresoApp')
             $scope.socialIconsAreDisplayed = false;
           }
         };
-
-        $scope.toggleSummary = function() {
-          $scope.fullSummary = (! $scope.fullSummary);
-        };
-
       });
 
   });

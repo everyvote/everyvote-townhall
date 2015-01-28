@@ -18,12 +18,7 @@
     <div class="col-sm-8">
       <div class="ev-content-summary">
         <p>
-        <span>{{ summary }}</span>
-        <!-- truncated summary code we may or may not want to use later -->
-        <!-- <span ng-show="!fullSummary">{{ truncSummary }}</span>
-          <span ng-show="fullSummary">{{ summary }}</span>
-          <span class="ev-more" ng-show="!fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-down"></i></span>
-          <span class="ev-more" ng-show="fullSummary && truncSummaryIsLessThanSummary" ng-click="toggleSummary();"><i class="fa fa-fw fa-angle-up"></i></span> -->
+          <ev-truncated-text text="summary" word-limit="80" />
         </p>
       </div>
     </div>

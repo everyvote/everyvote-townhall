@@ -69,9 +69,8 @@
           </table>
         </div>
 
-        <div class="profile-summary" style="cursor:pointer" ng-click="toggleSummary();">
-          <span ng-show="!fullSummary">{{ truncSummary | htmlToPlaintext }}</span>
-          <span ng-show="fullSummary">{{ summary | htmlToPlaintext }}</span>
+        <div class="profile-summary">
+          <ev-truncated-text text='summary' word-limit="40" />
         </div>
       </div><!-- /.box-padding-sides -->
     </div><!-- /.col-sm-7 -->
