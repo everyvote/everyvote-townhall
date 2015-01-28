@@ -5,6 +5,7 @@ describe('Directive: evProfileListing', function () {
   // load the directive's module
   beforeEach(module('everyvoteTuresoApp'));
   beforeEach(module('views/directives/evProfileListing.html'));
+  beforeEach(module('views/directives/evTruncatedText.html'));
 
   var element,
     scope;

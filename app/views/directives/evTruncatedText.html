@@ -1,0 +1,8 @@
+<span ng-click="toggle()" style="cursor:pointer">
+  <span ng-show="!truncate" >
+    {{ text | htmlToPlaintext }}
+  </span>
+  <span ng-show="truncate">
+    {{ text | htmlToPlaintext | words:wordLimit }}
+  </span>
+</span>

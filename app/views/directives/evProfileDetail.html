@@ -99,19 +99,24 @@
       <div class="profile-detail-content">
         <div class="candidate-text">
           <h7>Summary</h7>
-          <p>{{ candidate.summary | htmlToPlaintext }}</p>
+          <p>
+            <ev-truncated-text text="candidate.summary" word-limit="40" />
+          </p>
         </div>
         <div class="candidate-text">
           <h7>Experience</h7>
-          <p>{{ candidate.summary | htmlToPlaintext }}</p>
+          <p>
+            <ev-truncated-text text="candidate.summary" word-limit="40" />
+          </p>
         </div>
         <div class="candidate-text">
           <h7>Goals</h7>
-          <p>{{ candidate.summary | htmlToPlaintext }}</p>
+          <p>
+            <ev-truncated-text text="candidate.summary" word-limit="40" />
+          </p>
         </div>
       </div>
     </div>
 
 </div><!-- /.profile clearfix -->
 <div class="clearfix"></div>
-

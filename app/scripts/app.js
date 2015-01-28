@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngResource',
     'ngRoute',
-    'everyvoteFilters'
+    'everyvoteFilters',
+    'truncate'
   ])
   .constant('POPIT_API', 'https://everyvote-demo.popit.mysociety.org/api/v0.1')
   .config(function ($routeProvider) {
