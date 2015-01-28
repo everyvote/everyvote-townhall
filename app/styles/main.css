@@ -1133,7 +1133,7 @@ hr {
 
 #sidebar-nav {
     border-left: 1px solid #ccc;
-    overflow-y: scroll;
+    overflow-y: hidden;
     margin-top: 29px;
 }
 
