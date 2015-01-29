@@ -535,6 +535,10 @@ hr {
     color: #fff
 }
 
+.xs-profile-dropdown-menu {
+    width: 162px;
+}
+
 .ev-body-container {
     max-width: 1080px;
     margin: 0 auto;
@@ -605,19 +609,6 @@ hr {
     overflow-y: scroll
 }
 
-@media (max-width: 767px) {
-    .main-content h1 {
-        margin:0 15px;
-        font-size: 20px;
-        font-weight: 700
-    }
-
-    .main-content h5 {
-        margin: 0 15px 10px;
-        font-family: "Open Sans",sans-serif
-    }
-}
-
 .ev-content {
     border: 1px solid #999;
     padding: 25px 20px 15px;
@@ -626,9 +617,15 @@ hr {
 
 @media (max-width: 767px) {
     .ev-content {
-        padding:25px 15px 0;
+        padding:25px 0 0 0;
         border: none;
         margin: 0
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ev-content {
+        border: none;
     }
 }
 
@@ -664,8 +661,7 @@ hr {
     padding-top: 40px;
     padding-bottom: 20px;
     padding-left: 25px;
-    padding-right: 25px
-;
+    padding-right: 25px;
     background: white;
 }
 
@@ -678,11 +674,21 @@ hr {
     .main-content {
         padding:15px 0;
         border-left: none;
-        border-right: none
+        border-right: none;
+        margin: 0 15px;
     }
 
     .main-content h1 {
-        font-size: 25px
+        font-size: 25px;
+        margin: 5px 0 0 0;
+        font-family: "Open Sans",sans-serif
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-content {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
@@ -909,7 +915,7 @@ hr {
 }
 
 .functions-dropdown>ul {
-    margin-left: -98px!important;
+    margin-left: -118px!important;
     padding: 0!important;
     border: none!important;
     box-shadow: none!important;
@@ -928,8 +934,8 @@ hr {
 
 @media (max-width: 767px) {
     .functions-menu {
-        padding-left:10px;
-        padding-right: 0
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -1065,6 +1071,12 @@ hr {
     font-size: 16px
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .functions-menu i {
+        display: none;
+    }
+}
+
 .profile-social-icons {
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
@@ -1133,7 +1145,7 @@ hr {
 
 #sidebar-nav {
     border-left: 1px solid #ccc;
-    overflow-y: hidden;
+    overflow-y: scroll;
     margin-top: 29px;
 }
 
@@ -1166,6 +1178,12 @@ hr {
 .sidebar-nav-container {
     max-width: 1078px;
     margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .sidebar-nav-container {
+        display: none;
+    }
 }
 
 .sidebar-nav-overlay {
@@ -1315,7 +1333,6 @@ hr {
 
 .sidebar-bar-button {
     padding: 4px 9px;
-    margin-right: 2px;
     background-color: #f5f5f5;
     clear: both;
     cursor: pointer

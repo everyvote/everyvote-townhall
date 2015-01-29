@@ -18,7 +18,7 @@
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
             <i class="fa fa-fw fa-ellipsis-h"></i>
           </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <ul class="dropdown-menu xs-profile-dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
             <div class="bg-lt-gry box-padding-sides functions-menu">
               <div class="profile-social-icons">
                   <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
@@ -31,10 +31,9 @@
                   -->
               </div>
 
-              <p>Save Candidate</p>
               <ul>
-                <li>Voting For</li>
-                <li>Not Voting For</li>
+                <li><i class="fa fa-check"></i> &nbsp; Voting For</li>
+                <li><i class="fa fa-check"></i> &nbsp; Not Voting For</li>
               </ul>
 
             </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
