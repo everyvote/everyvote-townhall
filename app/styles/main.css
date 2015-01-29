@@ -3,6 +3,13 @@ body {
     background: #f7f7f7
 }
 
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
 h1 {
     font-family: Cardo,sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -713,11 +720,12 @@ hr {
 
 .profile-picture {
     display: block;
-    float: left
+    float: left;
+    width: 90%;
 }
 
 .profile-picture img {
-    margin-bottom: 15px
+    /*margin-bottom: 15px*/
 }
 
 .profile-folder-bar {
@@ -813,8 +821,8 @@ hr {
 
 @media (min-width: 768px) {
     .profile img {
-        margin-right:15px;
-        width: 90%;
+        /*margin-right:15px;*/
+        width: 100%;
         border: 1px solid #595959;
         /* box-shadow: #bbb 2px 2px 1px 0
      */}
