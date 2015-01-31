@@ -1,6 +1,6 @@
 <div class="profile clearfix">
 
-    <div class="col-sm-2 hidden-xs">
+    <div class="col-sm-2 hidden-xs" style="z-index: 1;"><!-- z-index:1 makes it clickable -->
       <a class="profile-picture" href="#/candidates/{{ candidate.id }}">
         <img src="{{ candidate.image }}" />
         <div class="clearfix"></div>
@@ -8,13 +8,13 @@
     </div><!-- /.col-sm-2 -->
 
     <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
-    <div class="col-sm-7">
+    <div class="col-md-7">
       <div class="profile-main-content">
         <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
           <img src="{{ candidate.image }}" />
         </a>
 
-        <div class="dropdown functions-dropdown hidden-sm hidden-md hidden-lg">
+        <div class="dropdown functions-dropdown hidden-md hidden-lg">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
             <i class="fa fa-fw fa-ellipsis-h"></i>
           </button>
@@ -40,7 +40,8 @@
           </ul>
         </div>
 
-        <div class="profile-subtitle">
+
+        <div class="profile-name">
           <a href="/#/candidates/{{candidate.id}}">
             <h4>{{ candidate.name }}</h4>
           </a>
@@ -69,11 +70,12 @@
         </div>
 
         <div class="profile-summary">
-          <ev-truncated-text text='summary' word-limit="40" />
+          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
         </div>
+
       </div><!-- /.box-padding-sides -->
     </div><!-- /.col-sm-7 -->
-    <div class="col-sm-3 hidden-xs">
+    <div class="col-sm-3 hidden-xs hidden-sm">
       <div class="bg-lt-gry functions-menu">
         <div class="profile-social-icons">
             <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">

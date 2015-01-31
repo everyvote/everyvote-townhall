@@ -1,6 +1,6 @@
 <div style="padding-top: 0;" class="profile clearfix">
 
-    <div class="col-sm-2 hidden-xs">
+    <div class="col-sm-2 hidden-xs" style="z-index: 1;"><!-- z-index:1 makes it clickable -->
       <a class="profile-picture" href="#/candidates/{{ candidate.id }}">
         <img src="{{ candidate.image }}" />
         <div class="clearfix"></div>
@@ -9,7 +9,7 @@
 
     <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
     <div class="col-sm-7">
-      <div class="profile-detail-content">
+      <div class="profile-main-content">
         <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
           <img src="{{ candidate.image }}" />
         </a>
@@ -18,7 +18,7 @@
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
             <i class="fa fa-fw fa-ellipsis-h"></i>
           </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <ul class="dropdown-menu xs-profile-dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
             <div class="bg-lt-gry box-padding-sides functions-menu">
               <div class="profile-social-icons">
                   <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
@@ -31,17 +31,16 @@
                   -->
               </div>
 
-              <p>Save Candidate</p>
               <ul>
-                <li>Voting For</li>
-                <li>Not Voting For</li>
+                <li><i class="fa fa-check"></i> &nbsp; Voting For</li>
+                <li><i class="fa fa-check"></i> &nbsp; Not Voting For</li>
               </ul>
 
             </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
           </ul>
         </div>
 
-        <div class="profile-subtitle">
+        <div class="profile-name">
           <a href="/#/candidates/{{candidate.id}}">
             <h4>{{ candidate.name }}</h4>
           </a>
@@ -68,6 +67,7 @@
             -->
           </table>
         </div>
+
       </div><!-- /.box-padding-sides -->
     </div><!-- /.col-sm-7 -->
     <div class="col-sm-3 hidden-xs">
@@ -92,10 +92,12 @@
         </ul>
 
       </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
+
     </div><!-- /.col-sm-3 -->
 
     <div class="clearfix"></div>
-    <div class="col-xs-12">
+
+        <div class="col-xs-12">
       <div class="profile-detail-content">
         <div class="candidate-text">
           <h7>Summary</h7>
@@ -118,5 +120,7 @@
       </div>
     </div>
 
-</div><!-- /.profile clearfix -->
+    <div class="clearfix"></div>
+</div>
+
 <div class="clearfix"></div>
