@@ -32,88 +32,91 @@
     <!-- Body -->
 
     <div class="ev-body-container" ng-controller="EvPageCtrl">
-      <div class="sidebar-nav-title-container">
-        <div class="sidebar-nav-title sidebar-nav-h-resize">
-          Candidates
-        </div>
-      </div>
-
-      <div class="sidebar-nav-container">
-        <div class="sidebar-nav-scroll">
-          <div class="sidebar-nav-scroll-button">
-            <i class="fa fa-caret-up sidebar-nav-scroll-button-up"></i>
-            <hr class="sidebar-nav-scroll-button-divider">
-            <i class="fa fa-caret-down sidebar-nav-scroll-button-down"></i>
+      <div class="ev-body-container-shadow"><!-- needed to overcome sidebar quirkiness -->
+        <div class="sidebar-nav-title-container">
+          <div class="sidebar-nav-title sidebar-nav-h-resize">
+            Candidates
           </div>
-          <div class="clearfix"></div>
         </div>
-      </div>
 
-      <div class="row" style="min-height: 100%; height: 100%">
-        <div class="col-sm-9" id="main-col" style="min-height: 100%; height: 100%">
-          <div class="main-margin">
+        <div class="sidebar-nav-container">
+          <div class="sidebar-nav-scroll">
+            <div class="sidebar-nav-scroll-button">
+              <i class="fa fa-caret-up sidebar-nav-scroll-button-up"></i>
+              <hr class="sidebar-nav-scroll-button-divider">
+              <i class="fa fa-caret-down sidebar-nav-scroll-button-down"></i>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
 
-            <!-- Cover img -->
-            <div class="cover-img">
-              <div class="cover-img-shadow hidden-xs">
+        <div class="row" style="min-height: 100%; height: 100%">
+          <div class="col-sm-9" id="main-col" style="min-height: 100%; height: 100%">
+            <div class="main-margin">
+
+              <!-- Cover img -->
+              <div class="cover-img">
+                <div class="cover-img-shadow hidden-xs">
+                </div>
+                <div class="cover-img-text hidden-xs">
+                  <h5>
+                    <a href="/">
+                      NIU
+                    </a>
+                    >
+                    <a href="/">
+                      Student Association
+                    </a>
+                  </h5>
+                  <h1><a href="/">Spring 2015 Session</a></h1>
+                </div>
+                <img src="images/niu.png" class="img-responsive" />
               </div>
-              <div class="cover-img-text hidden-xs">
-                <h5>
-                  <a href="/">
-                    NIU
-                  </a>
-                  >
-                  <a href="/">
-                    Student Association
-                  </a>
-                </h5>
-                <h1><a href="/">Spring 2015 Session</a></h1>
-              </div>
-              <img src="images/niu.png" class="img-responsive" />
+
+              <div class="main-content">
+
+                <div class="visible-xs dark-links">
+                  <h5>
+                    <a href="/">
+                      NIU
+                    </a>
+                    >
+                    <a href="/">
+                      Student Association
+                    </a>
+                  </h5>
+                  <h1><a href="/">Spring 2015 Session</a></h1>
+                  <div class="clearfix"></div>
+                </div>
+
+                <!-- Detail Pane -->
+                <div class="detail-pane" ng-view="">
+                  <!-- detail-pane contents inserted here from app.js routes and templates -->
+                </div>
+
+              </div><!-- /.main-content -->
+
+            </div><!-- /.main-margin -->
+
+            <div class="ev-footer">
+                <a href="#" target="_blank"><img src="images/ev-brand.png" /></a>
+                <div class="clearfix"></div>
             </div>
 
-            <div class="main-content">
+          </div><!-- /.col-sm-9 -->
 
-              <div class="visible-xs dark-links">
-                <h5>
-                  <a href="/">
-                    NIU
-                  </a>
-                  >
-                  <a href="/">
-                    Student Association
-                  </a>
-                </h5>
-                <h1><a href="/">Spring 2015 Session</a></h1>
-                <div class="clearfix"></div>
-              </div>
-
-              <!-- Detail Pane -->
-              <div class="detail-pane" ng-view="">
-                <!-- detail-pane contents inserted here from app.js routes and templates -->
-              </div>
-
-            </div><!-- /.main-content -->
-
-          </div><!-- /.main-margin -->
-
-          <div class="ev-footer">
-              <a href="#" target="_blank"><img src="images/ev-brand.png" /></a>
-              <div class="clearfix"></div>
+          <!-- Sidebar Pane -->
+          <div class="col-sm-3 hidden-xs" id="sidebar-col" ng-include="'views/sidebar.html'" ng-controller="CandidateListingCtrl">
+            <!-- sidebar contents inserted here via app.js routes and templates -->
           </div>
 
-        </div><!-- /.col-sm-9 -->
+          <!-- these cols are used in resizeSidebar() -->
+          <div class="col-sm-9" style="display: none; visibility: hidden;" id="main-col-width"></div>
+          <div class="col-sm-3" style="visibility: hidden; border-left: 1px solid transparent" id="sidebar-col-width"></div>
 
-        <!-- Sidebar Pane -->
-        <div class="col-sm-3 hidden-xs" id="sidebar-col" ng-include="'views/sidebar.html'" ng-controller="CandidateListingCtrl">
-          <!-- sidebar contents inserted here via app.js routes and templates -->
-        </div>
+        </div><!-- /.row -->
 
-        <!-- these cols are used in resizeSidebar() -->
-        <div class="col-sm-9" style="display: none; visibility: hidden;" id="main-col-width"></div>
-        <div class="col-sm-3" style="visibility: hidden; border-left: 1px solid transparent" id="sidebar-col-width"></div>
-
-      </div><!-- /.row -->
+      </div><!-- /.ev-body-container-shadow -->
 
     </div><!-- /.ev-body-container -->
 

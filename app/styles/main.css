@@ -542,13 +542,17 @@ hr {
 
 .ev-body-container {
     max-width: 1080px;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    box-shadow: 0 1px 3px 1px rgba(0,0,0,.2);
     background-color: #fff;
     position: relative;
     min-height: 100%;
     height: 100%;
+    margin: 0 auto;
+}
+
+.ev-body-container-shadow {
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.2);
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 
 .cover-img {
@@ -655,7 +659,6 @@ hr {
 
 .main-margin {
     min-height: 100%;
-
     margin: 0 auto; /* the bottom margin is the negative value of the footer's height */
 }
 
@@ -1194,6 +1197,7 @@ hr {
 #sidebar-nav {
     border-left: 1px solid #ccc;
     overflow-y: scroll;
+    background: white;
     margin-top: 29px;
 }
 
