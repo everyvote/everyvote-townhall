@@ -1,7 +1,11 @@
 <nav id="sidebar-nav" class="affix stickem-container sidebar-nav-h-resize" data-spy="affix" data-offset-top="0">
-  <ev-sidebar-profile-folder post="post" ng-repeat="post in posts">
-  </ev-sidebar-profile-folder>
-  <div class="sidebar-bar-divider"></div>
+  <div ng-repeat="post in posts">
+    <div ng-show="!$first" class="sidebar-bar-divider"></div>
+    <ev-sidebar-profile-folder post="post">
+    </ev-sidebar-profile-folder>
+    <div ng-show="$last" ng-class="sidebar-bar-divider"></div>
+  </div>
+
 </nav>
 
 <script>
@@ -25,7 +29,7 @@
   })
 
   function resizeToWindow () {
-    windowHeight = $(window).height() - 28;
+    windowHeight = $(window).height() - 27;
     $("#sidebar-nav").height(windowHeight);
   }
 
@@ -34,4 +38,31 @@
   $(window).resize(function() {
     resizeToWindow();
   });
+
+  var amount = '';
+
+  function scroll() {
+      $('#sidebar-nav').animate({
+          scrollTop: amount
+      }, 75, 'linear',function() {
+          if (amount != '') {
+              scroll();
+          }
+      });
+  }
+  $('.sidebar-nav-scroll-button-up').hover(function() {
+      amount = '-=10';
+      console.log("goodbye");
+      scroll();
+  }, function() {
+      amount = '';
+  });
+  $('.sidebar-nav-scroll-button-down').hover(function() {
+      amount = '+=10';
+      console.log("hello");
+      scroll();
+  }, function() {
+      amount = '';
+  });
+
 </script>

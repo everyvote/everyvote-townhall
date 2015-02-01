@@ -1198,7 +1198,7 @@ hr {
     border-left: 1px solid #ccc;
     overflow-y: scroll;
     background: white;
-    margin-top: 29px;
+    margin-top: 30px;
 }
 
 .sidebar-dropdown-background {
@@ -1249,10 +1249,10 @@ hr {
 
 .sidebar-nav-title-container {
     position: fixed;
-    z-index: 9999999999;
     text-align:right;
     max-width: 1078px;
     width: 100%;
+    background: #eee;
 }
 
 @media (max-width: 767px) {
@@ -1322,7 +1322,7 @@ hr {
 }*/
 
 .sidebar-nav-scroll {
-    background: #eee;
+    background: transparent;
     border-bottom: 1px solid #bbb;
     position: fixed;
     width: 100%;
@@ -1491,4 +1491,8 @@ hr {
 .stickit-end {
     position: absolute;
     right: 0
+}
+
+.displayNone {
+    display: none;
 }
