@@ -7,7 +7,6 @@ html,
 body {
    margin: 0;
    padding: 0;
-   height: 100%;
    min-height: 100%;
 }
 
@@ -34,7 +33,7 @@ h2 {
     height: 15px;
     width: auto;
     padding: 0 10px;
-    margin-top: -36px;
+    margin-top: -35px;
     margin-left: -10px;
     background: #fff;
     float: left;
@@ -85,10 +84,18 @@ h6 {
 }
 
 h7 {
-    text-transform: uppercase;
-    color: #666;
+    display: block;
+    color: #000;
     letter-spacing: .06em;
-    font-weight: 500
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-right: 150px;
+}
+
+@media (max-width: 767px) {
+    h7 {
+        margin-right: 0;
+    }
 }
 
 .ev-more {
@@ -537,7 +544,7 @@ hr {
 }
 
 .xs-profile-dropdown-menu {
-    width: 162px;
+    width: 150px;
 }
 
 .ev-body-container {
@@ -545,7 +552,6 @@ hr {
     background-color: #fff;
     position: relative;
     min-height: 100%;
-    height: 100%;
     margin: 0 auto;
 }
 
@@ -683,10 +689,9 @@ hr {
 
 @media (max-width: 767px) {
     .main-content {
-        padding:15px 0;
+        padding:15px;
         border-left: none;
         border-right: none;
-        margin: 0 15px;
     }
 
     .main-content h1 {
@@ -711,13 +716,13 @@ hr {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .profile-detail-container {
-        margin: -20px 25px 0 25px;
+        margin: 0 20px;
     }
 }
 
 @media (min-width: 992px) {
     .profile-detail-container {
-        margin: -20px 0 0 0;
+        margin: -20px 0 30px 0;
     }
 }
 
@@ -743,18 +748,31 @@ hr {
 .profile-picture {
     display: block;
     float: left;
-    width: 90%;
+    width: 108px;
+    height: 108px;
+    margin: 0 15px 0 0;
+    border: 1px solid #595959;
 }
 
 @media (max-width: 767px) {
     .profile-picture {
-        width: auto;
+        width: 65px;
+        height: 65px;
         margin-bottom: 10px;
     }
 }
 
 .profile-picture img {
     /*margin-bottom: 15px*/
+    width: 108px;
+    height: 108px;
+}
+
+@media (max-width: 767px) {
+    .profile-picture img {
+        width: 63px;
+        height: 63px;
+    }
 }
 
 .profile-folder-bar {
@@ -838,23 +856,6 @@ hr {
 
 .profile h4 {
     display: inline
-}
-
-@media (max-width: 767px) {
-    .profile img {
-        margin-right:15px;
-        max-width: 65px;
-        box-shadow: #bbb 2px 2px 1px 0
-    }
-}
-
-@media (min-width: 768px) {
-    .profile img {
-        /*margin-right:15px;*/
-        width: 100%;
-        border: 1px solid #595959;
-        /* box-shadow: #bbb 2px 2px 1px 0
-     */}
 }
 
 .profile hr {
@@ -953,7 +954,7 @@ hr {
 }
 
 .functions-dropdown>ul {
-    margin-left: -118px!important;
+    margin-left: -106px !important;
     padding: 0!important;
     border: none!important;
     box-shadow: none!important;
@@ -967,7 +968,10 @@ hr {
 .functions-menu {
     font-size: 13px;
     padding: 0 10px 4px;
-    height: 109px;
+    height: 110px;
+    width: 150px;
+    float: right;
+    margin: 0 0 0 15px;
 }
 
 @media (max-width: 991px) {
@@ -1132,22 +1136,19 @@ hr {
 
 .profile-social-icons {
     margin-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
+    padding: 30px 0 0 0;
     width: 100%;
-    height: 34px
+    font-size: 18px;
 }
 
 @media (max-width: 991px) {
     .profile-social-icons {
-        height: auto;
     }
 }
 
 .profile-social-icons a {
     display: inline-block;
-    margin-right: 13px;
-    margin-top: 10px
+    margin-right: 15px;
 }
 
 .profile-social-icons a:last-child {
@@ -1512,8 +1513,33 @@ hr {
 }
 
 .candidate-text {
-    margin: 10px 10px 15px 0;
+    padding: 15px 0;
     clear: both;
+    border-bottom: 1px solid #ccc;
+}
+
+.candidate-text-opinion-buttons {
+    float: right;
+    text-align: center;
+    padding: 0 13px;
+    font-size: 18px;
+    margin: -4px 0 0 0;
+    color: #777;
+}
+
+@media (max-width: 767px) {
+    .candidate-text-opinion-buttons {
+        display: none;
+    }
+}
+
+.candidate-text-opinion-button {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.candidate-text-opinion-text {
+    font-size: 12px;
 }
 
 .stickit {

@@ -1,14 +1,38 @@
-<div style="padding-top: 0;" class="profile clearfix">
+<div class="ev-content">
+  <h2>Candidate Profile</h2>
 
-    <div class="col-sm-2 hidden-xs" style="z-index: 1;"><!-- z-index:1 makes it clickable -->
-      <a class="profile-picture" href="#/candidates/{{ candidate.id }}">
-        <img src="{{ candidate.image }}" />
-        <div class="clearfix"></div>
-      </a>
-    </div><!-- /.col-sm-2 -->
+  <div style="padding-top: 0; padding-bottom: 0; border: none;" class="profile clearfix">
 
-    <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
-    <div class="col-md-7">
+      <div class="profile-picture hidden-xs" style="z-index: 1;"><!-- z-index:1 makes it clickable -->
+        <a href="#/candidates/{{ candidate.id }}">
+          <img src="{{ candidate.image }}" />
+          <div class="clearfix"></div>
+        </a>
+      </div>
+
+      <div class="bg-lt-gry functions-menu hidden-xs hidden-sm">
+        <!-- <div class="profile-social-icons">
+            <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
+              <i class="fa fa-fw fa-{{socialLink.note}}"></i>
+            </a>
+            <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="!socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
+              <i class="fa fa-fw fa-ellipsis-h"></i>
+            </a>
+            <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
+              <i class="fa fa-fw fa-angle-up"></i>
+            </a>
+        </div> -->
+        <div class="functions-menu-header">
+          Save Candidate
+        </div>
+        <ul>
+          <li><i class="fa fa-check"></i> &nbsp; Voting For</li>
+          <li><i class="fa fa-check"></i> &nbsp; Not Voting For</li>
+        </ul>
+
+      </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
+
+      <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
       <div class="profile-main-content">
         <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
           <img src="{{ candidate.image }}" />
@@ -49,78 +73,142 @@
               <!-- <td>Party</td> -->
               <td>Independent</td>
             </tr>
-            <!--
-            <tr>
-              <td>Videos</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Questions </td>
-              <td>7</td>
-            </tr>
-            <tr>
-              <td>Comments</td>
-              <td>23</td>
-            </tr>
-            -->
           </table>
         </div>
-
-        <div class="profile-summary">
-          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
+        <div class="profile-social-icons">
+          <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
+            <i class="fa fa-fw fa-{{socialLink.note}}"></i>
+          </a>
         </div>
+
 
       </div><!-- /.box-padding-sides -->
-    </div><!-- /.col-sm-7 -->
-    <div class="col-sm-3 hidden-xs hidden-sm">
-      <div class="bg-lt-gry functions-menu">
-        <!-- <div class="profile-social-icons">
-            <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
-              <i class="fa fa-fw fa-{{socialLink.note}}"></i>
-            </a>
-            <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="!socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
-              <i class="fa fa-fw fa-ellipsis-h"></i>
-            </a>
-            <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
-              <i class="fa fa-fw fa-angle-up"></i>
-            </a>
-        </div> -->
-        <div class="functions-menu-header">
-          Save Candidate
-        </div>
-        <ul>
-          <li><i class="fa fa-check"></i> &nbsp; Voting For</li>
-          <li><i class="fa fa-check"></i> &nbsp; Not Voting For</li>
-        </ul>
 
-      </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
-    </div><!-- /.col-sm-3 -->
+      <div class="clearfix"></div>
+
+      <div class="col-xs-12">
+      <div class="profile-detail-content">
+        <div class="candidate-text">
+          <h7>Summary</h7>
+          <div class="candidate-text-opinion-buttons">
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-up"></i>
+              <div class="candidate-text-opinion-text">
+                Like
+              </div>
+            </div>
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-down"></i>
+              <div class="candidate-text-opinion-text">
+                Dislike
+              </div>
+            </div>
+          </div>
+          <p>
+            <ev-truncated-text text="candidate.summary" word-limit="40" />
+          </p>
+        </div>
+        <div class="candidate-text">
+          <h7>Experience</h7>
+          <div class="candidate-text-opinion-buttons">
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-up"></i>
+              <div class="candidate-text-opinion-text">
+                Like
+              </div>
+            </div>
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-down"></i>
+              <div class="candidate-text-opinion-text">
+                Dislike
+              </div>
+            </div>
+          </div>
+          <p>
+            <ev-truncated-text text="candidate.summary" word-limit="40" />
+          </p>
+        </div>
+        <div class="candidate-text" style="border: none;">
+          <h7>Goals</h7>
+          <div class="candidate-text-opinion-buttons">
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-up"></i>
+              <div class="candidate-text-opinion-text">
+                Like
+              </div>
+            </div>
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-down"></i>
+              <div class="candidate-text-opinion-text">
+                Dislike
+              </div>
+            </div>
+          </div>
+          <p>
+            <ev-truncated-text text="candidate.summary" word-limit="40" />
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div class="clearfix"></div>
 
-    <div class="col-xs-12">
+  </div><!-- /.profile clearfix -->
+
+  <div class="clearfix"></div>
+</div><!-- /.ev-content -->
+
+<div class="ev-content">
+  <h2>Questions & Answers</h2>
+
+  <div style="padding-top: 0; padding-bottom: 0; border: none;" class="profile clearfix">
+
     <div class="profile-detail-content">
-      <div class="candidate-text">
-        <h7>Summary</h7>
+      <div class="candidate-text" style="padding-top: 0;">
+        <h7>Do you agree that climate change is man-made?</h7>
+          <div class="candidate-text-opinion-buttons">
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-up"></i>
+              <div class="candidate-text-opinion-text">
+                Like
+              </div>
+            </div>
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-down"></i>
+              <div class="candidate-text-opinion-text">
+                Dislike
+              </div>
+            </div>
+          </div>
         <p>
           <ev-truncated-text text="candidate.summary" word-limit="40" />
         </p>
       </div>
-      <div class="candidate-text">
-        <h7>Experience</h7>
-        <p>
-          <ev-truncated-text text="candidate.summary" word-limit="40" />
-        </p>
-      </div>
-      <div class="candidate-text">
-        <h7>Goals</h7>
+      <div class="candidate-text" style="border: none;">
+        <h7>Do you agree that climate change is a myth, and if so, isn't this question just an example of a question that could span 2 lines?</h7>
+          <div class="candidate-text-opinion-buttons">
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-up"></i>
+              <div class="candidate-text-opinion-text">
+                Like
+              </div>
+            </div>
+            <div class="candidate-text-opinion-button">
+              <i class="fa fa-thumbs-down"></i>
+              <div class="candidate-text-opinion-text">
+                Dislike
+              </div>
+            </div>
+          </div>
         <p>
           <ev-truncated-text text="candidate.summary" word-limit="40" />
         </p>
       </div>
     </div>
-  </div>
+
+    <div class="clearfix"></div>
+
+  </div><!-- /.profile clearfix -->
 
   <div class="clearfix"></div>
-
-</div><!-- /.profile clearfix -->
+</div><!-- /.ev-content -->
