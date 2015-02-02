@@ -8,29 +8,26 @@
     </div><!-- /.col-sm-2 -->
 
     <!-- <div class="clearfix hidden-sm hidden-md hidden-lg"></div> -->
-    <div class="col-sm-7">
+    <div class="col-md-7">
       <div class="profile-main-content">
         <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
           <img src="{{ candidate.image }}" />
         </a>
 
-        <div class="dropdown functions-dropdown hidden-sm hidden-md hidden-lg">
+        <div class="dropdown functions-dropdown hidden-md hidden-lg">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
             <i class="fa fa-fw fa-ellipsis-h"></i>
           </button>
           <ul class="dropdown-menu xs-profile-dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
             <div class="bg-lt-gry box-padding-sides functions-menu">
-              <div class="profile-social-icons">
+              <!-- <div class="profile-social-icons">
                   <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
                     <i class="fa fa-fw fa-{{socialLink.note}}"></i>
                   </a>
-                  <!--
-                  <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
-                    <i class="fa fa-fw fa-angle-up"></i>
-                  </a>
-                  -->
+              </div> -->
+              <div class="functions-menu-header">
+                Save Candidate
               </div>
-
               <ul>
                 <li><i class="fa fa-check"></i> &nbsp; Voting For</li>
                 <li><i class="fa fa-check"></i> &nbsp; Not Voting For</li>
@@ -39,6 +36,7 @@
             </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
           </ul>
         </div>
+
 
         <div class="profile-name">
           <a href="/#/candidates/{{candidate.id}}">
@@ -68,59 +66,61 @@
           </table>
         </div>
 
+        <div class="profile-summary">
+          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
+        </div>
+
       </div><!-- /.box-padding-sides -->
     </div><!-- /.col-sm-7 -->
-    <div class="col-sm-3 hidden-xs">
+    <div class="col-sm-3 hidden-xs hidden-sm">
       <div class="bg-lt-gry functions-menu">
-        <div class="profile-social-icons">
+        <!-- <div class="profile-social-icons">
             <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
               <i class="fa fa-fw fa-{{socialLink.note}}"></i>
             </a>
             <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="!socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
               <i class="fa fa-fw fa-ellipsis-h"></i>
             </a>
-            <!--
             <a style="margin-right: 0; cursor: pointer; color: #888;" ng-show="socialIconsAreDisplayed && showMoreSocialIcon" ng-click="toggleSocialIcons();">
               <i class="fa fa-fw fa-angle-up"></i>
             </a>
-            -->
+        </div> -->
+        <div class="functions-menu-header">
+          Save Candidate
         </div>
-
         <ul>
           <li><i class="fa fa-check"></i> &nbsp; Voting For</li>
           <li><i class="fa fa-check"></i> &nbsp; Not Voting For</li>
         </ul>
 
       </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
-
     </div><!-- /.col-sm-3 -->
 
     <div class="clearfix"></div>
 
-        <div class="col-xs-12">
-      <div class="profile-detail-content">
-        <div class="candidate-text">
-          <h7>Summary</h7>
-          <p>
-            <ev-truncated-text text="candidate.summary" word-limit="40" />
-          </p>
-        </div>
-        <div class="candidate-text">
-          <h7>Experience</h7>
-          <p>
-            <ev-truncated-text text="candidate.summary" word-limit="40" />
-          </p>
-        </div>
-        <div class="candidate-text">
-          <h7>Goals</h7>
-          <p>
-            <ev-truncated-text text="candidate.summary" word-limit="40" />
-          </p>
-        </div>
+    <div class="col-xs-12">
+    <div class="profile-detail-content">
+      <div class="candidate-text">
+        <h7>Summary</h7>
+        <p>
+          <ev-truncated-text text="candidate.summary" word-limit="40" />
+        </p>
+      </div>
+      <div class="candidate-text">
+        <h7>Experience</h7>
+        <p>
+          <ev-truncated-text text="candidate.summary" word-limit="40" />
+        </p>
+      </div>
+      <div class="candidate-text">
+        <h7>Goals</h7>
+        <p>
+          <ev-truncated-text text="candidate.summary" word-limit="40" />
+        </p>
       </div>
     </div>
+  </div>
 
-    <div class="clearfix"></div>
-</div>
+  <div class="clearfix"></div>
 
-<div class="clearfix"></div>
+</div><!-- /.profile clearfix -->
