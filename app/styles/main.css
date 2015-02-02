@@ -1407,14 +1407,30 @@ hr {
 }
 
 .sidebar-profile {
-    margin: 10px;
+    padding: 10px;
     font-size: 14px;
     clear: both
+}
+
+.sidebar-profile:hover {
+    background-color: #eee;
 }
 
 .sidebar-profile a {
     color: #333;
     text-decoration: none
+}
+
+.sidebar-profile-isFocused {
+    padding: 10px;
+    font-size: 14px;
+    clear: both;
+    background: #999;
+}
+
+.sidebar-profile-isFocused a {
+    color: #fff !important;
+    text-decoration: none;
 }
 
 .sidebar-profile-picture {
@@ -1428,7 +1444,11 @@ hr {
 }
 
 .sidebar-profile-text-wrapper {
-    overflow: hidden
+    overflow: hidden;
+}
+
+.sidebar-profile-text-wrapper a {
+    display: block;
 }
 
 .sidebar-profile-party {

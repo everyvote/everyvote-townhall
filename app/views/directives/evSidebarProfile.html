@@ -1,12 +1,12 @@
-<div class="sidebar-profile" ng-style="isFocused ? {'background-color':'blue'} : {}">
+<div ng-class="isFocused ? 'sidebar-profile-isFocused' : 'sidebar-profile'">
   <div class="sidebar-profile-picture">
     <a href="#/candidates/{{ candidate.id }}">
       <img src="{{ candidate.image }}" />
     </a>
   </div>
   <div class="sidebar-profile-text-wrapper">
-    <a href="/#/candidates/{{candidate.id}}">{{ candidate.name }}</a><br>
-    <a class="sidebar-profile-party" href="/#/candidates/{{candidate.id}}">Independent</a></span>
+    <a style="margin-top: -1px; margin-bottom: 3px;" href="/#/candidates/{{candidate.id}}">{{ candidate.name }}</a>
+    <a class="sidebar-profile-party" href="/#/candidates/{{candidate.id}}">Independent</a>
   </div>
   <div class="clearfix">
   </div>
