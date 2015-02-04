@@ -1038,6 +1038,63 @@ hr {
     padding: 2px 5px
 }
 
+.functions-menu-detail {
+    font-size: 13px;
+    padding: 0 0 4px;
+    height: 110px;
+    width: 130px;
+    float: right;
+    margin: 0 0 0 15px
+}
+
+.functions-menu-detail ul {
+    list-style: none
+}
+
+.functions-menu-detail li {
+    color: #777;
+    font-size: 1em;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    padding: 2px 5px
+}
+
+.functions-menu-detail > .functions-menu-header {
+    padding: 0;
+    margin: 2px 0 10px 0;
+}
+
+.profile-vertical-divider {
+    height: 110px;
+    border-left: 1px solid #ccc;
+    float: right;
+}
+
+.profile-issue-stance-box {
+    font-size: 13px;
+    padding: 0 0 4px;
+    height: 110px;
+    width: 130px;
+    float: right;
+    margin: 0 0 0 15px
+}
+
+.profile-issue-stance-box-header {
+    margin: 2px 0 10px 0;
+    font-weight: 700;
+    color: #777;
+}
+
+.profile-issue-stance-box-text {
+    font-weight: 700;
+    color: #777;
+}
+
+.profile-issue-stance-box-subtext {
+    color: #aaa;
+    font-style: italic;
+}
+
 .group {
     padding-top: 25px;
     padding-bottom: 25px;
