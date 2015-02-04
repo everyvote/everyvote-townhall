@@ -86,7 +86,6 @@ h7 {
     letter-spacing: .06em;
     font-weight: 600;
     margin-bottom: 10px;
-    margin-right: 150px
 }
 
 @media (max-width: 767px) {
@@ -716,8 +715,12 @@ hr {
     }
 }
 
+.profile-detail-content hr {
+    margin: 10px 0;
+}
+
 .profile-detail-qa-pictures {
-    width: 135px;
+    width: 130px;
     float: right;
 }
 
@@ -1546,16 +1549,19 @@ hr {
 
 .candidate-text {
     padding: 15px 0;
-    clear: both;
-    border-bottom: 1px solid #ccc
+    overflow: hidden;
+}
+
+.candidate-text h7 {
+    margin-top: 4px;
 }
 
 .candidate-text-opinion-buttons {
     float: right;
     text-align: center;
-    width: 135px;
+    width: 130px;
     font-size: 18px;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 15px;
     color: #777
 }
 
@@ -1567,7 +1573,7 @@ hr {
 
 .candidate-text-opinion-button {
     display: inline-block;
-    padding: 0 15px
+    padding: 2px 14px
 }
 
 .candidate-text-opinion-text {
