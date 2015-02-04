@@ -90,60 +90,18 @@
       <div class="profile-detail-content">
         <div class="candidate-text">
           <h7>Summary</h7>
-          <div class="candidate-text-opinion-buttons">
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-up"></i>
-              <div class="candidate-text-opinion-text">
-                Like
-              </div>
-            </div>
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-down"></i>
-              <div class="candidate-text-opinion-text">
-                Dislike
-              </div>
-            </div>
-          </div>
           <p>
             <ev-truncated-text text="candidate.summary" word-limit="40" />
           </p>
         </div>
         <div class="candidate-text">
           <h7>Experience</h7>
-          <div class="candidate-text-opinion-buttons">
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-up"></i>
-              <div class="candidate-text-opinion-text">
-                Like
-              </div>
-            </div>
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-down"></i>
-              <div class="candidate-text-opinion-text">
-                Dislike
-              </div>
-            </div>
-          </div>
           <p>
             <ev-truncated-text text="candidate.summary" word-limit="40" />
           </p>
         </div>
         <div class="candidate-text" style="border: none;">
           <h7>Goals</h7>
-          <div class="candidate-text-opinion-buttons">
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-up"></i>
-              <div class="candidate-text-opinion-text">
-                Like
-              </div>
-            </div>
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-down"></i>
-              <div class="candidate-text-opinion-text">
-                Dislike
-              </div>
-            </div>
-          </div>
           <p>
             <ev-truncated-text text="candidate.summary" word-limit="40" />
           </p>
@@ -159,28 +117,41 @@
 </div><!-- /.ev-content -->
 
 <div class="ev-content">
-  <h2>Questions & Answers</h2>
-
+  <h2>Q & A</h2>
+  <div class="profile-detail-qa-pictures">
+    <div style="float: left;" class="profile-detail-qa-picture">
+      <img src="{{ candidate.image }}" />
+      <div class="clearfix"></div>
+    </div>
+    <div style="float: right;" class="profile-detail-qa-picture">
+      <img src="images/kevin-hall-monitor.png" />
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="profile-match-text">
+    <span class="profile-match-text-strong">80% match</span> <span class="profile-match-text-light">based on 2 answers</span>
+  </div>
+  <p style="margin-bottom: 13px;" class="main-sort-by">sort by: <a>most answered</a></p>
+  <hr style="clear:both;">
   <div style="padding-top: 0; padding-bottom: 0; border: none;" class="profile clearfix">
-
     <div class="profile-detail-content">
+      <div class="candidate-text-opinion-buttons">
+        <div class="candidate-text-opinion-button">
+          <i class="fa fa-thumbs-up"></i>
+          <div class="candidate-text-opinion-text">
+            Like
+          </div>
+        </div>
+        <div class="candidate-text-opinion-button">
+          <i class="fa fa-thumbs-down"></i>
+          <div class="candidate-text-opinion-text">
+            Dislike
+          </div>
+        </div>
+      </div>
       <div class="candidate-text" style="padding-top: 0;">
         <h7>Do you agree that climate change is man-made?</h7>
-          <div class="candidate-text-opinion-buttons">
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-up"></i>
-              <div class="candidate-text-opinion-text">
-                Like
-              </div>
-            </div>
-            <div class="candidate-text-opinion-button">
-              <i class="fa fa-thumbs-down"></i>
-              <div class="candidate-text-opinion-text">
-                Dislike
-              </div>
-            </div>
-          </div>
-        <p>
+        <p style="overflow: hidden;">
           <ev-truncated-text text="candidate.summary" word-limit="40" />
         </p>
       </div>
