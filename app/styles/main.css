@@ -179,6 +179,16 @@ hr {
 
 .navbar-nav {
     margin: 0;
+    background: #777;
+    width: auto;
+    float: right;
+    padding: 10px 14px 5px 14px;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        padding: 0;
+    }
 }
 
 .ev-navbar {
@@ -209,10 +219,10 @@ hr {
 
 #xs-navbar-show-search {
     float: right;
-    font-size: 28px;
-    margin: 5px 20px 0 0;
+    font-size: 25px;
+    margin: 0 25px 0 0;
     color: #ddd;
-    cursor: pointer
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -315,7 +325,16 @@ hr {
 }
 
 .navbar-collapse {
-    padding: 0
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        margin-right: -10px;
+        border-top: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
 }
 
 .navbar-default .navbar-collapse {
@@ -333,7 +352,7 @@ hr {
 @media (min-width: 768px) {
     #nav-person {
         float:right;
-        margin: 4px 0 0 30px;
+        margin: 4px 0 0 25px;
         padding: 0
     }
 }
@@ -345,31 +364,32 @@ hr {
 #nav-person img {
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 
 #nav-person-xs-image {
     float: right;
-    padding: 4px 15px;
     font-weight: 700
 }
 
 #nav-person-xs-image img {
-    width: 42px;
-    height: 42px;
-    border-radius: 2px
+    width: 36px;
+    height: 36px;
 }
 
-#nav-person-xs-text {
-    padding: 16px 0 15px;
-    height: 0;
-    float: right;
-    text-shadow: 1px 1px rgba(0,0,0,.4);
-    text-decoration: none
+.nav-option-xs {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .nav-option-xs {
+        display: none;
+    }
 }
 
 .nav-option-xs-text {
     float: right;
-    padding: 5px 0;
+    line-height: 20px;
     margin: 8px 7px;
     text-shadow: 1px 1px rgba(0,0,0,.4);
     text-decoration: none!important
@@ -382,7 +402,7 @@ hr {
 .nav-option-xs-icon {
     float: right;
     clear: both;
-    margin: 7px 22px 7px 15px;
+    margin: 0 4px 0 15px;
     font-size: 26px
 }
 
@@ -416,8 +436,9 @@ hr {
 }
 
 .navbar-toggle {
-    margin-right: 0;
-    border: 1px solid #ddd
+    margin: 3px 0 0 0;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
 }
 
 .navbar-toggle .icon-bar {
@@ -466,6 +487,13 @@ hr {
 
 .xs-profile-dropdown-menu {
     width: 150px
+}
+
+@media (min-width: 768px) {
+    .navbar-right .dropdown-menu {
+        right: -1px;
+        left: auto;
+    }
 }
 
 .ev-body-container {
@@ -543,6 +571,12 @@ hr {
 .ev-page-share {
     float: right;
     margin: -22px 0 15px 0;
+}
+
+@media (max-width: 767px) {
+    .ev-page-share {
+        margin: 0;
+    }
 }
 
 .ev-content {
@@ -662,8 +696,8 @@ hr {
 }
 
 .profile-detail-qa-picture {
-    width: 47px;
-    height: 47px;
+    width: 46px;
+    height: 46px;
     display: inline-block;
     border: 1px solid #777;
 }
@@ -1035,6 +1069,16 @@ hr {
     font-style: italic;
 }
 
+.profile-issue-stance-alt {
+    margin: 10px 0 0 0;
+}
+
+@media (max-width: 767px) {
+    .profile-issue-stance-alt {
+        margin: 5px 0 0 0;
+    }
+}
+
 .group {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -1111,7 +1155,8 @@ hr {
 
 @media (max-width: 767px) {
     .profile-list {
-        font-size:13px
+        font-size:13px;
+        margin-bottom: 0;
     }
 }
 
@@ -1158,6 +1203,18 @@ hr {
     font-size: 18px
 }
 
+@media (max-width: 991px) {
+    .profile-social-icons {
+        padding: 10px 0 0 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-social-icons {
+        clear: both;x
+    }
+}
+
 .profile-social-icons a {
     display: inline-block;
     margin-right: 15px
@@ -1182,9 +1239,38 @@ hr {
     margin: -25px 0 25px 0;
 }
 
+@media (max-width: 767px) {
+    .profile-page-status {
+        margin: 0;
+    }
+}
+
+.profile-page-nav-vertical-divider {
+    height: 18px;
+    border-left: 1px solid #aaa;
+    float: right;
+    margin: -21px 15px 0 0;
+}
+
+@media (max-width: 767px) {
+    .profile-page-nav-vertical-divider {
+        height: 18px;
+        border-left: 1px solid #aaa;
+        float: right;
+        margin: 0 15px 0 0;
+    }
+}
+
 .profile-page-nav-buttons {
     float: right;
     margin: -22px 30px 0 0;
+}
+
+@media (max-width: 767px) {
+    .profile-page-nav-buttons {
+        float: right;
+        margin: 0 30px 0 0;
+    }
 }
 
 .profile-page-nav-buttons a {
@@ -1519,7 +1605,8 @@ hr {
 
 .candidate-text-opinion-button {
     display: inline-block;
-    padding: 2px 14px
+    padding: 2px 0;
+    width: 46px;
 }
 
 .candidate-text-opinion-text {
