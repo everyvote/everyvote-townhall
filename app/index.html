@@ -33,9 +33,87 @@
 
     <div class="ev-body-container" ng-controller="EvPageCtrl">
       <div class="ev-body-container-shadow"><!-- needed to overcome sidebar quirkiness -->
-        <div class="sidebar-nav-title-container">
-          <div class="sidebar-nav-title sidebar-nav-h-resize">
-            Candidates
+
+    <nav class="navbar ev-navbar-container" role="navigation"> <!-- keeps content centered at 1080px width -->
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="xs-navbar-show-search" class="hidden-sm hidden-md hidden-lg">
+          <i class="fa fa-search"></i>
+        </div>
+        <div>
+          <input type="text" style="display:none" id="xs-navbar-search" class="form-control" placeholder="Search">
+        </div>
+        <ul class="ev-nav-group" id="ev-nav-group">
+          <li>
+            <a class="ev-nav-group-img">
+              <img src="images/niu-sa.png" />
+            </a>
+            <a class="ev-nav-group-text">
+              Student Association <i class="fa fa-caret-down"></i>
+            </a>
+            <ul>
+              <hr>
+              <li>
+                <a class="ev-nav-group-img">
+                  <img src="images/niu.png" />
+                </a>
+                <a  class="ev-nav-group-text">
+                  Northern Illinois University
+                </a>
+              </li>
+              <div class="clearfix"></div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown hidden-xs">
+          <a id="nav-person" data-toggle="dropdown"><img src="images/kevin-hall-monitor.png" /></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a>Frederick Douglass</a></li>
+              <li><a>Settings</a></li>
+              <li class="divider"></li>
+              <li><a>Sign out</a></li>
+            </ul>
+          </li>
+          <a id="nav-person-xs-image" class="hidden-sm hidden-md hidden-lg"><img src="img/user.png" /></a>
+          <a id="nav-person-xs-text" class="hidden-sm hidden-md hidden-lg">Frederick Douglass</a>
+          <a class="nav-option-xs-icon hidden-sm hidden-md hidden-lg"><i class="fa fa-gears"></i></a>
+          <a class="nav-option-xs-text hidden-sm hidden-md hidden-lg">Settings</a>
+          <a class="nav-option-xs-icon hidden-sm hidden-md hidden-lg"><i class="fa fa-sign-out"></i></a>
+          <a class="nav-option-xs-text hidden-sm hidden-md hidden-lg"s>Sign out</a>
+        </ul>
+        <form class="navbar-form navbar-right hidden-xs" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="ev-nav-search-btn btn btn-default"><i class="fa fa-search"></i></button>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+        <div style="margin-top: 40px;">
+          <div class="sidebar-nav-title-container">
+            <div class="sidebar-nav-link">
+              Election
+            </div>
+            <div class="sidebar-nav-link">
+              Debate
+            </div>
+            <div class="sidebar-nav-link">
+              About
+            </div>
+            <div class="sidebar-nav-title sidebar-nav-h-resize">
+              Candidates
+            </div>
           </div>
         </div>
 
@@ -98,7 +176,7 @@
 
             </div><!-- /.main-margin -->
             <div class="ev-footer">
-                <a href="#" target="_blank"><img src="images/ev-brand.png" /></a>
+                <a target="_blank"><img src="images/ev-brand.png" /></a>
                 <div class="clearfix"></div>
             </div>
 
