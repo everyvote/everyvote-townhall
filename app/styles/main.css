@@ -178,7 +178,7 @@ hr {
 }
 
 .navbar-nav {
-    margin: 0;
+    margin: 0 5px 0 0;
     background: #777;
     width: auto;
     float: right;
@@ -188,6 +188,7 @@ hr {
 @media (min-width: 768px) {
     .navbar-nav {
         padding: 0;
+        margin: 0 !important;
     }
 }
 
@@ -687,6 +688,7 @@ hr {
 }
 
 .profile-detail-content hr {
+    clear: both;
     margin: 10px 0;
 }
 
@@ -856,7 +858,7 @@ hr {
 }
 
 .profile hr {
-    margin: 5px 0;
+    margin: 15px 0 10px 0;
     border-top: 1px solid #ccc
 }
 
@@ -1336,18 +1338,18 @@ hr {
     text-decoration: none
 }
 
-.sidebar-nav-container {
+.tabbar-nav-container {
     max-width: 1078px;
     margin: 0 auto
 }
 
 @media (max-width: 767px) {
-    .sidebar-nav-container {
+    .tabbar-nav-container {
         display:none
     }
 }
 
-.sidebar-nav-overlay {
+.tabbar-nav-overlay {
     height: 100%;
     background: #fff;
     width: 75%;
@@ -1356,7 +1358,7 @@ hr {
     top: 0
 }
 
-.sidebar-nav-title-container {
+.tabbar-nav-title-container {
     position: fixed;
     text-align: right;
     max-width: 1078px;
@@ -1366,12 +1368,12 @@ hr {
 }
 
 @media (max-width: 767px) {
-    .sidebar-nav-title-container {
+    .tabbar-nav-title-container {
         display:none
     }
 }
 
-.sidebar-nav-title {
+.tabbar-nav-title {
     font-family: Cardo,serif;
     font-weight: 700;
     padding: 5px 0 3px;
@@ -1385,12 +1387,12 @@ hr {
 }
 
 @media (max-width: 1078px) {
-    .sidebar-nav-title {
+    .tabbar-nav-title {
         margin-right:1px
     }
 }
 
-.sidebar-nav-link {
+.tabbar-nav-link {
     float: left;
     padding: 5px 15px 4px 15px;
     font-family: "Cardo", serif;
@@ -1398,7 +1400,7 @@ hr {
     border-right: 1px solid #ccc;
 }
 
-.sidebar-nav-scroll {
+.tabbar-nav-scroll {
     background: 0 0;
     border-bottom: 1px solid #5e5e5e;
     position: fixed;
@@ -1407,24 +1409,24 @@ hr {
     z-index: 15
 }
 
-.sidebar-nav-scroll-button {
+.tabbar-nav-scroll-button {
     float: right;
     clear: both
 }
 
-.sidebar-nav-scroll-button-up {
+.tabbar-nav-scroll-button-up {
     float: right;
     padding: 0 13px 0 15px;
     border-left: 1px solid #bbb
 }
 
-.sidebar-nav-scroll-button-divider {
+.tabbar-nav-scroll-button-divider {
     border-top: 1px solid #bbb;
     clear: both;
     margin: 0
 }
 
-.sidebar-nav-scroll-button-down {
+.tabbar-nav-scroll-button-down {
     float: right;
     padding: 0 13px 0 15px;
     border-left: 1px solid #bbb
@@ -1579,13 +1581,23 @@ hr {
     vertical-align: middle
 }
 
-.candidate-text {
-    padding: 15px 0;
+@media (min-width: 992px) {
+    .profile-qa-container {
+        overflow: hidden;
+    }
+}
+
+.profile-question-text {
+    padding: 15px 0 0 0;
     overflow: hidden;
 }
 
-.candidate-text h7 {
+.profile-question-text h7 {
     margin-top: 4px;
+}
+
+.profile-answer-text {
+
 }
 
 .candidate-text-opinion-buttons {
@@ -1611,6 +1623,49 @@ hr {
 
 .candidate-text-opinion-text {
     font-size: 12px
+}
+
+.xs-candidate-text-opinion-buttons {
+    font-size: 18px;
+    color: #777;
+    margin: 15px 0 0 0;
+}
+
+@media (min-width: 768px) {
+    .xs-candidate-text-opinion-buttons {
+        display:none
+    }
+}
+
+.xs-candidate-text-opinion-picture {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #777;
+    margin: 0 10px 0 0;
+    float: left;
+}
+
+.xs-candidate-text-opinion-picture img {
+    width: 38px;
+    height: 38px;
+}
+
+.xs-candidate-text-opinion-button {
+    text-align: center;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+.xs-candidate-text-opinion-text {
+    font-size: 12px
+}
+
+.xs-candidate-text-opinion-divider {
+    height: 36px;
+    margin: 2px 30px 2px 20px;
+    border-left: 1px solid #ccc;
+    float: left;
 }
 
 .stickit {
