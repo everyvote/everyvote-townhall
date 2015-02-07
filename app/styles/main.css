@@ -166,7 +166,8 @@ hr {
 }
 
 .nav a {
-    color: #ddd
+    color: #f7f7f7;
+    cursor: pointer;
 }
 
 .navbar {
@@ -359,7 +360,7 @@ hr {
 }
 
 #nav-person:focus,#nav-person:hover {
-    background-color: #4b4b4b
+    background-color: transparent
 }
 
 #nav-person img {
@@ -457,9 +458,14 @@ hr {
     border-left: 0!important
 }
 
-.more-dropdown-menu li a:hover {
+.more-dropdown-menu li ul a:hover {
     background: #333;
     color: #fff
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .dropdown-menu {
@@ -1364,7 +1370,8 @@ hr {
     max-width: 1078px;
     width: 100%;
     background: #eee;
-    z-index: 15;
+    z-index: 20;
+    border-bottom: 1px solid #ccc;
 }
 
 @media (max-width: 767px) {
@@ -1381,7 +1388,6 @@ hr {
     font-size: 15px;
     z-index: 1000;
     border-left: 1px solid #5e5e5e;
-    border-bottom: 1px solid #ccc;
     width: 25%;
     float: right
 }
@@ -1394,10 +1400,16 @@ hr {
 
 .tabbar-nav-link {
     float: left;
-    padding: 5px 15px 4px 15px;
     font-family: "Cardo", serif;
     font-weight: 700;
     border-right: 1px solid #ccc;
+}
+
+.tabbar-nav-link a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 15px 4px 15px;
+    display: block;
 }
 
 .tabbar-nav-scroll {
