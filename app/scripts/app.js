@@ -17,7 +17,7 @@ angular
     'truncate'
   ])
   .constant('POPIT_API', 'https://everyvote-demo.popit.mysociety.org/api/v0.1')
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/candidateListing.html',
@@ -30,4 +30,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+
+      $locationProvider.html5Mode(false);
+
+  }]);
