@@ -169,6 +169,16 @@ hr {
     cursor: pointer
 }
 
+.navbar-full-width {
+    position: fixed;
+    height: 40px;
+    background: #44454c;
+    border-bottom: 1px solid #5e5e5e;
+    z-index: 0;
+    width: 100%;
+    top: 0;
+}
+
 .navbar {
     height: 40px;
     min-height: 40px;
@@ -205,9 +215,7 @@ hr {
     max-width: 1080px;
     margin-left: -1px;
     z-index: 2000;
-    margin-top: -40px;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc
+    margin-top: -40px
 }
 
 .ev-navbar a {
@@ -1343,6 +1351,15 @@ hr {
     text-decoration: none
 }
 
+.tabbar-full-width {
+    position: fixed;
+    top: 40px;
+    height: 30px;
+    width: 100%;
+    background: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
 .tabbar-nav-container {
     max-width: 1078px;
     margin: 0 auto
@@ -1369,7 +1386,7 @@ hr {
     max-width: 1078px;
     width: 100%;
     background: #eee;
-    z-index: 20;
+    z-index: 15;
     border-bottom: 1px solid #ccc
 }
 
@@ -1413,7 +1430,6 @@ hr {
 
 .tabbar-nav-scroll {
     background: 0 0;
-    border-bottom: 1px solid #5e5e5e;
     position: fixed;
     width: 100%;
     max-width: 1078px;

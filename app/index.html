@@ -32,88 +32,106 @@
 
     <!-- Body -->
 
+    <div class="navbar-full-width">
+    </div>
+    <div class="tabbar-full-width">
+    </div>
+
     <div class="ev-body-container" ng-controller="EvPageCtrl">
       <div class="ev-body-container-shadow"><!-- needed to overcome sidebar quirkiness -->
 
-    <nav class="navbar ev-navbar-container" role="navigation"> <!-- keeps content centered at 1080px width -->
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- <div id="xs-navbar-show-search" class="hidden-sm hidden-md hidden-lg">
-          <i class="fa fa-search"></i>
-        </div>
-        <div>
-          <input type="text" style="display:none" id="xs-navbar-search" class="form-control" placeholder="Search">
-        </div>-->
-        <ul class="ev-nav-group" id="ev-nav-group">
-          <li>
-            <a class="ev-nav-group-img">
-              <img src="images/niu-sa.png" />
-            </a>
-            <a class="ev-nav-group-text" href="/">
-              Student Association
-            </a>
-            <ul>
-              <hr>
+        <nav class="navbar ev-navbar-container" role="navigation"> <!-- keeps content centered at 1080px width -->
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <div id="xs-navbar-show-search" class="hidden-sm hidden-md hidden-lg">
+              <i class="fa fa-search"></i>
+            </div>
+            <div>
+              <input type="text" style="display:none" id="xs-navbar-search" class="form-control" placeholder="Search">
+            </div>-->
+            <ul class="ev-nav-group" id="ev-nav-group">
               <li>
                 <a class="ev-nav-group-img">
-                  <img src="images/niu.png" />
+                  <img src="images/niu-sa.png" />
                 </a>
-                <a  class="ev-nav-group-text">
-                  Northern Illinois University
+                <a class="ev-nav-group-text" href="/">
+                  Student Association
                 </a>
+                <ul>
+                  <hr>
+                  <li>
+                    <a class="ev-nav-group-img">
+                      <img src="images/niu.png" />
+                    </a>
+                    <a  class="ev-nav-group-text">
+                      Northern Illinois University
+                    </a>
+                  </li>
+                  <div class="clearfix"></div>
+                </ul>
               </li>
-              <div class="clearfix"></div>
             </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown hidden-xs">
-            <a id="nav-person" data-toggle="dropdown">
-              Kevin Powers &nbsp; &nbsp; <img src="images/kevin-hall-monitor.png" />
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a>My Profile</a></li>
-              <li><a>Settings</a></li>
-              <li class="divider"></li>
-              <li><a>Sign out</a></li>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown hidden-xs">
+                <a id="nav-person" data-toggle="dropdown">
+                  Kevin Powers &nbsp; &nbsp; <img src="images/kevin-hall-monitor.png" />
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a>My Profile</a></li>
+                  <li><a>Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a>Sign out</a></li>
+                </ul>
+              </li>
+              <div class="nav-option-xs">
+                <a id="nav-person-xs-image" class="hidden-sm hidden-md hidden-lg"><img src="images/kevin-hall-monitor.png" /></a>
+                <a id="nav-person-xs-text" class="nav-option-xs-text hidden-sm hidden-md hidden-lg">Kevin Powers</a>
+                <div class="clearfix"></div>
+              </div>
+              <div class="nav-option-xs">
+                <a class="nav-option-xs-icon hidden-sm hidden-md hidden-lg"><i class="fa fa-gears"></i></a>
+                <a class="nav-option-xs-text hidden-sm hidden-md hidden-lg">Settings</a>
+                <div class="clearfix"></div>
+              </div>
+              <div class="nav-option-xs">
+                <a class="nav-option-xs-icon hidden-sm hidden-md hidden-lg"><i class="fa fa-sign-out"></i></a>
+                <a class="nav-option-xs-text hidden-sm hidden-md hidden-lg"s>Sign out</a>
+                <div class="clearfix"></div>
+              </div>
             </ul>
-          </li>
-          <div class="nav-option-xs">
-            <a id="nav-person-xs-image" class="hidden-sm hidden-md hidden-lg"><img src="images/kevin-hall-monitor.png" /></a>
-            <a id="nav-person-xs-text" class="nav-option-xs-text hidden-sm hidden-md hidden-lg">Kevin Powers</a>
-            <div class="clearfix"></div>
-          </div>
-          <div class="nav-option-xs">
-            <a class="nav-option-xs-icon hidden-sm hidden-md hidden-lg"><i class="fa fa-gears"></i></a>
-            <a class="nav-option-xs-text hidden-sm hidden-md hidden-lg">Settings</a>
-            <div class="clearfix"></div>
-          </div>
-          <div class="nav-option-xs">
-            <a class="nav-option-xs-icon hidden-sm hidden-md hidden-lg"><i class="fa fa-sign-out"></i></a>
-            <a class="nav-option-xs-text hidden-sm hidden-md hidden-lg"s>Sign out</a>
-            <div class="clearfix"></div>
-          </div>
-        </ul>
-        <!-- <form class="navbar-form navbar-right hidden-xs" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="ev-nav-search-btn btn btn-default"><i class="fa fa-search"></i></button>
-        </form> -->
-      </div><!-- /.navbar-collapse -->
-    </nav>
+            <!-- <form class="navbar-form navbar-right hidden-xs" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="ev-nav-search-btn btn btn-default"><i class="fa fa-search"></i></button>
+            </form> -->
+          </div><!-- /.navbar-collapse -->
+        </nav>
 
         <div style="margin-top: 40px;">
           <div class="tabbar-nav-title-container">
+            <div class="tabbar-nav-title tabbar-nav-h-resize">
+              Candidates
+            </div>
+          </div>
+        </div>
+
+        <div class="tabbar-nav-container">
+          <div class="tabbar-nav-scroll">
+            <div class="tabbar-nav-scroll-button">
+              <i class="fa fa-caret-up tabbar-nav-scroll-button-up"></i>
+              <hr class="tabbar-nav-scroll-button-divider">
+              <i class="fa fa-caret-down tabbar-nav-scroll-button-down"></i>
+            </div>
             <div class="tabbar-nav-link">
               <a href="/">
                 Election
@@ -128,19 +146,6 @@
               <a href="/">
                 About
               </a>
-            </div>
-            <div class="tabbar-nav-title tabbar-nav-h-resize">
-              Candidates
-            </div>
-          </div>
-        </div>
-
-        <div class="tabbar-nav-container">
-          <div class="tabbar-nav-scroll">
-            <div class="tabbar-nav-scroll-button">
-              <i class="fa fa-caret-up tabbar-nav-scroll-button-up"></i>
-              <hr class="tabbar-nav-scroll-button-divider">
-              <i class="fa fa-caret-down tabbar-nav-scroll-button-down"></i>
             </div>
             <div class="clearfix"></div>
           </div>
