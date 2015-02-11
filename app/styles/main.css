@@ -8,13 +8,12 @@ body {
 body,html {
     margin: 0;
     padding: 0;
-    min-height: 100%;
+    min-height: 100%
 }
 
 h1 {
     font-family: Cardo,sans-serif;
-    margin-top: 0;
-
+    margin-top: 0
 }
 
 h1 a,h1 a:hover {
@@ -56,9 +55,11 @@ h3 {
 
 h4 {
     font-family: 'Open Sans',sans-serif;
-    margin-bottom: 5px!important;
+    margin-bottom: 2px!important;
     font-size: 17px;
     margin-top: 0
+;
+    font-weight: 600;
 }
 
 h5 {
@@ -176,7 +177,7 @@ hr {
     border-bottom: 1px solid #5e5e5e;
     z-index: 0;
     width: 100%;
-    top: 0;
+    top: 0
 }
 
 .navbar {
@@ -189,7 +190,6 @@ hr {
 
 .navbar-nav {
     margin: 0 5px 0 0;
-    /* background:#777; */
     width: auto;
     float: right;
     padding: 10px 14px 5px
@@ -497,7 +497,7 @@ hr {
 }
 
 .xs-profile-dropdown-menu {
-    width: 150px
+    width: 155px
 }
 
 @media (min-width: 768px) {
@@ -543,8 +543,8 @@ hr {
     text-shadow: 2px 2px 5px rgba(0,0,0,.5);
     font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: .03em;
-    /* font-weight: 700; */}
+    letter-spacing: .03em
+}
 
 .cover-img h5 {
     bottom: 43px;
@@ -590,7 +590,7 @@ hr {
 }
 
 .ev-content {
-    border: 1px solid #999;
+    border: 1px solid #5e5e5e;
     padding: 25px 20px 15px;
     margin: 0 0 40px;
     clear: both
@@ -611,7 +611,7 @@ hr {
 }
 
 .ev-content-voting-info {
-    background-color: #f0f3f6;
+    background-color: #eaedf2;
     padding: 15px 20px
 }
 
@@ -745,7 +745,6 @@ hr {
 }
 
 .profile a {
-    /* color:#333; */
     text-decoration: none
 }
 
@@ -826,7 +825,7 @@ hr {
 
 .profile-folder-divider {
     clear: both;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #bababa;
     margin-top: 5px!important;
     margin-bottom: 0!important
 }
@@ -852,7 +851,6 @@ hr {
     float: left;
     clear: both;
     width: 100%;
-    /* border-bottom:1px solid #DDC; */
     padding: 20px 0
 }
 
@@ -863,10 +861,7 @@ hr {
 }
 
 .profile h4 {
-    /* display:inline; */
-    color: #000;
-    margin-bottom: 0 !important;
-}
+    color: #000;}
 
 .profile hr {
     margin: 15px 0 10px;
@@ -875,8 +870,7 @@ hr {
 
 .profile p {
     margin-bottom: 5px;
-    line-height: 18px
-}
+    line-height: 20px;}
 
 .profile-row-first {
     clear: both
@@ -905,7 +899,7 @@ hr {
 
 @media (min-width: 768px) {
     .profile-name {
-        margin: 0 0 1px;
+        margin:0 0 1px
     }
 }
 
@@ -976,12 +970,13 @@ hr {
 }
 
 .functions-menu {
-    font-size: 13px;
+    font-size: 14px;
     padding: 0 10px 4px;
     height: 110px;
-    width: 150px;
+    width: 155px;
     float: right;
-    margin: 0 0 0 15px
+    margin: 0 0 0 15px;
+    border-left: 1px solid #bababa;
 }
 
 @media (max-width: 991px) {
@@ -1005,8 +1000,12 @@ hr {
 
 .functions-menu-header {
     font-weight: 600;
-    padding: 10px 5px;
-    /* color:#777 */
+    padding: 0 5px 10px 5px;
+}
+
+.save-candidate-toggled {
+    color: red !important;
+    font-weight: 700 !important;
 }
 
 .profile-stats {
@@ -1022,14 +1021,13 @@ hr {
     font-size: 1em;
     margin-bottom: 5px;
     border-radius: 3px;
-    padding: 2px 5px
-}
+    /* padding: 2px 5px */}
 
 .functions-menu-detail {
     font-size: 14px;
     padding: 0 0 4px;
     height: 110px;
-    width: 130px;
+    width: 135px;
     float: right;
     margin: 0 0 0 15px
 }
@@ -1043,8 +1041,7 @@ hr {
     font-size: 1em;
     margin-bottom: 7px;
     border-radius: 3px;
-    /* padding: 2px 5px; */
-    font-weight: 600;
+    font-weight: 600
 }
 
 .functions-menu-detail>.functions-menu-header {
@@ -1069,13 +1066,11 @@ hr {
 
 .profile-issue-stance-box-header {
     margin: 2px 0 10px;
-    font-weight: 600;
-    /* color:#777 */
+    font-weight: 600
 }
 
 .profile-issue-stance-box-text {
-    font-weight: 600;
-    /* color:#777 */
+    font-weight: 600
 }
 
 .profile-issue-stance-box-subtext {
@@ -1141,7 +1136,7 @@ hr {
 }
 
 .profile-summary {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 7px
 }
 
@@ -1163,8 +1158,9 @@ hr {
 .profile-list {
     font-size: 14px;
     color: #919191;
-    margin-bottom: 7px;
+    margin-bottom: 13px;
     overflow: hidden
+;font-style: italic;
 }
 
 @media (max-width: 767px) {
@@ -1207,7 +1203,7 @@ hr {
 }
 
 .functions-menu i {
-    font-size: 16px
+    font-size: 20px;
 }
 
 .profile-social-icons {
@@ -1232,7 +1228,7 @@ hr {
 .profile-social-icons a {
     display: inline-block;
     margin-right: 15px;
-    color: #606060;
+    color: #606060
 }
 
 .profile-social-icons a:last-child {
@@ -1357,7 +1353,7 @@ hr {
     height: 30px;
     width: 100%;
     background: #eee;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc
 }
 
 .tabbar-nav-container {
@@ -1523,7 +1519,7 @@ hr {
     padding: 10px;
     font-size: 14px;
     clear: both;
-    background: #e9edf1;
+    background: #e9edf1
 }
 
 .sidebar-profile-isFocused a {
@@ -1538,23 +1534,22 @@ hr {
 
 .sidebar-profile-picture img {
     width: 38px;
-    height: 38px
-;
-    border: 1px solid #666;
+    height: 38px;
+    border: 1px solid #666
 }
 
 .sidebar-profile-text-wrapper {
     overflow: hidden;
-    color: #333 !important;
+    color: #333!important
 }
 
 .sidebar-profile-text-wrapper a {
-    display: block;
+    display: block
 }
 
 .sidebar-profile-party {
     font-size: 11px;
-    color: #919191 !important;
+    color: #919191!important
 }
 
 .sidebar-indent {
@@ -1709,9 +1704,9 @@ hr {
 }
 
 .bg-slate {
-    background: #e9edf1
+    /* background:#e9edf1 */
 }
 
 .functions-menu-detail i {
-    font-size: 20px;
+    font-size: 20px
 }

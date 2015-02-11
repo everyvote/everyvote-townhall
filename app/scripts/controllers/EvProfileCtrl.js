@@ -108,6 +108,23 @@ angular.module('everyvoteTuresoApp')
             $scope.socialIconsAreDisplayed = false;
           }
         };
+
+        $scope.votingFor = false;
+        $scope.notVotingFor = false;
+
+        $scope.toggleVotingFor = function() {
+          $scope.votingFor = (! $scope.votingFor);
+          if ($scope.notVotingFor === true) {
+            $scope.notVotingFor = false;
+          }
+        };
+        $scope.toggleNotVotingFor = function() {
+          $scope.notVotingFor = (! $scope.notVotingFor);
+          if ($scope.votingFor === true) {
+            $scope.votingFor = false;
+          }
+        };
+
       });
 
   });

@@ -13,8 +13,12 @@
       </div>
       <hr>
       <ul>
-        <li><i class="fa fa-fw fa-check"></i> Voting For</li>
-        <li><i class="fa fa-fw fa-times"></i> Not Voting For</li>
+        <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
+          <i class="fa fa-fw fa-check"></i> Voting For
+        </li>
+        <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
+          <i class="fa fa-fw fa-times"></i> Not Voting For
+        </li>
       </ul>
     </div><!-- /.bg-slate box-padding-sides profile-right-col -->
 
@@ -34,8 +38,12 @@
             </div>
             <hr>
             <ul>
-              <li><i class="fa fa-fw fa-check"></i> Voting For</li>
-              <li><i class="fa fa-fw fa-times"></i> Not Voting For</li>
+              <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
+                <i class="fa fa-fw fa-check"></i> Voting For
+              </li>
+              <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
+                <i class="fa fa-fw fa-times"></i> Not Voting For
+              </li>
             </ul>
           </div><!-- /.bg-slate box-padding-sides profile-right-col -->
         </ul>

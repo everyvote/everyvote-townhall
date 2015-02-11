@@ -15,8 +15,12 @@
           Save Candidate
         </div>
         <ul>
-          <li><i class="fa fa-fw fa-check"></i> Voting For</li>
-          <li><i class="fa fa-fw fa-times"></i> Not Voting For</li>
+          <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
+            <i class="fa fa-fw fa-check"></i> Voting For
+          </li>
+          <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
+            <i class="fa fa-fw fa-times"></i> Not Voting For
+          </li>
         </ul>
 
       </div><!-- /.functions-menu-detail hidden-xs -->
@@ -61,8 +65,12 @@
                 Save Candidate
               </div>
               <ul>
-                <li><i class="fa fa-fw fa-check"></i> Voting For</li>
-                <li><i class="fa fa-fw fa-times"></i> Not Voting For</li>
+                <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
+                  <i class="fa fa-fw fa-check"></i> Voting For
+                </li>
+                <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
+                  <i class="fa fa-fw fa-times"></i> Not Voting For
+                </li>
               </ul>
 
             </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
