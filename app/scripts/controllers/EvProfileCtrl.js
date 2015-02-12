@@ -24,6 +24,22 @@ angular.module('everyvoteTuresoApp')
     //
     //
 
+    // CandidatePicksService.declareChoice($scope.candidateId)
+    //   .then(function (choice) {
+    //     $scope.votingFor = false;
+    //     $scope.notVotingFor = false;
+
+    //     if (choice === "Voting For") {
+    //       $scope.votingFor = true;
+    //       $scope.notVotingFor = false;
+    //     }
+    //     if (choice === "Not Voting For") {
+    //       $scope.notVotingFor = true;
+    //       $scope.votingFor = false;
+    //     }
+
+    // })
+
     CandidateService.getCandidate($scope.candidateId)
       .then(function (candidate) {
 

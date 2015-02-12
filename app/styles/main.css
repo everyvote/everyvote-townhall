@@ -958,11 +958,15 @@ hr {
 }
 
 .functions-dropdown>ul {
-    margin-left: -106px!important;
+    margin-left: -111px!important;
     padding: 0!important;
     border: none!important;
     box-shadow: none!important;
     min-width: 0!important
+}
+
+.functions-dropdown .dropdown-menu {
+    background-color: #eee;
 }
 
 .functions-dropdown-padding-sides {
@@ -983,13 +987,9 @@ hr {
     .functions-menu {
         padding-left:10px;
         padding-right: 10px;
-        height: auto
-    }
-}
-
-@media (min-width: 768px) and (max-width:991px) {
-    .functions-menu {
-        width:162px
+        height: auto;
+        margin: 0;
+        border-left: none;
     }
 }
 
@@ -1001,6 +1001,12 @@ hr {
 .functions-menu-header {
     font-weight: 600;
     padding: 0 5px 10px 5px;
+}
+
+@media (max-width: 991px) {
+    .functions-menu-header {
+        padding: 5px;
+    }
 }
 
 .save-candidate-toggled {
