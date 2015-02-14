@@ -12,7 +12,7 @@ angular.module('everyvoteTuresoApp')
 
     CandidatePicksService.getPicks() /* use something to retrieve person's picks list */
       .then(function (picks) {
-        $scope.picks = picks;
+        $scope.posts = picks.posts;
       });
 
   });
