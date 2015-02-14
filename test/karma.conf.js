@@ -24,6 +24,8 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-truncate/src/truncate.js',
+      'bower_components/angular-cookies/angular-cookies.js',
+      'bower_components/angularLocalStorage/src/angularLocalStorage.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js',
@@ -54,18 +56,18 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-ng-html2js-preprocessor'
     ],
-    
+
     preprocessors: {
       '**/*.html': ['ng-html2js']
     },
-    
+
     ngHtml2JsPreprocessor: {
-      // strip this from the file path so that it 
+      // strip this from the file path so that it
       // makes the template available at views/file.html instead
       // of app/views/file.html
       stripPrefix: 'app/',
     },
-    
+
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false,

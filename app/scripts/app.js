@@ -14,7 +14,8 @@ angular
     'ngResource',
     'ngRoute',
     'everyvoteFilters',
-    'truncate'
+    'truncate',
+    'angularLocalStorage'
   ])
   .constant('POPIT_API', 'https://everyvote-demo.popit.mysociety.org/api/v0.1')
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
