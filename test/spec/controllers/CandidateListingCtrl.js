@@ -24,7 +24,7 @@ describe('Controller: CandidateListingCtrl', function () {
     var deferred = $q.defer();
     ElectionService = _ElectionService_;
     getElectionSpy = spyOn(ElectionService, 'getElection')
-      .andReturn(deferred.promise);
+      .and.returnValue(deferred.promise);
     deferred.resolve(testGetElectionRetVal);
 
     scope = $rootScope.$new();

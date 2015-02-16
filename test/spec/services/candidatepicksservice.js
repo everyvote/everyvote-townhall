@@ -21,37 +21,47 @@ describe('Service: CandidatePicksService', function () {
 
   describe('when storing a candidate pick', function () {
 
-    it('should save the candidatePick in localstorage', function () {
+    it('should save the candidatePick in localstorage', function (done) {
       // V, N, U
 
-      CandidatePicksService.savePick('abc123', 'V');
+      CandidatePicksService.savePick('abc123', 'V')
+        .then(function () {
+          var result = storage.get('candidatePick-abc123');
+          expect(result).toEqual('V');
+          done();
+        });
 
-      var result = storage.get('candidatePick-abc123');
-
-      expect(result).toEqual('V');
-
+      $scope.$digest();
     });
 
   });
 
   describe('when retrieving a candidatePick', function () {
 
-      it('should retrieve the candidate from localstorage', function () {
+      it('should retrieve the candidate from localstorage', function (done) {
 
         storage.set('candidatePick-asdf5500', 'N');
 
-        var result = CandidatePicksService.getPick('asdf5500');
+        CandidatePicksService.getPick('asdf5500')
+          .then(function (result) {
+            expect(result).toEqual('N');
+            done();
+          });
 
-        expect(result).toEqual('N');
+        $scope.$digest();
 
       });
 
-      it('should return U when no decision has been made for a candidate', function () {
+      it('should return U when no decision has been made for a candidate', function (done) {
 
-        var result = CandidatePicksService.getPick('asdf5500');
+        CandidatePicksService.getPick('asdf5500')
+          .then(function (result) {
+            expect(result).toEqual('U');
+            done();
+          });
 
-        expect(result).toEqual('U');
-        
+        $scope.$digest();
+
       });
 
   });

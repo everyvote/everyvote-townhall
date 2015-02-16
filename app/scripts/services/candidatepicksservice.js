@@ -15,16 +15,27 @@ angular.module('everyvoteTuresoApp')
     };
 
     this.savePick = function (candidateId, stance) {
+      var deferred = $q.defer();
+
       storage.set(_getStorageKey(candidateId), stance);
+
+      deferred.resolve(true);
+
+      return deferred.promise;
     };
 
     this.getPick = function (candidateId) {
+
+      var deferred = $q.defer();
+
       var pick = storage.get(_getStorageKey(candidateId));
       if (pick === null) {
         pick = 'U';
       }
 
-      return pick;
+      deferred.resolve(pick);
+
+      return deferred.promise;
     };
 
   });

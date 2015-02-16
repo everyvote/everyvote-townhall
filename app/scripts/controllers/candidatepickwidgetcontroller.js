@@ -11,50 +11,63 @@ angular.module('everyvoteTuresoApp')
   .controller('CandidatePickWidgetController', function ($scope, CandidatePicksService) {
 
     var init = function () {
-
       // Quit if there's no candidateId
       if(!$scope.candidateId) {
         return;
       }
 
-      var pick = CandidatePicksService.getPick($scope.candidateId);
+      CandidatePicksService.getPick($scope.candidateId)
+        .then(function (pick) {
 
-      if (pick === 'V') {
+          if (pick === 'V') {
 
-        $scope.notVotingForFlag = false;
-        $scope.votingForFlag = true;
+            $scope.notVotingForFlag = false;
+            $scope.votingForFlag = true;
 
-      } else if (pick === 'N') {
+          } else if (pick === 'N') {
 
-        $scope.notVotingForFlag = true;
-        $scope.votingForFlag = false;
+            $scope.notVotingForFlag = true;
+            $scope.votingForFlag = false;
 
-      } else {
-        $scope.notVotingForFlag = false;
-        $scope.votingForFlag = false;
-      }
+          } else {
+            $scope.notVotingForFlag = false;
+            $scope.votingForFlag = false;
+          }
+      });
+
     };
 
-    $scope.$watch('candidateId', init);
+    // Make sure we reinit if the candidateId changes
+    $scope.$watch('candidateId', function (oldVal, newVal) {
+
+      // Only reinit when it really changed.
+      if (oldVal !== newVal) {
+        init();
+      }
+    });
 
     init();
 
-
+    ////
+    // Scope methods
     ////
 
     $scope.setNotVotingFor = function () {
 
       if ($scope.notVotingForFlag === true) {
 
-        CandidatePicksService.savePick($scope.candidateId, 'U');
-        $scope.notVotingForFlag = false;
+        CandidatePicksService.savePick($scope.candidateId, 'U')
+          .then(function () {
+            $scope.notVotingForFlag = false;
+          });
 
       } else {
 
-        CandidatePicksService.savePick($scope.candidateId, 'N');
-
-        $scope.notVotingForFlag = true;
-        $scope.votingForFlag = false;
+        CandidatePicksService.savePick($scope.candidateId, 'N')
+          .then(function () {
+            $scope.notVotingForFlag = true;
+            $scope.votingForFlag = false;
+          });
       }
 
     };
@@ -63,15 +76,19 @@ angular.module('everyvoteTuresoApp')
 
       if ($scope.votingForFlag === true) {
 
-        CandidatePicksService.savePick($scope.candidateId, 'U');
-        $scope.votingForFlag = false;
+        CandidatePicksService.savePick($scope.candidateId, 'U')
+          .then(function () {
+            $scope.votingForFlag = false;
+          });
 
       } else {
 
-        CandidatePicksService.savePick($scope.candidateId, 'V');
+        CandidatePicksService.savePick($scope.candidateId, 'V')
+          .then(function () {
+            $scope.votingForFlag = true;
+            $scope.notVotingForFlag = false;
+          });
 
-        $scope.votingForFlag = true;
-        $scope.notVotingForFlag = false;
       }
 
 

@@ -28,10 +28,6 @@ angular.module('everyvoteTuresoApp')
           $scope.truncate = !$scope.truncate;
         };
 
-        $scope.$watch('text', function() {
-          var totalWords = $scope.text.split(/\s+/).length;
-        });
-
       }
     };
   });

@@ -8,14 +8,24 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
   var CandidatepickwidgetcontrollerCtrl,
     scope,
     CandidatePicksService,
-    initialize;
+    initialize,
+    returnAndResolvePromiseWith;
+
+
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope, _CandidatePicksService_) {
+  beforeEach(inject(function ($controller, $rootScope, _CandidatePicksService_, $q) {
+
+    returnAndResolvePromiseWith = function (val) {
+      var d = $q.defer();
+      d.resolve(val);
+      return d.promise;
+    };
 
     CandidatePicksService = _CandidatePicksService_;
 
-    spyOn(CandidatePicksService, 'savePick');
+    spyOn(CandidatePicksService, 'savePick')
+      .and.returnValue(returnAndResolvePromiseWith());
 
     initialize = function () {
 
@@ -36,8 +46,12 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
     describe('always', function () {
 
       beforeEach(function () {
-        spyOn(CandidatePicksService, 'getPick');
+        spyOn(CandidatePicksService, 'getPick')
+          .and.returnValue(returnAndResolvePromiseWith());
+
         initialize();
+
+        scope.$digest();
       });
 
       it('should call getPick on the candidatepicksservice', function () {
@@ -58,9 +72,11 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
       beforeEach(function () {
 
         spyOn(CandidatePicksService, 'getPick')
-          .andReturn('V');
+          .and.returnValue(returnAndResolvePromiseWith('V'));
 
         initialize();
+
+        scope.$digest();
 
       });
 
@@ -74,9 +90,11 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
       beforeEach(function () {
 
         spyOn(CandidatePicksService, 'getPick')
-          .andReturn('U');
+          .and.returnValue(returnAndResolvePromiseWith('U'));
 
         initialize();
+
+        scope.$digest();
 
       });
 
@@ -91,9 +109,11 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
       beforeEach(function () {
 
         spyOn(CandidatePicksService, 'getPick')
-          .andReturn('N');
+          .and.returnValue(returnAndResolvePromiseWith('N'));
 
         initialize();
+
+        scope.$digest();
 
       });
 
@@ -120,11 +140,14 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
         scope.notVotingForFlag = false;
 
         scope.setVotingFor();
+
+        scope.$digest();
+
       });
 
       it('should call savePick on the candidate pick service', function () {
         expect(CandidatePicksService.savePick)
-        .toHaveBeenCalledWith('fake-candidate', 'U');
+          .toHaveBeenCalledWith('fake-candidate', 'U');
       });
 
       it('should set votingForFlag', function () {
@@ -139,11 +162,14 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
         scope.votingForFlag = false;
 
         scope.setVotingFor();
+
+        scope.$digest();
+
       });
 
       it('should call savePick on the candidate pick service', function () {
         expect(CandidatePicksService.savePick)
-        .toHaveBeenCalledWith('fake-candidate', 'V');
+          .toHaveBeenCalledWith('fake-candidate', 'V');
       });
 
       it('should set votingForFlag', function () {
@@ -173,6 +199,9 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
         scope.votingForFlag = false;
 
         scope.setNotVotingFor();
+
+        scope.$digest();
+
       });
 
       it('should call savePick on the candidate pick service', function () {
@@ -187,16 +216,21 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
     });
 
     describe('given that notVotingForFlag is falsy', function () {
+
       beforeEach(function () {
 
         scope.notVotingForFlag = false;
+        scope.votingForFlag = true;
 
         scope.setNotVotingFor();
+
+        scope.$digest();
+
       });
 
       it('should call savePick on the candidate pick service', function () {
         expect(CandidatePicksService.savePick)
-        .toHaveBeenCalledWith('fake-candidate', 'N');
+          .toHaveBeenCalledWith('fake-candidate', 'N');
       });
 
       it('should set notVotingForFlag', function () {
