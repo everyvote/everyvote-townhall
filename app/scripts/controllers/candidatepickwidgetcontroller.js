@@ -10,8 +10,12 @@
 angular.module('everyvoteTuresoApp')
   .controller('CandidatePickWidgetController', function ($scope, CandidatePicksService) {
 
-    // INIT
-    $scope.$watch('candidateId', function () {
+    var init = function () {
+
+      // Quit if there's no candidateId
+      if(!$scope.candidateId) {
+        return;
+      }
 
       var pick = CandidatePicksService.getPick($scope.candidateId);
 
@@ -29,8 +33,11 @@ angular.module('everyvoteTuresoApp')
         $scope.notVotingForFlag = false;
         $scope.votingForFlag = false;
       }
+    };
 
-    });
+    $scope.$watch('candidateId', init);
+
+    init();
 
 
     ////

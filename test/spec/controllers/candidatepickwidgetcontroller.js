@@ -22,7 +22,7 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
       scope = $rootScope.$new();
       scope.candidateId = 'fake-candidate';
 
-      CandidatepickwidgetcontrollerCtrl = $controller('CandidatepickwidgetcontrollerCtrl', {
+      CandidatepickwidgetcontrollerCtrl = $controller('CandidatePickWidgetController', {
         $scope: scope,
         CandidatePicksService: CandidatePicksService
       });
@@ -36,7 +36,6 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
     describe('always', function () {
 
       beforeEach(function () {
-
         spyOn(CandidatePicksService, 'getPick');
         initialize();
       });
