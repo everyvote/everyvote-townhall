@@ -15,9 +15,17 @@ angular
     'ngRoute',
     'everyvoteFilters',
     'truncate',
-    'angularLocalStorage'
+    'angularLocalStorage',
+    'angular-data.DSCacheFactory'
   ])
   .constant('POPIT_API', 'https://everyvote-demo.popit.mysociety.org/api/v0.1')
+
+  .factory('CandidateCache', function (DSCacheFactory) {
+    return DSCacheFactory.createCache('CandidateCache', {
+      storageMode: 'localStorage'
+    });
+  })
+
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {

@@ -26,6 +26,7 @@ module.exports = function(config) {
       'bower_components/angular-truncate/src/truncate.js',
       'bower_components/angular-cookies/angular-cookies.js',
       'bower_components/angularLocalStorage/src/angularLocalStorage.js',
+      'bower_components/angular-cache/dist/angular-cache.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js',

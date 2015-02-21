@@ -12,8 +12,13 @@ describe('Service: CandidateService', function () {
   }));
 
   // instantiate service
-  var CandidateService, scope, $httpBackend;
-  beforeEach(inject(function (_$rootScope_, _CandidateService_, _$httpBackend_) {
+  var CandidateService, scope, $httpBackend, CandidateCache;
+
+  beforeEach(inject(function (_$rootScope_, _CandidateService_, _$httpBackend_,
+    _CandidateCache_) {
+
+    CandidateCache = _CandidateCache_;
+    CandidateCache.removeAll();
 
     $httpBackend = _$httpBackend_;
 
@@ -27,23 +32,51 @@ describe('Service: CandidateService', function () {
     CandidateService = _CandidateService_;
   }));
 
-  it('should do something', function () {
-    expect(!!CandidateService).toBe(true);
+  describe('when obtaning a candidate that has been cached', function () {
+    var result;
+
+    beforeEach(function () {
+
+      CandidateCache.put('abcd', 'testobj');
+
+      CandidateService.getCandidate('abcd')
+        .then(function(data) {
+          result = data;
+        });
+
+      scope.$apply();
+    });
+
+    it('should return the candidate reuslt object from cache without HTTP request',
+      function () {
+      expect(result).toBe('testobj');
+      $httpBackend.verifyNoOutstandingRequest();
+    });
+
   });
 
-  it('should have the getCandidate method', function (){
+  describe('when obtaning a candidate without being cached', function () {
+    var result;
 
-    var test;
+    beforeEach(function () {
 
-    CandidateService.getCandidate('abcd')
+      CandidateService.getCandidate('abcd')
       .then(function(data) {
-        test = data;
+        result = data;
       });
 
       $httpBackend.flush();
       scope.$apply();
+    });
 
-      expect(test).toBeDefined('testobj');
+    it('should return the candidate reuslt object from the PopIt API', function () {
+      expect(result).toBe('testobj');
+    });
+
+    it('should put the candidate in the cache', function () {
+      expect(CandidateCache.get('abcd')).toBe('testobj');
+    });
+
   });
 
 });
