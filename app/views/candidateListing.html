@@ -1,21 +1,24 @@
 <div class="ev-content-side-padding">
-  <div class="ev-page-share">
+<!--   <div class="ev-page-share">
     <i class="fa fa-share-square-o"></i> share
-  </div>
+  </div> -->
 </div>
 <div class="ev-content">
+  <div class="xs-ev-content-header hidden-sm hidden-md hidden-lg">
+    Election
+  </div>
   <h2 class="ev-content-header">Election</h2>
   <div class="clearfix"></div>
   <div class="row">
     <div class="col-sm-4">
       <div class="ev-content-voting-info">
-        <p>
+        <p class="hidden-xs">
           <b>Voting Details</b>
         </p>
-        <hr style="margin: 10px -20px; border-color: white;">
-        <p style="color: #777">
-          <em>Voting begins in<br>
-          58 days and 6 hours</em>
+        <hr class="hidden-xs" style="margin: 10px -20px; border-color: white;">
+        <p class="ev-content-voting-begins">
+          Voting begins in<br class="hidden-xs">
+          58 days and 6 hours
         </p>
         <p>
           <div style="padding-bottom: 5px;"><b>Voting Days</b></div>
@@ -27,17 +30,26 @@
         </p>
         <p>
           <div>
-            <b><i style="font-weight: bold" class="fa fa-angle-right"></i> Vote Online</b><br>
-            <b><i style="font-weight: bold" class="fa fa-angle-right"></i> Vote By Mail</b><br>
-            <b><i style="font-weight: bold" class="fa fa-angle-right"></i> Voting Locations</b><br>
+            <div class="ev-content-voting-link">
+              <b><i class="fa fa-angle-right"></i> Vote Online</b><br>
+            </div>
+            <div class="ev-content-voting-link">
+              <b><i class="fa fa-angle-right"></i> Vote By Mail</b><br>
+            </div>
+            <div class="ev-content-voting-link">
+              <b><i class="fa fa-angle-right"></i> Voting Locations</b><br>
+            </div>
+            <div class="ev-content-voting-link hidden-sm hidden-md hidden-lg">
+              <b><i class="fa fa-angle-right"></i> Election Description</b><br>
+            </div>
           </div>
         </p>
       </div>
     </div>
     <div class="col-sm-8">
       <div class="ev-content-summary">
-        <hr style="margin:0 0 14px 0">
-        <p style="margin:0 0 15px 0;">
+        <hr class="hidden-xs" style="margin:0 0 14px 0">
+        <p class="hidden-xs" style="margin:0 0 15px 0;">
           <b>Election Description</b>
         </p>
         <p>
@@ -52,7 +64,10 @@
 </div><!-- /.ev-content -->
 <div class="clearfix"></div>
 <div class="ev-content">
-  <h2>Candidates</h2>
+  <div class="xs-ev-content-header hidden-sm hidden-md hidden-lg">
+    Candidates
+  </div>
+  <h2 class="ev-content-header">Candidates</h2>
   <p class="main-sort-by">sort by: <a>random</a></p>
 
   <ev-profile-listing-folder post="post" ng-repeat="post in posts"></ev-profile-listing-folder>

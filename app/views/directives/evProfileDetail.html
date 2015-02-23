@@ -1,6 +1,8 @@
 <div class="ev-content">
-  <h2>Candidate Profile</h2>
-
+  <div class="xs-ev-content-header hidden-sm hidden-md hidden-lg">
+    Candidate Profile
+  </div>
+  <h2 class="ev-content-header">Candidate Profile</h2>
   <div style="padding-top: 0; padding-bottom: 0; border: none;" class="profile clearfix">
 
       <div class="profile-picture hidden-xs" style="z-index: 1;"><!-- z-index:1 makes it clickable -->
@@ -14,7 +16,7 @@
         <div class="functions-menu-header">
           Save Candidate
         </div>
-        
+
         <candidate-pick-widget candidate-id="candidate.id" />
 
       </div><!-- /.functions-menu-detail hidden-xs -->
@@ -46,7 +48,7 @@
 
         <div class="dropdown functions-dropdown hidden-sm hidden-md hidden-lg">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-            <i class="fa fa-fw fa-ellipsis-h"></i>
+            <i class="fa fa-ellipsis-v"></i>
           </button>
           <ul class="dropdown-menu xs-profile-dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
             <div class="functions-menu-detail">
@@ -132,7 +134,10 @@
 </div><!-- /.ev-content -->
 
 <div class="ev-content">
-  <h2>Q & A</h2>
+  <div class="xs-ev-content-header hidden-sm hidden-md hidden-lg">
+    Q & A
+  </div>
+  <h2 class="ev-content-header">Q & A</h2>
   <div class="profile-detail-qa-pictures hidden-xs">
     <div style="float: left;" class="profile-detail-qa-picture">
       <img src="{{ candidate.image }}" />

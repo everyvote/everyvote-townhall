@@ -598,9 +598,21 @@ hr {
 
 @media (max-width: 767px) {
     .ev-content {
-        padding:25px 0 0;
+        padding: 15px 0 0 0;
         border: none;
         margin: 0
+    }
+    .ev-content-header {
+        display: none;
+    }
+    .xs-ev-content-header {
+        background: #e7e7e7;
+        margin: 0 -15px 20px -15px;
+        padding: 5px 15px;
+        font-family: "Cardo", sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
     }
 }
 
@@ -615,10 +627,28 @@ hr {
     padding: 15px 20px
 }
 
+.ev-content-voting-begins {
+    color: #777;
+    font-style: italic;
+}
+
+.ev-content-voting-link, .ev-content-voting-link i {
+    font-weight: 700;
+}
+
 @media (max-width: 767px) {
     .ev-content-voting-info {
+        background-color: transparent;
         margin:0 0 15px;
-        padding: 20px 15px 15px
+        padding: 0
+    }
+    .ev-content-voting-begins {
+        font-size: 17px;
+        font-weight: 600;
+        font-style: normal;
+    }
+    .ev-content-voting-link, .ev-content-voting-link i {
+        line-height: 28px;
     }
 }
 
@@ -628,7 +658,7 @@ hr {
 
 @media (max-width: 767px) {
     .ev-content-summary {
-        margin:0
+        margin: -10px 0 0 0;
     }
 }
 
@@ -642,6 +672,12 @@ hr {
     clear: left;
     font-size: 13px;
     float: left
+}
+
+@media (max-width: 767px) {
+    .main-sort-by {
+        margin: -5px 0 10px 0;
+    }
 }
 
 .main-content {
@@ -659,15 +695,19 @@ hr {
 
 @media (max-width: 767px) {
     .main-content {
-        padding:15px;
+        padding:20px 15px;
         border-left: none;
         border-right: none
     }
 
     .main-content h1 {
-        font-size: 25px;
+        font-size: 16px;
         margin: 5px 0 0;
-        font-family: "Open Sans",sans-serif
+        font-family: "Cardo",sans-serif;
+        border-bottom: none;
+    }
+    .main-content h5 {
+        font-size: 16px;
     }
 }
 
@@ -954,11 +994,13 @@ hr {
 
 .functions-dropdown button {
     border: 1px solid #ccc;
-    color: #aaa
+    color: #aaa;
+    padding: 4px 12px 3px 12px;
+    font-size: 20px;
 }
 
 .functions-dropdown>ul {
-    margin-left: -111px!important;
+    margin-left: -125px !important;
     padding: 0!important;
     border: none!important;
     box-shadow: none!important;
@@ -1243,7 +1285,7 @@ hr {
 
 .profile-page-title {
     float: left;
-    font-family: Cardo,sans-serif;
+    font-family: "Cardo", sans-serif;
     font-size: 20px;
     font-weight: 700
 }
@@ -1256,9 +1298,16 @@ hr {
     margin: -25px 0 25px 0
 }
 
+.profile-page-status-count {
+    font-size: 14px;
+}
+
 @media (max-width: 767px) {
     .profile-page-status {
-        margin:0
+        margin: 10px 0 0 0;
+    }
+    .profile-page-status-count {
+
     }
 }
 
@@ -1280,13 +1329,13 @@ hr {
 
 .profile-page-nav-buttons {
     float: right;
-    margin: -22px 30px 0 0
+    margin: -22px 0 0 0
 }
 
 @media (max-width: 767px) {
     .profile-page-nav-buttons {
         float:right;
-        margin: 0 30px 0 0
+        margin: 12px 0 0 0
     }
 }
 
