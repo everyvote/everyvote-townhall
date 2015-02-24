@@ -153,7 +153,7 @@ hr {
 @media (min-width: 768px) {
     .profile-main-content {
         margin-left:10px;
-        margin-right: 20px
+        margin-right: 0;
     }
 }
 
@@ -168,6 +168,8 @@ hr {
 .nav a {
     color: #f7f7f7;
     cursor: pointer
+;
+    /* display: inline-block; */
 }
 
 .navbar-full-width {
@@ -189,10 +191,14 @@ hr {
 }
 
 .navbar-nav {
-    margin: 0 5px 0 0;
+    margin: 3px 0px 0 0;
     width: auto;
     float: right;
-    padding: 10px 14px 5px
+    padding: 5px 24px 0px 35px;
+    border-right: 1px solid #5e5e5e;
+    /* border-bottom: 1px solid #5e5e5e; */
+    /* border-left: 1px solid #5e5e5e; */
+    background: #44454c;
 }
 
 @media (min-width: 768px) {
@@ -376,6 +382,8 @@ hr {
 #nav-person-xs-image {
     float: right;
     font-weight: 700
+;
+    /* display: inline-block; */
 }
 
 #nav-person-xs-image img {
@@ -1069,7 +1077,8 @@ hr {
     font-size: 1em;
     margin-bottom: 5px;
     border-radius: 3px;
-    /* padding: 2px 5px */}
+    cursor: pointer;
+}
 
 .functions-menu-detail {
     font-size: 14px;

@@ -50,26 +50,16 @@
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
             <i class="fa fa-ellipsis-v"></i>
           </button>
-          <ul class="dropdown-menu xs-profile-dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <div class="functions-menu-detail">
-              <!-- <div class="profile-social-icons">
-                  <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
-                    <i class="fa fa-fw fa-{{socialLink.note}}"></i>
-                  </a>
-              </div> -->
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <div class="functions-menu">
               <div class="functions-menu-header">
                 Save Candidate
               </div>
-              <ul>
-                <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
-                  <i class="fa fa-fw fa-check"></i> Voting For
-                </li>
-                <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
-                  <i class="fa fa-fw fa-times"></i> Not Voting For
-                </li>
-              </ul>
+              <hr>
 
-            </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
+              <candidate-pick-widget candidate-id="candidate.id" />
+
+            </div><!-- /.bg-slate box-padding-sides profile-right-col -->
           </ul>
         </div>
 

@@ -12,14 +12,9 @@
         Save Candidate
       </div>
       <hr>
-      <ul>
-        <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
-          <i class="fa fa-fw fa-check"></i> Voting For
-        </li>
-        <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
-          <i class="fa fa-fw fa-times"></i> Not Voting For
-        </li>
-      </ul>
+
+      <candidate-pick-widget candidate-id="candidate.id" />
+
     </div><!-- /.bg-slate box-padding-sides profile-right-col -->
 
     <div class="profile-main-content">
@@ -37,14 +32,9 @@
               Save Candidate
             </div>
             <hr>
-            <ul>
-              <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
-                <i class="fa fa-fw fa-check"></i> Voting For
-              </li>
-              <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
-                <i class="fa fa-fw fa-times"></i> Not Voting For
-              </li>
-            </ul>
+
+            <candidate-pick-widget candidate-id="candidate.id" />
+
           </div><!-- /.bg-slate box-padding-sides profile-right-col -->
         </ul>
       </div>
