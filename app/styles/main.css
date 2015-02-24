@@ -1098,7 +1098,8 @@ hr {
     font-size: 1em;
     margin-bottom: 7px;
     border-radius: 3px;
-    font-weight: 600
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .functions-menu-detail>.functions-menu-header {
@@ -1628,7 +1629,7 @@ hr {
 }
 
 .ev-footer {
-    height: 51px;
+    height: 60px;
     z-index: 1000;
     max-width: 1080px;
     margin: 0 0 -1px 0;
@@ -1640,6 +1641,28 @@ hr {
     margin-right: 10px;
     float: right
 }
+
+.ev-footer-img {
+    margin:16px 5px 0 0;
+}
+
+.ev-footer-img img {
+    width: 104px;
+}
+
+/*.ev-html-xs-scroll-y {
+    overflow-y: scroll;
+}
+
+@media only screen {
+    .ev-html-xs-scroll-y {
+        overflow-y: auto;
+    }
+}
+
+.body {
+    overflow-y: auto;
+}*/
 
 .row {
     margin: 0
