@@ -50,26 +50,16 @@
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
             <i class="fa fa-ellipsis-v"></i>
           </button>
-          <ul class="dropdown-menu xs-profile-dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <div class="functions-menu-detail">
-              <!-- <div class="profile-social-icons">
-                  <a ng-repeat="socialLink in socialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
-                    <i class="fa fa-fw fa-{{socialLink.note}}"></i>
-                  </a>
-              </div> -->
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <div class="functions-menu">
               <div class="functions-menu-header">
                 Save Candidate
               </div>
-              <ul>
-                <li ng-click="toggleVotingFor()" ng-class="votingFor ? 'save-candidate-toggled' : ''">
-                  <i class="fa fa-fw fa-check"></i> Voting For
-                </li>
-                <li ng-click="toggleNotVotingFor()" ng-class="notVotingFor ? 'save-candidate-toggled' : ''">
-                  <i class="fa fa-fw fa-times"></i> Not Voting For
-                </li>
-              </ul>
+              <hr>
 
-            </div><!-- /.bg-lt-gry box-padding-sides profile-right-col -->
+              <candidate-pick-widget candidate-id="candidate.id" />
+
+            </div><!-- /.bg-slate box-padding-sides profile-right-col -->
           </ul>
         </div>
 
@@ -88,7 +78,7 @@
           </table>
         </div>
         <div class="profile-issue-stance-alt hidden-md hidden-lg">
-          <span class="profile-match-text-strong">80% match</span> <span class="profile-match-text-light">based on 2 answers</span>
+          <span class="profile-match-text-strong">80% match</span> <span class="profile-match-text-light">based on 5 answers</span>
         </div>
         <div class="profile-social-icons">
           <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
@@ -144,7 +134,7 @@
       <div class="clearfix"></div>
     </div>
     <div style="float: right;" class="profile-detail-qa-picture">
-      <img src="images/kevin-hall-monitor.png" />
+      <img src="images/frederick-douglass.jpg" />
       <div class="clearfix"></div>
     </div>
   </div>
@@ -171,10 +161,10 @@
       </div>
       <div class="profile-qa-container">
         <div class="profile-question-text" style="padding-top: 0;">
-          <h7>Do you believe Earth today is warming 15x faster than it has been on average over the past 10,000 years?</h7>
+          <h7>Do you support increasing the cost of student fees for the Fall 2015 semester?</h7>
         </div>
         <p class="profile-answer-text" style="overflow: hidden;">
-          {{ candidate.summary | htmlToPlaintext }}
+          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
         </p>
         <div class="xs-candidate-text-opinion-buttons">
           <div class="xs-candidate-text-opinion-picture">
@@ -189,7 +179,7 @@
           <div class="xs-candidate-text-opinion-divider">
           </div>
           <div class="xs-candidate-text-opinion-picture">
-            <img src="images/kevin-hall-monitor.png" />
+            <img src="images/frederick-douglass.jpg" />
           </div>
           <div class="xs-candidate-text-opinion-button">
             <i class="fa fa-thumbs-down"></i>
@@ -217,10 +207,10 @@
       </div>
       <div class="profile-qa-container">
         <div class="profile-question-text" style="padding-top: 0;">
-          <h7>Do you believe the Earth is warming, Earth's coastlines are flooding, weather patterns are changing, and that some of this weather change is a by-product of our unprecedented technology and fuel-consumption? And that if climate change continues at this rate it will have (and already is having) dire consequences for humanity, and we seriously need to focus on addressing, preventing, and preparing for climate change related environmental disasters before it's too late?</h7>
+          <h7>Do you support the decriminalization of drug use?</h7>
         </div>
         <p class="profile-answer-text" style="overflow: hidden;">
-          {{ candidate.summary | htmlToPlaintext }}
+          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
         </p>
         <div class="xs-candidate-text-opinion-buttons">
           <div class="xs-candidate-text-opinion-picture">
@@ -235,12 +225,150 @@
           <div class="xs-candidate-text-opinion-divider">
           </div>
           <div class="xs-candidate-text-opinion-picture">
-            <img src="images/kevin-hall-monitor.png" />
+            <img src="images/frederick-douglass.jpg" />
           </div>
           <div class="xs-candidate-text-opinion-button">
             <i class="fa fa-exclamation-triangle"></i>
             <div class="xs-candidate-text-opinion-text">
               Obj.
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="candidate-text-opinion-buttons">
+        <div style="float: left;" class="candidate-text-opinion-button">
+          <i class="fa fa-thumbs-up"></i>
+          <div class="candidate-text-opinion-text">
+            Yes
+          </div>
+        </div>
+        <div style="float: right;" class="candidate-text-opinion-button">
+          <i class="fa fa-thumbs-down"></i>
+          <div class="candidate-text-opinion-text">
+            No
+          </div>
+        </div>
+      </div>
+      <div class="profile-qa-container">
+        <div class="profile-question-text" style="padding-top: 0;">
+          <h7>Do you support legalizing same sex marriage?</h7>
+        </div>
+        <p class="profile-answer-text" style="overflow: hidden;">
+          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
+        </p>
+        <div class="xs-candidate-text-opinion-buttons">
+          <div class="xs-candidate-text-opinion-picture">
+            <img src="{{ candidate.image }}" />
+          </div>
+          <div class="xs-candidate-text-opinion-button">
+            <i class="fa fa-thumbs-up"></i>
+            <div class="xs-candidate-text-opinion-text">
+              Yes
+            </div>
+          </div>
+          <div class="xs-candidate-text-opinion-divider">
+          </div>
+          <div class="xs-candidate-text-opinion-picture">
+            <img src="images/frederick-douglass.jpg" />
+          </div>
+          <div class="xs-candidate-text-opinion-button">
+            <i class="fa fa-thumbs-down"></i>
+            <div class="xs-candidate-text-opinion-text">
+              No
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="candidate-text-opinion-buttons">
+        <div style="float: left;" class="candidate-text-opinion-button">
+          <i class="fa fa-question"></i>
+          <div class="candidate-text-opinion-text">
+            Und.
+          </div>
+        </div>
+        <div style="float: right;" class="candidate-text-opinion-button">
+          <i class="fa fa-exclamation-triangle"></i>
+          <div class="candidate-text-opinion-text">
+            Obj.
+          </div>
+        </div>
+      </div>
+      <div class="profile-qa-container">
+        <div class="profile-question-text" style="padding-top: 0;">
+          <h7>Do you believe Earth today is warming 15x faster than it has been on average over the past 10,000 years, and that this rapid escalation of temperatures will have and is already having dire environmental consequences for members of the human race?</h7>
+        </div>
+        <p class="profile-answer-text" style="overflow: hidden;">
+          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
+        </p>
+        <div class="xs-candidate-text-opinion-buttons">
+          <div class="xs-candidate-text-opinion-picture">
+            <img src="{{ candidate.image }}" />
+          </div>
+          <div class="xs-candidate-text-opinion-button">
+            <i class="fa fa-question"></i>
+            <div class="xs-candidate-text-opinion-text">
+              Und.
+            </div>
+          </div>
+          <div class="xs-candidate-text-opinion-divider">
+          </div>
+          <div class="xs-candidate-text-opinion-picture">
+            <img src="images/frederick-douglass.jpg" />
+          </div>
+          <div class="xs-candidate-text-opinion-button">
+            <i class="fa fa-exclamation-triangle"></i>
+            <div class="xs-candidate-text-opinion-text">
+              Obj.
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="candidate-text-opinion-buttons">
+        <div style="float: left;" class="candidate-text-opinion-button">
+          <i class="fa fa-thumbs-up"></i>
+          <div class="candidate-text-opinion-text">
+            Yes
+          </div>
+        </div>
+        <div style="float: right;" class="candidate-text-opinion-button">
+          <i class="fa fa-thumbs-down"></i>
+          <div class="candidate-text-opinion-text">
+            No
+          </div>
+        </div>
+      </div>
+      <div class="profile-qa-container">
+        <div class="profile-question-text" style="padding-top: 0;">
+          <h7>Do you support affirmative action programs?</h7>
+        </div>
+        <p class="profile-answer-text" style="overflow: hidden;">
+          <ev-truncated-text text='summary' word-limit="40"></ev-truncated-text>
+        </p>
+        <div class="xs-candidate-text-opinion-buttons">
+          <div class="xs-candidate-text-opinion-picture">
+            <img src="{{ candidate.image }}" />
+          </div>
+          <div class="xs-candidate-text-opinion-button">
+            <i class="fa fa-thumbs-up"></i>
+            <div class="xs-candidate-text-opinion-text">
+              Yes
+            </div>
+          </div>
+          <div class="xs-candidate-text-opinion-divider">
+          </div>
+          <div class="xs-candidate-text-opinion-picture">
+            <img src="images/frederick-douglass.jpg" />
+          </div>
+          <div class="xs-candidate-text-opinion-button">
+            <i class="fa fa-thumbs-down"></i>
+            <div class="xs-candidate-text-opinion-text">
+              No
             </div>
           </div>
           <div class="clearfix"></div>

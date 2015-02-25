@@ -39,24 +39,28 @@
             <div class="ev-content-voting-link">
               <b><i class="fa fa-angle-right"></i> Voting Locations</b><br>
             </div>
-            <div class="ev-content-voting-link hidden-sm hidden-md hidden-lg">
-              <b><i class="fa fa-angle-right"></i> Election Description</b><br>
+            <div ng-click="toggle();" class="ev-content-voting-link hidden-sm hidden-md hidden-lg">
+              <b><i ng-show="showSummary" class="fa fa-angle-down"></i>
+                 <i ng-show="!showSummary" class="fa fa-angle-right"></i> Election Description</b><br>
             </div>
+            <p class="hidden-sm hidden-md hidden-lg" ng-show="showSummary">
+              {{ summary }}
+            </p>
           </div>
         </p>
       </div>
     </div>
     <div class="col-sm-8">
-      <div class="ev-content-summary">
-        <hr class="hidden-xs" style="margin:0 0 14px 0">
-        <p class="hidden-xs" style="margin:0 0 15px 0;">
+      <div class="ev-content-indented-summary hidden-xs">
+        <hr style="margin:0 0 14px 0">
+        <p style="margin:0 0 15px 0;">
           <b>Election Description</b>
         </p>
         <p>
           <ev-truncated-text text="summary" word-limit="80" />
         </p>
         <p style="color:#777">
-          <em>Moderators: Mitchell Downey Weaver, Gareth Johannesburg-san, Vinciple Schramer</em>
+          <em>Moderators: Harriet Tubman, Benjamin Franklin</em>
         </p>
       </div>
     </div>

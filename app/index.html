@@ -57,7 +57,7 @@
             </div>-->
             <ul class="ev-nav-group" id="ev-nav-group">
               <li>
-                <a class="ev-nav-group-img">
+                <a class="ev-nav-group-img" href="/">
                   <img src="images/niu-sa.png" />
                 </a>
                 <a class="ev-nav-group-text" href="/">
@@ -83,7 +83,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown hidden-xs">
                 <a id="nav-person" data-toggle="dropdown">
-                  Kevin Powers &nbsp; &nbsp; <img src="images/kevin-hall-monitor.png" />
+                  Frederick Douglass &nbsp; &nbsp; <img src="images/frederick-douglass.jpg" />
                 </a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a>My Profile</a></li>
@@ -93,8 +93,8 @@
                 </ul>
               </li>
               <div class="nav-option-xs">
-                <a id="nav-person-xs-image" class="hidden-sm hidden-md hidden-lg"><img src="images/kevin-hall-monitor.png" /></a>
-                <a id="nav-person-xs-text" class="nav-option-xs-text hidden-sm hidden-md hidden-lg">Kevin Powers</a>
+                <a id="nav-person-xs-image" class="hidden-sm hidden-md hidden-lg"><img src="images/frederick-douglass.jpg" /></a>
+                <a id="nav-person-xs-text" class="nav-option-xs-text hidden-sm hidden-md hidden-lg">Frederick Douglass</a>
                 <div class="clearfix"></div>
               </div>
               <div class="nav-option-xs">
@@ -138,12 +138,12 @@
               </a>
             </div>
             <div class="tabbar-nav-link">
-              <a href="/">
+              <a onclick="alert('coming soon :)');">
                 Debate
               </a>
             </div>
             <div class="tabbar-nav-link">
-              <a href="/">
+              <a href="#/about">
                 About
               </a>
             </div>
@@ -196,7 +196,7 @@
                 </div>
 
                 <!-- Detail Pane -->
-                <div class="detail-pane" ng-view="">
+                <div class="detail-pane" ng-view="" autoscroll="true">
                   <!-- detail-pane contents inserted here from app.js routes and templates -->
                 </div>
 
@@ -204,7 +204,9 @@
 
             </div><!-- /.main-margin -->
             <div class="ev-footer">
-                <a target="_blank"><img src="images/ev-brand.png" /></a>
+                <a class="ev-footer-img" href="https://everyvote.org">
+                  <img src="images/ev-footer-brand.png" />
+                </a>
                 <div class="clearfix"></div>
             </div>
 
