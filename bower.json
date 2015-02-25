@@ -13,7 +13,8 @@
     "font-awesome": "~4.2.0",
     "jquery.scrollTo": "~1.4.14",
     "angular-truncate": "*",
-    "angularLocalStorage": "v0.2.0"
+    "angularLocalStorage": "v0.2.0",
+    "lodash": "~3.3.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

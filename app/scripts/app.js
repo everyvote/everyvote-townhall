@@ -18,15 +18,35 @@ angular
     'angularLocalStorage',
     'angular-data.DSCacheFactory'
   ])
-  .constant('POPIT_API', 'https://everyvote-demo.popit.mysociety.org/api/v0.1')
 
-  .factory('CandidateCache', function (DSCacheFactory) {
-    return DSCacheFactory.createCache('CandidateCache', {
-      storageMode: 'localStorage'
+  .factory('PersonCache', function (DSCacheFactory) {
+    return DSCacheFactory.createCache('PersonCache', {
+      storageMode: 'localStorage',
+      maxAge: 30*60*1000 // 30 min
     });
   })
 
-  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  .factory('PostCache', function (DSCacheFactory) {
+    return DSCacheFactory.createCache('PostCache', {
+      storageMode: 'localStorage',
+      maxAge: 30*60*1000 // 30 min
+    });
+  })
+
+  .factory('OrganizationCache', function (DSCacheFactory) {
+    return DSCacheFactory.createCache('OrganizationCache', {
+      storageMode: 'localStorage',
+      maxAge: 30*60*1000 // 30 min
+    });
+  })
+
+  .config(['$routeProvider', '$locationProvider', 'DSCacheFactoryProvider',
+    function($routeProvider, $locationProvider, DSCacheFactoryProvider) {
+
+    DSCacheFactoryProvider.setCacheDefaults({
+      deleteOnExpire: 'passive'
+    });
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/candidateListing.html',

@@ -9,9 +9,19 @@
  */
 angular.module('everyvoteTuresoApp')
   .controller('CandidateDetailCtrl', function ($scope, $routeParams,
-    CandidateService) {
+    CandidateService, ElectionService) {
 
     $scope.candidateId = $routeParams.id;
+
+    ElectionService.getNextCandidateId($scope.candidateId)
+      .then(function (id) {
+        $scope.nextCandidateId = id;
+      });
+
+    ElectionService.getPreviousCandidateId($scope.candidateId)
+      .then(function (id) {
+        $scope.prevCandidateId = id;
+      });
 
     CandidateService
       .getCandidate($routeParams.id)
