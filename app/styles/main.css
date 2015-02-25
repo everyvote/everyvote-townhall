@@ -662,11 +662,25 @@ hr {
 }
 
 .ev-content-summary {
-    margin: 0 0 0 25px
+
 }
 
 @media (max-width: 767px) {
     .ev-content-summary {
+        margin: -10px 0 0 0;
+    }
+}
+
+.ev-content hr {
+    margin: 20px 0;
+}
+
+.ev-content-indented-summary {
+    margin: 0 0 0 25px
+}
+
+@media (max-width: 767px) {
+    .ev-content-indented-summary {
         margin: -10px 0 0 0;
     }
 }
