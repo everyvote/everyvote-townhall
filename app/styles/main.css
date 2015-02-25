@@ -195,7 +195,7 @@ hr {
     width: auto;
     float: right;
     padding: 5px 24px 0px 35px;
-    border-right: 1px solid #5e5e5e;
+    /* border-right: 1px solid #5e5e5e;*/
     /* border-bottom: 1px solid #5e5e5e; */
     /* border-left: 1px solid #5e5e5e; */
     background: #44454c;
@@ -1698,6 +1698,10 @@ hr {
     .profile-qa-container {
         overflow:hidden
     }
+}
+
+.profile-qa-container {
+    overflow: hidden;
 }
 
 .profile-question-text {
