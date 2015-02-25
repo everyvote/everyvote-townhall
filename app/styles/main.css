@@ -642,6 +642,7 @@ hr {
 
 .ev-content-voting-link, .ev-content-voting-link i {
     font-weight: 700;
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {
