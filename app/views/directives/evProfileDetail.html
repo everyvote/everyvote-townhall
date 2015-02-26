@@ -33,7 +33,7 @@
         </span>
         <span class="profile-issue-stance-box-subtext">
           based on<br>
-          3 questions
+          5 questions
         </span>
       </div>
 
@@ -81,7 +81,7 @@
           <span class="profile-match-text-strong">80% match</span> <span class="profile-match-text-light">based on 5 answers</span>
         </div>
         <div class="profile-social-icons">
-          <a ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
+          <a target="_blank" ng-repeat="socialLink in displayedSocialLinks" ng-show="socialLink.isSupported" href="{{socialLink.url}}">
             <i class="fa fa-fw fa-{{socialLink.note}}"></i>
           </a>
         </div>

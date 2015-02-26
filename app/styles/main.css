@@ -1504,6 +1504,21 @@ hr {
     display: block
 }
 
+.tabbar-nav-link-social {
+    float: right;
+    font-family: Cardo,serif;
+    font-weight: 700;
+    border-left: 1px solid #ccc;
+    line-height: 21px;
+}
+
+.tabbar-nav-link-social a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 15px 4px;
+    display: block
+}
+
 .tabbar-nav-scroll {
     background: 0 0;
     position: fixed;
