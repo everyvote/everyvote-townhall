@@ -119,7 +119,7 @@
 
         <div style="margin-top: 40px;">
           <div class="tabbar-nav-title-container">
-            <div class="tabbar-nav-title tabbar-nav-h-resize">
+            <div class="tabbar-nav-title tabbar-nav-h-resize hidden-xs">
               Candidates
             </div>
           </div>
@@ -133,7 +133,7 @@
               <i class="fa fa-caret-down tabbar-nav-scroll-button-down"></i>
             </div>
             <div class="row">
-              <div class="col-sm-9">
+              <div class="col-sm-9 hidden-xs">
                 <div class="tabbar-nav-link">
                   <a href="/">
                     Election
@@ -181,6 +181,48 @@
                 </div>
                 <div class="clearfix"></div>
               </div>
+
+              <div style="float:left" class="dropdown hidden-sm hidden-md hidden-lg">
+                <button class="btn btn-default dropdown-toggle tabbar-nav-xs-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  Election
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/">Election</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/#/about">About</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" onclick="alert('coming soon')">Debate</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/#/mycandidates">My Candidates</a></li>
+                </ul>
+              </div>
+
+              <div style="float:right;" class="hidden-sm hidden-md hidden-lg">
+                <div class="tabbar-nav-link-social">
+                  <a target="_blank" href="https://github.com/everyvote/everyvote-tureso">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </div>
+  <!--               <div class="tabbar-nav-link-social">
+                  <a target="_blank" href="https://www.linkedin.com/company/everyvote">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </div> -->
+                <div class="tabbar-nav-link-social">
+                  <a target="_blank" href="https://twitter.com/everyvoteorg">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="tabbar-nav-link-social">
+                  <a target="_blank" href="https://www.facebook.com/EveryVote">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="tabbar-nav-link-social">
+                  <a target="_blank" href="http://www.reddit.com/user/_everyvote_/">
+                    <i class="fa fa-reddit"></i>
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

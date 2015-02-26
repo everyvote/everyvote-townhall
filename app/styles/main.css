@@ -672,7 +672,7 @@ hr {
 }
 
 .ev-content hr {
-    margin: 20px 0;
+    margin: 20px 0 25px 0;
 }
 
 .ev-content-indented-summary {
@@ -1443,7 +1443,7 @@ hr {
 
 @media (max-width: 767px) {
     .tabbar-nav-container {
-        display:none
+        /*display:none*/
     }
 }
 
@@ -1461,6 +1461,7 @@ hr {
     text-align: right;
     max-width: 1078px;
     width: 100%;
+    height: 30px;
     background: #eee;
     z-index: 15;
     border-bottom: 1px solid #ccc
@@ -1468,7 +1469,7 @@ hr {
 
 @media (max-width: 767px) {
     .tabbar-nav-title-container {
-        display:none
+
     }
 }
 
@@ -1488,6 +1489,12 @@ hr {
     .tabbar-nav-title {
         margin-right:1px
     }
+}
+
+.tabbar-nav-xs-dropdown {
+    background: transparent;
+    border: none;
+    line-height: 17px;
 }
 
 .tabbar-nav-link {
@@ -1530,6 +1537,12 @@ hr {
 .tabbar-nav-scroll-button {
     float: right;
     clear: both
+}
+
+@media (max-width: 767px) {
+    .tabbar-nav-scroll-button {
+        display: none;
+    }
 }
 
 .tabbar-nav-scroll-button-up {
