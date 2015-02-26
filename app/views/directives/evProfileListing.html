@@ -2,7 +2,7 @@
 
     <div class="profile-picture hidden-xs" style="z-index: 1;"><!-- z-index:1 makes it clickable -->
       <a href="#/candidates/{{ candidate.id }}">
-        <img src="{{ candidate.image }}" />
+        <img ng-src="{{ candidate.image }}" />
         <div class="clearfix"></div>
       </a>
     </div>
@@ -19,7 +19,7 @@
 
     <div class="profile-main-content">
       <a class="profile-picture hidden-sm hidden-md hidden-lg" href="#/candidates/{{ candidate.id }}">
-        <img src="{{ candidate.image }}" />
+        <img ng-src="{{ candidate.image }}" />
       </a>
 
       <div class="dropdown functions-dropdown hidden-md hidden-lg">

@@ -1,7 +1,7 @@
 <div ng-class="isFocused ? 'sidebar-profile-isFocused' : 'sidebar-profile'">
   <div class="sidebar-profile-picture">
     <a href="#/candidates/{{ candidate.id }}">
-      <img src="{{ candidate.image }}" />
+      <img ng-src="{{ candidate.image }}" />
     </a>
   </div>
   <div class="sidebar-profile-text-wrapper">
