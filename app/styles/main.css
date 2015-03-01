@@ -530,13 +530,8 @@ hr {
 
 .cover-img {
     position: relative;
-    color: #fff
-}
-
-@media (min-width: 768px) {
-    .cover-img {
-        margin:30px 0 0
-    }
+    color: #fff;
+    margin: 30px 0 0 0;
 }
 
 .cover-img img {
