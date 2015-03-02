@@ -199,9 +199,9 @@
                 <div class="clearfix"></div>
               </div>
 
-              <div style="float:left" class="dropdown hidden-sm hidden-md hidden-lg">
+              <div ng-controller="PagechangewidgetCtrl" style="float:left" class="dropdown hidden-sm hidden-md hidden-lg">
                 <button class="btn btn-default dropdown-toggle tabbar-nav-xs-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                  Election
+                  {{ currentPageName }}
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -375,6 +375,7 @@
         <script src="scripts/controllers/candidatepickwidgetcontroller.js"></script>
         <script src="scripts/services/popit.js"></script>
         <script src="scripts/services/electionmodelorchestrator.js"></script>
+        <script src="scripts/controllers/pagechangewidget.js"></script>
         <!-- endbuild -->
 
 </body>

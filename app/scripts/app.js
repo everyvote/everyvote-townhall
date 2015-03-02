@@ -50,19 +50,23 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/candidateListing.html',
-        controller: 'CandidateListingCtrl'
+        controller: 'CandidateListingCtrl',
+        name: 'Election'
       })
       .when('/candidates/:id', {
         templateUrl: 'views/candidateDetail.html',
-        controller: 'CandidateDetailCtrl'
+        controller: 'CandidateDetailCtrl',
+        name: 'Election'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         // controller: 'AboutCtrl'
+        name: 'About'
       })
       .when('/mycandidates', {
         templateUrl: 'views/candidatePicks.html',
-        controller: 'CandidatePicksCtrl'
+        controller: 'CandidatePicksCtrl',
+        name: 'My Candidates'
       })
       .otherwise({
         redirectTo: '/'

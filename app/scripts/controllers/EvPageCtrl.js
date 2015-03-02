@@ -8,7 +8,7 @@
  * Controller of the everyvoteTuresoApp
  */
 angular.module('everyvoteTuresoApp')
-  .controller('EvPageCtrl', function ($scope) {
+  .controller('EvPageCtrl', function ($scope, $route) {
 
     $scope.zone = 'EveryVote University > Student Association';
     $scope.electionName = 'Spring 2015 Semester';
