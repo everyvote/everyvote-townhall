@@ -57,9 +57,8 @@ h4 {
     font-family: 'Open Sans',sans-serif;
     margin-bottom: 2px!important;
     font-size: 17px;
-    margin-top: 0
-;
-    font-weight: 600;
+    margin-top: 0;
+    font-weight: 600
 }
 
 h5 {
@@ -153,7 +152,7 @@ hr {
 @media (min-width: 768px) {
     .profile-main-content {
         margin-left:10px;
-        margin-right: 0;
+        margin-right: 0
     }
 }
 
@@ -168,8 +167,6 @@ hr {
 .nav a {
     color: #f7f7f7;
     cursor: pointer
-;
-    /* display: inline-block; */
 }
 
 .navbar-full-width {
@@ -191,14 +188,11 @@ hr {
 }
 
 .navbar-nav {
-    margin: 3px 0px 0 0;
+    margin: 3px 0 0;
     width: auto;
     float: right;
-    padding: 5px 24px 0px 35px;
-    /* border-right: 1px solid #5e5e5e;*/
-    /* border-bottom: 1px solid #5e5e5e; */
-    /* border-left: 1px solid #5e5e5e; */
-    background: #44454c;
+    padding: 5px 24px 0 35px;
+    background: #44454c
 }
 
 @media (min-width: 768px) {
@@ -221,8 +215,7 @@ hr {
     max-width: 1080px;
     margin-left: -1px;
     z-index: 2000;
-    margin-top: -40px
-}
+    margin-top: -40px}
 
 .ev-navbar a {
     color: #fff!important
@@ -382,8 +375,6 @@ hr {
 #nav-person-xs-image {
     float: right;
     font-weight: 700
-;
-    /* display: inline-block; */
 }
 
 #nav-person-xs-image img {
@@ -517,21 +508,22 @@ hr {
 
 .ev-body-container {
     max-width: 1080px;
-    background-color: #fff;
+    /* background-color: #fff; */
     position: relative;
     min-height: 100%;
     margin: 0 auto
 }
 
 .ev-body-container-shadow {
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc
+
+
 }
 
 .cover-img {
     position: relative;
     color: #fff;
-    margin: 30px 0 0 0;
+    margin: 30px 0 0;
+    border-right: 1px solid #5e5e5e;
 }
 
 .cover-img img {
@@ -601,22 +593,24 @@ hr {
 
 @media (max-width: 767px) {
     .ev-content {
-        padding: 15px 0 0 0;
+        padding:15px 0 0;
         border: none;
         margin: 0
     }
+
     .ev-content-header {
-        display: none;
+        display: none
     }
+
     .xs-ev-content-header {
-        background: #e7e7e7;
+        background: #e7ebee;
         margin: 0 -15px 20px -15px;
         padding: 5px 15px;
-        font-family: "Cardo", sans-serif;
+        font-family: Cardo,sans-serif;
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 18px;
-    }
+        letter-spacing: .15em;
+        font-size: 16px;}
 }
 
 @media (min-width: 768px) and (max-width:991px) {
@@ -632,42 +626,40 @@ hr {
 
 .ev-content-voting-begins {
     color: #777;
-    font-style: italic;
+    font-style: italic
 }
 
-.ev-content-voting-link, .ev-content-voting-link i {
+.ev-content-voting-link,.ev-content-voting-link i {
     font-weight: 700;
-    cursor: pointer;
+    cursor: pointer
 }
 
 @media (max-width: 767px) {
     .ev-content-voting-info {
-        background-color: transparent;
-        margin:0 0 15px;
+        background-color:transparent;
+        margin: 0 0 15px;
         padding: 0
     }
+
     .ev-content-voting-begins {
         font-size: 17px;
         font-weight: 600;
-        font-style: normal;
+        font-style: normal
     }
-    .ev-content-voting-link, .ev-content-voting-link i {
-        line-height: 28px;
+
+    .ev-content-voting-link,.ev-content-voting-link i {
+        line-height: 28px
     }
-}
-
-.ev-content-summary {
-
 }
 
 @media (max-width: 767px) {
     .ev-content-summary {
-        margin: -10px 0 0 0;
+        margin:-10px 0 0 0
     }
 }
 
 .ev-content hr {
-    margin: 20px 0 25px 0;
+    margin: 20px 0 25px
 }
 
 .ev-content-indented-summary {
@@ -676,14 +668,13 @@ hr {
 
 @media (max-width: 767px) {
     .ev-content-indented-summary {
-        margin: -10px 0 0 0;
+        margin:-10px 0 0 0
     }
 }
 
 .main-margin {
     min-height: 100%;
-    margin: 0 auto
-}
+    margin: 0 auto}
 
 .main-sort-by {
     margin: -8px 0 17px 0;
@@ -694,7 +685,7 @@ hr {
 
 @media (max-width: 767px) {
     .main-sort-by {
-        margin: -5px 0 10px 0;
+        margin:-5px 0 10px 0
     }
 }
 
@@ -703,7 +694,8 @@ hr {
     padding-bottom: 20px;
     padding-left: 25px;
     padding-right: 25px;
-    background: #fff
+    background: #fff;
+    border-right: 1px solid #5e5e5e;
 }
 
 .main-content h1 {
@@ -721,11 +713,12 @@ hr {
     .main-content h1 {
         font-size: 16px;
         margin: 5px 0 0;
-        font-family: "Cardo",sans-serif;
-        border-bottom: none;
+        font-family: Cardo,sans-serif;
+        border-bottom: none
     }
+
     .main-content h5 {
-        font-size: 16px;
+        font-size: 16px
     }
 }
 
@@ -919,7 +912,8 @@ hr {
 }
 
 .profile h4 {
-    color: #000;}
+    color: #000
+}
 
 .profile hr {
     margin: 15px 0 10px;
@@ -928,7 +922,8 @@ hr {
 
 .profile p {
     margin-bottom: 5px;
-    line-height: 20px;}
+    line-height: 20px
+}
 
 .profile-row-first {
     clear: both
@@ -1011,14 +1006,19 @@ hr {
 }
 
 .functions-dropdown button {
-    border: 1px solid #ccc;
+    background-color: #f7f7f7;
     color: #aaa;
-    padding: 4px 12px 3px 12px;
+    padding: 4px 12px 3px;
     font-size: 20px;
+    border-radius: 0
+}
+
+.open>.dropdown-toggle.btn-default, button#dropdownMenu1, .functions-dropdown .btn-default:hover {
+    border: 1px solid #f7f7f7
 }
 
 .functions-dropdown>ul {
-    margin-left: -125px !important;
+    margin-left: -125px!important;
     padding: 0!important;
     border: none!important;
     box-shadow: none!important;
@@ -1026,8 +1026,7 @@ hr {
 }
 
 .functions-dropdown .dropdown-menu {
-    background-color: #eee;
-}
+    background-color: #eee}
 
 .functions-dropdown-padding-sides {
     padding: 0 10px
@@ -1040,7 +1039,7 @@ hr {
     width: 155px;
     float: right;
     margin: 0 0 0 15px;
-    border-left: 1px solid #bababa;
+    border-left: 1px solid #bababa
 }
 
 @media (max-width: 991px) {
@@ -1049,8 +1048,7 @@ hr {
         padding-right: 10px;
         height: auto;
         margin: 0;
-        border-left: none;
-    }
+        border-left: none}
 }
 
 .functions-menu hr {
@@ -1060,18 +1058,18 @@ hr {
 
 .functions-menu-header {
     font-weight: 600;
-    padding: 0 5px 10px 5px;
+    padding: 0 5px 10px
 }
 
 @media (max-width: 991px) {
     .functions-menu-header {
-        padding: 5px;
+        padding:5px
     }
 }
 
 .save-candidate-toggled {
-    color: red !important;
-    font-weight: 700 !important;
+    color: red!important;
+    font-weight: 700!important
 }
 
 .profile-stats {
@@ -1087,7 +1085,7 @@ hr {
     font-size: 1em;
     margin-bottom: 5px;
     border-radius: 3px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .functions-menu-detail {
@@ -1109,7 +1107,7 @@ hr {
     margin-bottom: 7px;
     border-radius: 3px;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .functions-menu-detail>.functions-menu-header {
@@ -1227,8 +1225,8 @@ hr {
     font-size: 14px;
     color: #919191;
     margin-bottom: 13px;
-    overflow: hidden
-;font-style: italic;
+    overflow: hidden;
+    font-style: italic
 }
 
 @media (max-width: 767px) {
@@ -1271,7 +1269,7 @@ hr {
 }
 
 .functions-menu i {
-    font-size: 20px;
+    font-size: 20px
 }
 
 .profile-social-icons {
@@ -1305,7 +1303,7 @@ hr {
 
 .profile-page-title {
     float: left;
-    font-family: "Cardo", sans-serif;
+    font-family: Cardo,sans-serif;
     font-size: 20px;
     font-weight: 700
 }
@@ -1319,15 +1317,12 @@ hr {
 }
 
 .profile-page-status-count {
-    font-size: 14px;
+    font-size: 14px
 }
 
 @media (max-width: 767px) {
     .profile-page-status {
-        margin: 10px 0 0 0;
-    }
-    .profile-page-status-count {
-
+        margin:10px 0 0
     }
 }
 
@@ -1355,7 +1350,7 @@ hr {
 @media (max-width: 767px) {
     .profile-page-nav-buttons {
         float:right;
-        margin: 12px 0 0 0
+        margin: 12px 0 0
     }
 }
 
@@ -1390,7 +1385,7 @@ hr {
 }
 
 #sidebar-nav {
-    border-left: 1px solid #5e5e5e;
+    /* border-left: 1px solid #5e5e5e; */
     overflow-y: scroll;
     background: #fff;
     margin-top: 30px
@@ -1436,12 +1431,6 @@ hr {
     margin: 0 auto
 }
 
-@media (max-width: 767px) {
-    .tabbar-nav-container {
-        /*display:none*/
-    }
-}
-
 .tabbar-nav-overlay {
     height: 100%;
     background: #fff;
@@ -1459,13 +1448,8 @@ hr {
     height: 30px;
     background: #eee;
     z-index: 15;
-    border-bottom: 1px solid #ccc
-}
-
-@media (max-width: 767px) {
-    .tabbar-nav-title-container {
-
-    }
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 
 .tabbar-nav-title {
@@ -1487,23 +1471,29 @@ hr {
 }
 
 .tabbar-nav-xs-dropdown {
-    background: transparent;
+    background: 0 0;
     border: none;
-    line-height: 17px;
+    line-height: 17px
 }
 
 .tabbar-nav-link {
     float: left;
     font-family: Cardo,serif;
     font-weight: 700;
-    border-right: 1px solid #ccc
+
 }
 
 .tabbar-nav-link a {
     color: #333;
     text-decoration: none;
     padding: 5px 15px 4px;
-    display: block
+    display: block;
+    border-right: 1px solid #ccc;
+    transition: .2s
+}
+
+.tabbar-nav-link a:hover {
+    background-color: #e5e5e5
 }
 
 .tabbar-nav-link-social {
@@ -1512,6 +1502,7 @@ hr {
     font-weight: 700;
     border-left: 1px solid #ccc;
     line-height: 21px;
+    transition: .2s;
 }
 
 .tabbar-nav-link-social a {
@@ -1521,12 +1512,18 @@ hr {
     display: block
 }
 
+.tabbar-nav-link-social a:hover {
+    background-color: #e5e5e5
+}
+
 .tabbar-nav-scroll {
     background: 0 0;
     position: fixed;
     width: 100%;
-    max-width: 1078px;
-    z-index: 15
+    max-width: 1080px;
+    z-index: 15;
+    /* border-left: 1px solid #ccc; */
+    border-right: 1px solid #ccc;
 }
 
 .tabbar-nav-scroll-button {
@@ -1536,7 +1533,7 @@ hr {
 
 @media (max-width: 767px) {
     .tabbar-nav-scroll-button {
-        display: none;
+        display:none
     }
 }
 
@@ -1671,7 +1668,7 @@ hr {
     z-index: 1000;
     max-width: 1080px;
     margin: 0 0 -1px 0;
-    background-color: #888;
+    background-color: #44454C;
     border-top: 1px solid #ccc
 }
 
@@ -1681,26 +1678,11 @@ hr {
 }
 
 .ev-footer-img {
-    margin:16px 5px 0 0;
+    margin: 16px 5px 0 0
 }
 
 .ev-footer-img img {
-    width: 104px;
-}
-
-/*.ev-html-xs-scroll-y {
-    overflow-y: scroll;
-}
-
-@media only screen {
-    .ev-html-xs-scroll-y {
-        overflow-y: auto;
-    }
-}
-
-.body {
-    overflow-y: auto;
-}*/
+    width: 120px;}
 
 .row {
     margin: 0
@@ -1738,7 +1720,7 @@ hr {
 }
 
 .profile-qa-container {
-    overflow: hidden;
+    overflow: hidden
 }
 
 .profile-question-text {
@@ -1832,26 +1814,22 @@ hr {
     display: none
 }
 
-.bg-slate {
-    /* background:#e9edf1 */
-}
-
 .functions-menu-detail i {
     font-size: 20px
 }
 
 .temp-alert-header {
-    margin: -15px 0 30px 0;
+    margin: -15px 0 30px 0
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width:991px) {
     .temp-alert-header {
-        margin: -15px 15px 45px 15px;
+        margin:-15px 15px 45px 15px
     }
 }
 
 @media (max-width: 767px) {
     .temp-alert-header {
-        margin:15px 0 15px 0;
+        margin:15px 0
     }
 }
