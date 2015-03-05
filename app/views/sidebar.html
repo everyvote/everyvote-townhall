@@ -12,8 +12,12 @@
   function resizeSidebar () {
     sidebarWidth = $("#sidebar-col-width").width();
     windowWidth = $(window).width();
-      $(".sidebar-nav-h-resize").width(sidebarWidth + 1);
-
+    $(".sidebar-nav-h-resize").width(sidebarWidth);
+    if (windowWidth > 1079) {
+      $(".tabbar-nav-h-resize").width(sidebarWidth - 2);
+    } else {
+      $(".tabbar-nav-h-resize").width(sidebarWidth - 1);
+    }
   }
 
   resizeSidebar();

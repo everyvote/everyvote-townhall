@@ -1460,7 +1460,8 @@ hr {
     font-size: 15px;
     z-index: 1000;
     width: 25%;
-    float: right
+    float: right;
+    border-left: 1px solid #5e5e5e;
 }
 
 @media (max-width: 1078px) {
@@ -1470,7 +1471,7 @@ hr {
 }
 
 #tabbar-main {
-    border-right: 1px solid #5e5e5e;
+    /*border-right: 1px solid #5e5e5e;*/
 }
 
 .tabbar-nav-xs-dropdown {
