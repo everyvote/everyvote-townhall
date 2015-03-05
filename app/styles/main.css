@@ -1459,7 +1459,6 @@ hr {
     text-align: center;
     font-size: 15px;
     z-index: 1000;
-    border-left: 1px solid #5e5e5e;
     width: 25%;
     float: right
 }
@@ -1470,9 +1469,13 @@ hr {
     }
 }
 
+#tabbar-main {
+    border-right: 1px solid #5e5e5e;
+}
+
 .tabbar-nav-xs-dropdown {
     background: 0 0;
-    border: none;
+    border: none !important;
     line-height: 17px
 }
 

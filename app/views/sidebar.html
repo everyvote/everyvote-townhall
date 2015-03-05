@@ -12,13 +12,7 @@
   function resizeSidebar () {
     sidebarWidth = $("#sidebar-col-width").width();
     windowWidth = $(window).width();
-    if (windowWidth > 1080 && windowWidth % 2 == 0) {
-      $(".sidebar-nav-h-resize").width(sidebarWidth);
-    } else if (windowWidth > 1080 && windowWidth % 2 == 1) {
       $(".sidebar-nav-h-resize").width(sidebarWidth + 1);
-    } else {
-      $(".sidebar-nav-h-resize").width(sidebarWidth + 1);
-    }
 
   }
 
