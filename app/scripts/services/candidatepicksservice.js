@@ -19,6 +19,22 @@ angular.module('everyvoteTuresoApp')
 
       storage.set(_getStorageKey(candidateId), stance);
 
+      var candidatePicks = storage.get('candidatePicks');
+      if (!candidatePicks) {
+        candidatePicks = '[]';
+      }
+
+      candidatePicks = JSON.parse(candidatePicks);
+
+      if (stance === 'V') {
+        candidatePicks.push(_getStorageKey(candidateId));
+      } else {
+        candidatePicks = _.without(candidatePicks, _getStorageKey(candidateId));
+      }
+
+      candidatePicks = JSON.stringify(candidatePicks);
+      storage.set('candidatePicks', candidatePicks);
+
       deferred.resolve(true);
 
       return deferred.promise;
@@ -36,6 +52,23 @@ angular.module('everyvoteTuresoApp')
       deferred.resolve(pick);
 
       return deferred.promise;
+    };
+
+    this.getPicks = function () {
+
+      var deferred = $q.defer();
+
+      var picks = storage.get('candidatePicks');
+      if (!picks) {
+        picks = [];
+      }
+
+      picks = JSON.parse(picks);
+
+      deferred.resolve(picks);
+
+      return deferred.promise;
+
     };
 
   });
