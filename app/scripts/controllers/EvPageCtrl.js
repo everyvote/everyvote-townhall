@@ -8,7 +8,7 @@
  * Controller of the everyvoteTuresoApp
  */
 angular.module('everyvoteTuresoApp')
-  .controller('EvPageCtrl', function ($scope) {
+  .controller('EvPageCtrl', function ($scope, $location) {
 
     $scope.zone = 'EveryVote University > Student Association';
     $scope.electionName = 'Spring 2015 Semester';
@@ -20,5 +20,19 @@ angular.module('everyvoteTuresoApp')
     $scope.toggle = function () {
       $scope.showSummary = !$scope.showSummary;
     };
+
+    // Add y-offset to make anchor appear below fixed nav
+    if ($location.hash() !== '') {
+      setTimeout(function() {
+        window.scrollTo(window.scrollX, window.scrollY - 90);
+      }, 500);
+    }
+
+    // why doesn't this work? i thought i could use angular.element(window) instead of setTimeout...
+    // if ($location.hash() !== '') {
+    //   angular.element(window).ready(function () {
+    //       window.scrollTo(window.scrollX, window.scrollY - 90);
+    //   });
+    // }
 
   });
