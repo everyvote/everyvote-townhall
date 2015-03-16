@@ -2,7 +2,6 @@
 'use strict';
 
 describe('Service: ElectionService', function () {
-
   var testOrganization = {
     result: {
       some_other_stuff: '',
@@ -62,7 +61,6 @@ describe('Service: ElectionService', function () {
 
             return deferred.promise;
           });
-
       })
       .service('ElectionModelOrchestrator', function () {
         this.groupByPost = jasmine.createSpy('groupByPost')
@@ -74,6 +72,9 @@ describe('Service: ElectionService', function () {
               'candidate1', 'candidate2'
             ]
           });
+
+        this.filterOnlyPicks = jasmine.createSpy('filterOnlyPicks')
+          .and.returnValue('onlyPicks-filtered-candidates');
       })
       .constant('ORGANIZATION_ID', 'orgid');
 
@@ -95,52 +96,127 @@ describe('Service: ElectionService', function () {
   }));
 
 
-  describe('when obtaining election viewmodel', function () {
+  describe('when obtaining the postId for a candidate (person_id)', function () {
     var result;
 
     beforeEach(function () {
 
-      ElectionService.getElection()
-      .then(function (election) {
-        result = election;
-      });
+      ElectionService.getPostIdByPersonId('abcd2')
+        .then(function (postId) {
+          result = postId;
+        });
 
       $scope.$apply();
     });
 
-    it('should get the organization model from popit', function () {
-      expect(PopIt.getModel).toHaveBeenCalledWith('organization', 'orgid');
+    it('should return the cooresponding post id', function () {
+      expect(result).toEqual('post2');
     });
+  });
 
-    it('should get the Post information for each involved Post', function () {
-      expect(PopIt.getModel).toHaveBeenCalledWith('post', 'post1');
-      expect(PopIt.getModel).toHaveBeenCalledWith('post', 'post2');
-    });
+  describe('when obtaining election viewmodel', function () {
+    var result;
 
+    describe('always', function () {
 
-    it('should group the Candidates', function () {
+      beforeEach(function () {
 
-      expect(ElectionModelOrchestrator.groupByPost)
-        .toHaveBeenCalledWith(testOrganization.result.next_election);
+        ElectionService.getElection()
+          .then(function (election) {
+            result = election;
+          });
 
-    });
-
-    it('should return the viewmodel as expected', function () {
-      expect(result.name).toEqual('Test Election 2015');
-
-      expect(_.map(result.posts, function(post) {
-        return post.name;
-      })).toEqual(['Post2Label', 'Post1Label']);
-
-      expect(result.posts).toContain({
-        name: 'Post1Label', candidateIds: ['candidate1', 'candidate2']
+        $scope.$apply();
       });
 
-      expect(result.posts).toContain({
-        name: 'Post2Label', candidateIds: ['candidate1', 'candidate2']
+      it('should get the organization model from popit', function () {
+        expect(PopIt.getModel).toHaveBeenCalledWith('organization', 'orgid');
+      });
+
+      it('should get the Post information for each involved Post', function () {
+        expect(PopIt.getModel).toHaveBeenCalledWith('post', 'post1');
+        expect(PopIt.getModel).toHaveBeenCalledWith('post', 'post2');
       });
 
     });
+
+    describe('with everything', function () {
+
+      beforeEach(function () {
+
+        ElectionService.getElection()
+        .then(function (election) {
+          result = election;
+        });
+
+        $scope.$apply();
+      });
+
+      it('should group the candidates', function () {
+        expect(ElectionModelOrchestrator.groupByPost)
+          .toHaveBeenCalledWith(testOrganization.result.next_election.candidates);
+      });
+
+      it('should return the viewmodel as expected', function () {
+        expect(result.name).toEqual('Test Election 2015');
+
+        expect(_.map(result.posts, function(post) {
+          return post.name;
+        })).toEqual(['Post2Label', 'Post1Label']);
+
+        expect(result.posts).toContain({
+          name: 'Post1Label', candidateIds: ['candidate1', 'candidate2']
+        });
+
+        expect(result.posts).toContain({
+          name: 'Post2Label', candidateIds: ['candidate1', 'candidate2']
+        });
+
+      });
+    });
+
+    describe('with only my picks', function () {
+      beforeEach(function () {
+
+        ElectionService.getElection({onlyMyPicks: true})
+        .then(function (election) {
+          result = election;
+        });
+
+        $scope.$apply();
+      });
+
+      it('should filter out candidates that aren\'t my picks', function () {
+        expect(ElectionModelOrchestrator.filterOnlyPicks)
+          .toHaveBeenCalledWith(testOrganization.result.next_election.candidates);
+      });
+
+      it('should group the candidates', function () {
+
+        expect(ElectionModelOrchestrator.groupByPost)
+          .toHaveBeenCalledWith('onlyPicks-filtered-candidates');
+
+      });
+
+      it('should return the viewmodel as expected', function () {
+        expect(result.name).toEqual('Test Election 2015');
+
+        expect(_.map(result.posts, function(post) {
+          return post.name;
+        })).toEqual(['Post2Label', 'Post1Label']);
+
+        // this stuff is the result of calling the orchestrator
+        expect(result.posts).toContain({
+          name: 'Post1Label', candidateIds: ['candidate1', 'candidate2']
+        });
+
+        expect(result.posts).toContain({
+          name: 'Post2Label', candidateIds: ['candidate1', 'candidate2']
+        });
+
+      });
+    });
+
 
   });
 

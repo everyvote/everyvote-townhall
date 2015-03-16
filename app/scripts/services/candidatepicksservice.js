@@ -27,9 +27,9 @@ angular.module('everyvoteTuresoApp')
       candidatePicks = JSON.parse(candidatePicks);
 
       if (stance === 'V') {
-        candidatePicks.push(_getStorageKey(candidateId));
+        candidatePicks.push((candidateId));
       } else {
-        candidatePicks = _.without(candidatePicks, _getStorageKey(candidateId));
+        candidatePicks = _.without(candidatePicks, (candidateId));
       }
 
       candidatePicks = JSON.stringify(candidatePicks);
