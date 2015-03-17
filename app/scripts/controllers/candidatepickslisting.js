@@ -10,11 +10,10 @@
 angular.module('everyvoteTuresoApp')
   .controller('CandidatePicksListingCtrl', function ($scope, ElectionService) {
 
-    console.log('asdf');
+
     ElectionService.getElection({onlyMyPicks: true})
       .then(function (election) {
-
-        console.log(election);
+        $scope.posts = election.posts;
       });
 
   });

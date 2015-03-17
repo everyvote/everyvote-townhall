@@ -33,8 +33,6 @@ angular.module('everyvoteTuresoApp')
       CandidatePicksService.getPicks()
         .then(function (picks) {
 
-
-
           var filtered = _.filter(candidates, function (candidate) {
             return _.contains(picks, candidate.person_id);
           });

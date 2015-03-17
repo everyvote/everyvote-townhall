@@ -83,12 +83,14 @@ angular.module('everyvoteTuresoApp')
           // Lets build up the Election ViewModel
           _.forEach(postOrder, function (postId) {
 
-            var post = postModels[postId].result;
+            if (!!postModels[postId]) {
+              var post = postModels[postId].result;
 
-            viewModel.posts.push({
-              name: post.label,
-              candidateIds: postGroups[postId]
-            });
+              viewModel.posts.push({
+                name: post.label,
+                candidateIds: postGroups[postId]
+              });
+            }
 
           });
 
