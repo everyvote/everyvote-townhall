@@ -156,31 +156,31 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
 
     });
 
-    describe('given that votingForFlag is falsy', function () {
-      beforeEach(function () {
+    // describe('given that votingForFlag is falsy', function () {
+    //   beforeEach(function () {
 
-        scope.votingForFlag = false;
+    //     scope.votingForFlag = false;
 
-        scope.setVotingFor();
+    //     scope.setVotingFor();
 
-        scope.$digest();
+    //     scope.$digest();
 
-      });
+    //   });
 
-      it('should call savePick on the candidate pick service', function () {
-        expect(CandidatePicksService.savePick)
-          .toHaveBeenCalledWith('fake-candidate', 'V');
-      });
+    //   it('should call savePick on the candidate pick service', function () {
+    //     expect(CandidatePicksService.savePick)
+    //       .toHaveBeenCalledWith('fake-candidate', 'V');
+    //   });
 
-      it('should set votingForFlag', function () {
-        expect(scope.votingForFlag).toEqual(true);
-      });
+    //   it('should set votingForFlag', function () {
+    //     expect(scope.votingForFlag).toEqual(true);
+    //   });
 
-      it('should unset notVotingForFlag', function () {
-        expect(scope.notVotingForFlag).toEqual(false);
-      });
+    //   it('should unset notVotingForFlag', function () {
+    //     expect(scope.notVotingForFlag).toEqual(false);
+    //   });
 
-    });
+    // });
 
 
   });
@@ -215,33 +215,33 @@ describe('Controller: CandidatepickwidgetcontrollerCtrl', function () {
 
     });
 
-    describe('given that notVotingForFlag is falsy', function () {
+    // describe('given that notVotingForFlag is falsy', function () {
 
-      beforeEach(function () {
+    //   beforeEach(function () {
 
-        scope.notVotingForFlag = false;
-        scope.votingForFlag = true;
+    //     scope.notVotingForFlag = false;
+    //     scope.votingForFlag = true;
 
-        scope.setNotVotingFor();
+    //     scope.setNotVotingFor();
 
-        scope.$digest();
+    //     scope.$digest();
 
-      });
+    //   });
 
-      it('should call savePick on the candidate pick service', function () {
-        expect(CandidatePicksService.savePick)
-          .toHaveBeenCalledWith('fake-candidate', 'N');
-      });
+    //   it('should call savePick on the candidate pick service', function () {
+    //     expect(CandidatePicksService.savePick)
+    //       .toHaveBeenCalledWith('fake-candidate', 'N');
+    //   });
 
-      it('should set notVotingForFlag', function () {
-        expect(scope.notVotingForFlag).toEqual(true);
-      });
+    //   it('should set notVotingForFlag', function () {
+    //     expect(scope.notVotingForFlag).toEqual(true);
+    //   });
 
-      it('should unset votingForFlag', function () {
-        expect(scope.votingForFlag).toEqual(false);
-      });
+    //   it('should unset votingForFlag', function () {
+    //     expect(scope.votingForFlag).toEqual(false);
+    //   });
 
-    });
+    // });
 
 
   });
