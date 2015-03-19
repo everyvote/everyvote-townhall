@@ -65,7 +65,7 @@ angular
       })
       .when('/mycandidates', {
         templateUrl: 'views/candidatePicks.html',
-        controller: 'CandidatePicksCtrl',
+        controller: 'CandidatePicksListingCtrl',
         name: 'My Candidates'
       })
       .otherwise({

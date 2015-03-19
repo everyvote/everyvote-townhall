@@ -38,12 +38,13 @@ angular.module('everyvoteTuresoApp')
     };
 
     // Make sure we reinit if the candidateId changes
-    $scope.$watch('candidateId', function (oldVal, newVal) {
+    $scope.$watch('candidateId', function () {
+    // $scope.$watch('candidateId', function (oldVal, newVal) {
 
       // Only reinit when it really changed.
-      if (oldVal !== newVal) {
+      // if (oldVal !== newVal) {
         init();
-      }
+      // }
     });
 
     init();
