@@ -41,9 +41,9 @@ angular.module('everyvoteTuresoApp')
     $scope.$watch('candidateId', function (oldVal, newVal) {
 
       // Only reinit when it really changed.
-      if (oldVal !== newVal) {
+      // if (oldVal !== newVal) {
         init();
-      }
+      // }
     });
 
     init();
