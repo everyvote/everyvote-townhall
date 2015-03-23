@@ -40,14 +40,14 @@ describe('Service: CandidatePicksService', function () {
 
     it('should append the candidate to candidatePicks in localstorage', function (done) {
 
-      var candidatePicks = ['candidatePick-abc123', 'candidatePick-def456'];
+      var candidatePicks = ['abc123', 'def456'];
       candidatePicks = JSON.stringify(candidatePicks);
       storage.set('candidatePicks', candidatePicks);
 
       CandidatePicksService.savePick('ghi789', 'V')
         .then(function () {
           var result = storage.get('candidatePicks');
-          expect(result).toEqual('["candidatePick-abc123","candidatePick-def456","candidatePick-ghi789"]');
+          expect(result).toEqual('["abc123","def456","ghi789"]');
           done();
         });
 
@@ -60,14 +60,14 @@ describe('Service: CandidatePicksService', function () {
 
     it('should remove the candidate from candidatePicks in localstorage', function (done) {
 
-      var candidatePicks = ['candidatePick-abc123', 'candidatePick-def456'];
+      var candidatePicks = ['abc123', 'def456'];
       candidatePicks = JSON.stringify(candidatePicks);
       storage.set('candidatePicks', candidatePicks);
 
       CandidatePicksService.savePick('abc123', 'N')
         .then(function () {
           var result = storage.get('candidatePicks');
-          expect(result).toEqual('["candidatePick-def456"]');
+          expect(result).toEqual('["def456"]');
           done();
         });
 
@@ -80,14 +80,14 @@ describe('Service: CandidatePicksService', function () {
 
     it('should remove the candidate from candidatePicks in localstorage', function (done) {
 
-      var candidatePicks = ['candidatePick-abc123', 'candidatePick-def456'];
+      var candidatePicks = ['abc123', 'def456'];
       candidatePicks = JSON.stringify(candidatePicks);
       storage.set('candidatePicks', candidatePicks);
 
       CandidatePicksService.savePick('abc123', 'U')
         .then(function () {
           var result = storage.get('candidatePicks');
-          expect(result).toEqual('["candidatePick-def456"]');
+          expect(result).toEqual('["def456"]');
           done();
         });
 
@@ -130,13 +130,13 @@ describe('Service: CandidatePicksService', function () {
 
       it('should retrieve the candidates from localstorage', function (done) {
 
-        var candidatePicks = ['candidatePick-abc123', 'candidatePick-def456', 'candidatePick-ghi789'];
+        var candidatePicks = ['abc123', 'def456', 'ghi789'];
         candidatePicks = JSON.stringify(candidatePicks);
         storage.set('candidatePicks', candidatePicks);
 
         CandidatePicksService.getPicks('candidatePicks')
           .then(function (result) {
-            expect(result).toEqual(['candidatePick-abc123', 'candidatePick-def456', 'candidatePick-ghi789']);
+            expect(result).toEqual(['abc123', 'def456', 'ghi789']);
             done();
           });
 
