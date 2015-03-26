@@ -68,6 +68,11 @@ angular
         controller: 'CandidatePicksListingCtrl',
         name: 'My Candidates'
       })
+      .when('/GoogleCivicAPISearch', {
+        templateUrl: 'views/GoogleCivicAPISearch.html',
+        controller: 'googlecivicapisearchCtrl',
+        name: 'Google Civic Info API Search'
+      })
       .otherwise({
         redirectTo: '/'
       });
